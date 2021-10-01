@@ -1,12 +1,12 @@
 {
-  "chronoMod:DefaultCharacter": {
+  "chronoMod:Chronomancer": {
     "NAMES": [
-      "The Default",
-      "the Default"
+      "Chronomancer",
+      "Chronomancer"
     ],
     "TEXT": [
-      "THE_DEFAULT exists and is valid. THE_DEFAULT wishes to T o uuuch# NL Second placeholder line of description text.",
-      "NL You TOUCH the heart.",
+      "A mage living in the past, the present, and the future. NL Stuck in an endless loop, forever bound to defeat the Spire",
+      "NL You finally escape the loop.",
       "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~basic~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
     ]
   }

@@ -23,129 +23,77 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import chronoMod.DefaultMod;
 import chronoMod.cards.*;
-import chronoMod.relics.DefaultClickableRelic;
-import chronoMod.relics.PlaceholderRelic;
-import chronoMod.relics.PlaceholderRelic2;
+import chronoMod.relics.BrokenWatch;
 
 import java.util.ArrayList;
 
 import static chronoMod.DefaultMod.*;
-import static chronoMod.characters.TheDefault.Enums.COLOR_GRAY;
+import static chronoMod.characters.Chronomancer.Enums.COLOR_BLUE;
 
-//Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
-//and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
-//All text (starting description and loadout, anything labeled TEXT[]) can be found in DefaultMod-character-Strings.json in the resources
-
-public class TheDefault extends CustomPlayer {
+public class Chronomancer extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
 
-    // =============== CHARACTER ENUMERATORS =================
-    // These are enums for your Characters color (both general color and for the card library) as well as
-    // an enum for the name of the player class - IRONCLAD, THE_SILENT, DEFECT, YOUR_CLASS ...
-    // These are all necessary for creating a character. If you want to find out where and how exactly they are used
-    // in the basegame (for fun and education) Ctrl+click on the PlayerClass, CardColor and/or LibraryType below and go down the
-    // Ctrl+click rabbit hole
-
+    // CHARACTER ENUMERATORS
     public static class Enums {
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_DEFAULT;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") // These two HAVE to have the same absolutely identical name.
-        public static AbstractCard.CardColor COLOR_GRAY;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR") @SuppressWarnings("unused")
+        public static AbstractPlayer.PlayerClass CHRONOMANCER;
+        @SpireEnum(name = "CHRONO_BLUE_COLOR") // These two HAVE to have the same absolutely identical name.
+        public static AbstractCard.CardColor COLOR_BLUE;
+        @SpireEnum(name = "CHRONO_BLUE_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
-    // =============== CHARACTER ENUMERATORS  =================
-
-
-    // =============== BASE STATS =================
-
+    // BASE STATS
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 75;
-    public static final int MAX_HP = 75;
+    public static final int STARTING_HP = 70;
+    public static final int MAX_HP = 70;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
-    public static final int ORB_SLOTS = 3;
+    public static final int HAND_SIZE = 5;
 
-    // =============== /BASE STATS/ =================
-
-
-    // =============== STRINGS =================
-
-    private static final String ID = makeID("DefaultCharacter");
+    // STRINGS
+    private static final String ID = makeID("Chronomancer");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     private static final String[] NAMES = characterStrings.NAMES;
     private static final String[] TEXT = characterStrings.TEXT;
 
-    // =============== /STRINGS/ =================
+    // IMAGES
+    public static final String CHRONO_SHOULDER_1 = "chronoModResources/images/char/defaultCharacter/shoulder.png";
+    public static final String CHRONO_SHOULDER_2 = "chronoModResources/images/char/defaultCharacter/shoulder2.png";
+    public static final String CHRONO_CORPSE = "chronoModResources/images/char/defaultCharacter/corpse.png";
+
+    // Atlas and JSON files for the Animations
+    public static final String CHRONO_SKELETON_ATLAS = "chronoModResources/images/char/defaultCharacter/skeleton.atlas";
+    public static final String CHRONO_SKELETON_JSON = "chronoModResources/images/char/defaultCharacter/skeleton.json";
+
+    // CHARACTER CLASS START
+    public Chronomancer(String name, PlayerClass setClass) {
+        super(name, setClass, null, null, null,
+                new SpriterAnimation("chronoModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
 
 
-    // =============== TEXTURES OF BIG ENERGY ORB ===============
-
-    public static final String[] orbTextures = {
-            "chronoModResources/images/char/defaultCharacter/orb/layer1.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer2.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer3.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer4.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer5.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer6.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer1d.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer2d.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer3d.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer4d.png",
-            "chronoModResources/images/char/defaultCharacter/orb/layer5d.png",};
-
-    // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
-
-    // =============== CHARACTER CLASS START =================
-
-    public TheDefault(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures,
-                "chronoModResources/images/char/defaultCharacter/orb/vfx.png", null,
-                new SpriterAnimation(
-                        "chronoModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
-
-
-        // =============== TEXTURES, ENERGY, LOADOUT =================  
-
+        // TEXTURES, ENERGY, LOADOUT
         initializeClass(null, // required call to load textures and setup energy/loadout.
-                // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
-                THE_DEFAULT_SHOULDER_2, // campfire pose
-                THE_DEFAULT_SHOULDER_1, // another campfire pose
-                THE_DEFAULT_CORPSE, // dead corpse
-                getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
+                CHRONO_SHOULDER_2, // campfire pose
+                CHRONO_SHOULDER_1, // another campfire pose
+                CHRONO_CORPSE, // dead corpse
+                getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F,
+                new EnergyManager(ENERGY_PER_TURN)); // energy manager
 
-        // =============== /TEXTURES, ENERGY, LOADOUT/ =================
-
-
-        // =============== ANIMATIONS =================  
-
-        loadAnimation(
-                THE_DEFAULT_SKELETON_ATLAS,
-                THE_DEFAULT_SKELETON_JSON,
-                1.0f);
+        // ANIMATIONS
+        loadAnimation(CHRONO_SKELETON_ATLAS, CHRONO_SKELETON_JSON, 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
-        // =============== /ANIMATIONS/ =================
-
-
-        // =============== TEXT BUBBLE LOCATION =================
-
+        // TEXT BUBBLE LOCATION
         dialogX = (drawX + 0.0F * Settings.scale); // set location for text bubbles
         dialogY = (drawY + 220.0F * Settings.scale); // you can just copy these values
-
-        // =============== /TEXT BUBBLE LOCATION/ =================
-
     }
-
-    // =============== /CHARACTER CLASS END/ =================
 
     // Starting description and loadout
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                STARTING_HP, MAX_HP, ORB_SLOTS, STARTING_GOLD, CARD_DRAW, this, getStartingRelics(),
+                STARTING_HP, MAX_HP, 0, STARTING_GOLD, HAND_SIZE, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 
@@ -177,21 +125,13 @@ public class TheDefault extends CustomPlayer {
     // Starting Relics	
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-
-        retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
-
+        retVal.add(BrokenWatch.ID);
         // Mark relics as seen - makes it visible in the compendium immediately
-        // If you don't have this it won't be visible in the compendium until you see them in game
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
-
+        UnlockTracker.markRelicAsSeen(BrokenWatch.ID);
         return retVal;
     }
 
-    // character Select screen effect
+    // Character select screen effect
     @Override
     public void doCharSelectScreenSelectEffect() {
         CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f); // Sound Effect
@@ -199,7 +139,7 @@ public class TheDefault extends CustomPlayer {
                 false); // Screen Effect
     }
 
-    // character Select on-button-press sound effect
+    // Character select on-button-press sound effect
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         return "ATTACK_DAGGER_1";
@@ -209,19 +149,19 @@ public class TheDefault extends CustomPlayer {
     // Ascension 14 or higher. (ironclad loses 5, defect and silent lose 4 hp respectively)
     @Override
     public int getAscensionMaxHPLoss() {
-        return 0;
+        return 4;
     }
 
     // Should return the card color enum to be associated with your character.
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_GRAY;
+        return COLOR_BLUE;
     }
 
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return chronoMod.DefaultMod.DEFAULT_GRAY;
+        return chronoMod.DefaultMod.CHRONO_BLUE;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -252,20 +192,20 @@ public class TheDefault extends CustomPlayer {
     // Should return a new instance of your character, sending name as its name parameter.
     @Override
     public AbstractPlayer newInstance() {
-        return new TheDefault(name, chosenClass);
+        return new Chronomancer(name, chosenClass);
     }
 
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return chronoMod.DefaultMod.DEFAULT_GRAY;
+        return chronoMod.DefaultMod.CHRONO_BLUE;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return chronoMod.DefaultMod.DEFAULT_GRAY;
+        return chronoMod.DefaultMod.CHRONO_BLUE;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects
@@ -274,8 +214,10 @@ public class TheDefault extends CustomPlayer {
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
         return new AbstractGameAction.AttackEffect[]{
-                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
-                AbstractGameAction.AttackEffect.BLUNT_HEAVY,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
+                AbstractGameAction.AttackEffect.FIRE,
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL,
+                AbstractGameAction.AttackEffect.FIRE,
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY};
     }
 

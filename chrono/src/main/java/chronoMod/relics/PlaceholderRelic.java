@@ -10,13 +10,6 @@ import static chronoMod.DefaultMod.makeRelicOutlinePath;
 import static chronoMod.DefaultMod.makeRelicPath;
 
 public class PlaceholderRelic extends CustomRelic {
-
-    /*
-     * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
-     *
-     * Gain 1 energy.
-     */
-
     // ID, images, text.
     public static final String ID = DefaultMod.makeID("PlaceholderRelic");
 
@@ -24,7 +17,7 @@ public class PlaceholderRelic extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
     public PlaceholderRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     // Flash at the start of Battle.

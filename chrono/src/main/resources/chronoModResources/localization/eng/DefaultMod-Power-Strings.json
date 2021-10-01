@@ -1,4 +1,8 @@
 {
+"chronoMod:BrokenWatch": {
+        "NAME": "Broken Watch",
+        "DESCRIPTIONS": ["The next card you play costs 0."]
+},
 "chronoMod:CommonPower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]

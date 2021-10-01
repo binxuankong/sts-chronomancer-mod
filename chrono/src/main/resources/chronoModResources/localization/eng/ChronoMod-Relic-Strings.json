@@ -1,4 +1,11 @@
 {
+  "chronoMod:BrokenWatch": {
+    "NAME": "Broken Watch",
+    "FLAVOR": "You cannot tell the time with this.",
+    "DESCRIPTIONS": [
+      "The first card you play each combat costs 0."
+    ]
+  },
   "chronoMod:PlaceholderRelic": {
     "NAME": "Placeholder Energy Relic",
     "FLAVOR": "The snake is a friend.",
