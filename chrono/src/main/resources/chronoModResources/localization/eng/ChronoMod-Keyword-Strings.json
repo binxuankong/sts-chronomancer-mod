@@ -5,6 +5,11 @@
     "DESCRIPTION": "Lose [E] equals to your Jade at the start of your turn."
   },
   {
+    "PROPER_NAME": "Recall",
+    "NAMES": ["Recall", "recall", "Recall:", "recall:"],
+    "DESCRIPTION": "Recall effects trigger at the start of your next turn."
+  },
+  {
     "NAMES": [
       "keyword",
       "keywords"

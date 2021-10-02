@@ -1,7 +1,11 @@
 {
     "chronoMod:Jade": {
         "NAME": "Jade",
-        "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " [E]."]
+        "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " energy."]
+    },
+    "chronoMod:RecallEnergy": {
+        "NAME": "Recall Energy",
+        "DESCRIPTIONS": ["Recall: Gain #b",  " energy."]
     },
     "chronoMod:CommonPower": {
         "NAME": "Placeholder Power",

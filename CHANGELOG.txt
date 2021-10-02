@@ -1,0 +1,12 @@
+2021-10-02
+Change Broken Watch effect
+- Old: The first card you play each combat costs 0.
+- New: The first time you consume Jade each combat, gain 1 E.
+
+Change Goggles effect
+- Old: The first time you consume Jade each combat, gain 1 Dexterity and 8 Block.
+- New: The first card you play each combat costs 0.
+
+Change Ancient Watch effect
+- Old: For the next 3 turns, the first card you play each turn costs 0.
+- New: The next 3 times you consume Jade each combat, gain 1 E.

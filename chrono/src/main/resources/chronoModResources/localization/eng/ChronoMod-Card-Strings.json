@@ -1,4 +1,21 @@
 {
+  "chronoMod:StrikeCHR": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "chronoMod:DefendCHR": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "chronoMod:MysticBlast": {
+    "NAME": "Mystic Blast",
+    "DESCRIPTION": "Deal !D!X damage. Gain 1 chronomod:Jade."
+  },
+  "chronoMod:TimeWarp": {
+    "NAME": "Time Warp",
+    "DESCRIPTION": "chronomod:Recall: Gain [E].",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. chronomod:Recall: Gain [E]."
+  },
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",
     "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 chronomod:Jade."
