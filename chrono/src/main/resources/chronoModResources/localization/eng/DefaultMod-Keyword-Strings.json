@@ -1,5 +1,10 @@
 [
   {
+    "PROPER_NAME": "Jade",
+    "NAMES": ["Jade", "jade"],
+    "DESCRIPTION": "Lose [E] equals to your Jade at the start of your turn."
+  },
+  {
     "NAMES": [
       "keyword",
       "keywords"

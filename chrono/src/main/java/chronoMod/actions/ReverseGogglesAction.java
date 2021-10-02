@@ -7,8 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.Iterator;
 
-public class ReverseBrokenWatchAction extends AbstractGameAction {
-    public ReverseBrokenWatchAction() {
+public class ReverseGogglesAction extends AbstractGameAction {
+    public ReverseGogglesAction() {
         this.duration = Settings.ACTION_DUR_XFAST;
     }
 

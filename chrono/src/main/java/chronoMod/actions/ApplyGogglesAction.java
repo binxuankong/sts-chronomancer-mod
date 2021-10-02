@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
-public class ApplyBrokenWatchAction extends AbstractGameAction {
-    public ApplyBrokenWatchAction() {
+public class ApplyGogglesAction extends AbstractGameAction {
+    public ApplyGogglesAction() {
         this.duration = Settings.ACTION_DUR_XFAST;
     }
 

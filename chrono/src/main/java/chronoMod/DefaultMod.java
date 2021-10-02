@@ -20,15 +20,12 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import chronoMod.cards.*;
 import chronoMod.characters.Chronomancer;
 import chronoMod.events.IdentityCrisisEvent;
 import chronoMod.potions.PlaceholderPotion;
-import chronoMod.relics.BrokenWatch;
-import chronoMod.relics.BottledPlaceholderRelic;
-import chronoMod.relics.DefaultClickableRelic;
-import chronoMod.relics.PlaceholderRelic;
-import chronoMod.relics.PlaceholderRelic2;
+import chronoMod.relics.*;
 import chronoMod.util.IDCheckDontTouchPls;
 import chronoMod.util.TextureLoader;
 import chronoMod.variables.DefaultCustomVariable;
@@ -305,7 +302,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), Chronomancer.Enums.COLOR_BLUE);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
-        BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
+        BaseMod.addRelic(new Goggles(), RelicType.SHARED);
         
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
@@ -360,11 +357,11 @@ public class DefaultMod implements
         
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
+                getModID() + "Resources/localization/eng/ChronoMod-Card-Strings.json");
         
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
-                getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
+                getModID() + "Resources/localization/eng/ChronoMod-Power-Strings.json");
         
         // RelicStrings
         BaseMod.loadCustomStringsFile(RelicStrings.class,

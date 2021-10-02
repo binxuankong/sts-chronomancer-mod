@@ -1,9 +1,5 @@
 package chronoMod.relics;
 
-import chronoMod.actions.ApplyGogglesAction;
-import chronoMod.DefaultMod;
-import chronoMod.actions.ReverseGogglesAction;
-import chronoMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -11,16 +7,20 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import chronoMod.DefaultMod;
+import chronoMod.util.TextureLoader;
+import chronoMod.actions.ApplyGogglesAction;
+import chronoMod.actions.ReverseGogglesAction;
 import static chronoMod.DefaultMod.makeRelicOutlinePath;
 import static chronoMod.DefaultMod.makeRelicPath;
 
-public class BrokenWatch extends CustomRelic {
-    public static final String ID = DefaultMod.makeID("BrokenWatch");
+public class Goggles extends CustomRelic {
+    public static final String ID = DefaultMod.makeID("Goggles");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
-    public BrokenWatch() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
+    public Goggles() {
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
     public void atBattleStart() {
@@ -43,6 +43,6 @@ public class BrokenWatch extends CustomRelic {
     }
 
     public CustomRelic makeCopy() {
-        return new BrokenWatch();
+        return new Goggles();
     }
 }

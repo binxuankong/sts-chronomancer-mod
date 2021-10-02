@@ -21,12 +21,12 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import chronoMod.DefaultMod;
-import chronoMod.cards.*;
-import chronoMod.relics.BrokenWatch;
 
 import java.util.ArrayList;
 
+import chronoMod.DefaultMod;
+import chronoMod.cards.*;
+import chronoMod.relics.*;
 import static chronoMod.DefaultMod.*;
 import static chronoMod.characters.Chronomancer.Enums.COLOR_BLUE;
 
@@ -104,6 +104,8 @@ public class Chronomancer extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
+        retVal.add(TwilightAssault.ID);
+
         retVal.add(DefaultCommonAttack.ID);
         retVal.add(DefaultUncommonAttack.ID);
         retVal.add(DefaultRareAttack.ID);
@@ -125,9 +127,9 @@ public class Chronomancer extends CustomPlayer {
     // Starting Relics	
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(BrokenWatch.ID);
+        retVal.add(Goggles.ID);
         // Mark relics as seen - makes it visible in the compendium immediately
-        UnlockTracker.markRelicAsSeen(BrokenWatch.ID);
+        UnlockTracker.markRelicAsSeen(Goggles.ID);
         return retVal;
     }
 

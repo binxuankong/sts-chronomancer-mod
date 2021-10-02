@@ -1,14 +1,14 @@
 {
-"chronoMod:BrokenWatch": {
-        "NAME": "Broken Watch",
-        "DESCRIPTIONS": ["The next card you play costs 0."]
-},
-"chronoMod:CommonPower": {
+    "chronoMod:Jade": {
+        "NAME": "Jade",
+        "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " [E]."]
+    },
+    "chronoMod:CommonPower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-},
-"chronoMod:RarePower": {
+    },
+    "chronoMod:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-}
+    }
 }

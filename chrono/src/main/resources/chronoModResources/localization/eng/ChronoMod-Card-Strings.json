@@ -1,4 +1,8 @@
 {
+  "chronoMod:TwilightAssault": {
+    "NAME": "Twilight Assault",
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 chronomod:Jade."
+  },
   "chronoMod:DefaultCommonAttack": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"

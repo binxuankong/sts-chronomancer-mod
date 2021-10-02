@@ -6,6 +6,13 @@
       "The first card you play each combat costs 0."
     ]
   },
+  "chronoMod:Goggles": {
+    "NAME": "Goggles",
+    "FLAVOR": "You can see further with this.",
+    "DESCRIPTIONS": [
+      "The first card you play each combat costs 0."
+    ]
+  },
   "chronoMod:PlaceholderRelic": {
     "NAME": "Placeholder Energy Relic",
     "FLAVOR": "The snake is a friend.",
