@@ -7,6 +7,32 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "chronoMod:ArcaneBarrage": {
+    "NAME": "Arcane Barrage",
+    "DESCRIPTION": "Deal !D! damage !M! time(s). NL When you draw this card, increase its number of hits by 1 this combat and gain 1 chronomod:Jade."
+  },
+  "chronoMod:ArcaneBolt": {
+    "NAME": "Arcane Bolt",
+    "DESCRIPTION": "Deal !D! damage. NL If you have chronomod:Jade, gain 1 chronomod:Jade to deal double damage."
+  },
+  "chronoMod:AstralBeam": {
+    "NAME": "Astral Beam",
+    "DESCRIPTION": "Deal !D! damage and draw !M! cards. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:DelayedGuard": {
+    "NAME": "Delayed Guard",
+    "DESCRIPTION": "chronomod:Recall: Gain !B! Block."
+  },
+  "chronoMod:EventHorizon": {
+    "NAME": "Event Horizion",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, gain !M! [E].",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw this card, gain !B! Block and !M! [E].",
+    "EXTENDED_DESCRIPTION": ["This card cannot be played."]
+  },
+  "chronoMod:Flux": {
+    "NAME": "Flux",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 chronomod:Jade."
+  },
   "chronoMod:MysticBarrier": {
     "NAME": "Mystic Barrier",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! additional Block for each chronomod:Jade that you have."
@@ -14,19 +40,6 @@
   "chronoMod:MysticBlast": {
     "NAME": "Mystic Blast",
     "DESCRIPTION": "Deal !D! X damage. NL Gain 1 chronomod:Jade."
-  },
-  "chronoMod:TimeWarp": {
-    "NAME": "Time Warp",
-    "DESCRIPTION": "chronomod:Recall: Gain [E].",
-    "UPGRADE_DESCRIPTION": "Draw !M! card. NL chronomod:Recall: Gain [E]."
-  },
-  "chronoMod:DelayedGuard": {
-    "NAME": "Delayed Guard",
-    "DESCRIPTION": "chronomod:Recall: Gain !B! Block."
-  },
-  "chronoMod:Flux": {
-    "NAME": "Flux",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 chronomod:Jade."
   },
   "chronoMod:MysticShot": {
     "NAME": "Mystic Shot",
@@ -36,59 +49,17 @@
     "NAME": "Surge",
     "DESCRIPTION": "Draw !M! cards. NL Gain 1 chronomod:Jade."
   },
+  "chronoMod:TimeWarp": {
+    "NAME": "Time Warp",
+    "DESCRIPTION": "chronomod:Recall: Gain [E].",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL chronomod:Recall: Gain [E]."
+  },
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",
     "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 chronomod:Jade."
   },
-  "chronoMod:DefaultCommonAttack": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
-  },
-  "chronoMod:DefaultCommonSkill": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. NL chronomod:Multiword_Keyword."
-  },
-  "chronoMod:DefaultCommonPower": {
-    "NAME": "Hold Place",
-    "DESCRIPTION": "Gain !M! chronomod:Keyword.",
-    "UPGRADE_DESCRIPTION": "Gain !M! chronomod:Keywords."
-  },
-  "chronoMod:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-  "chronoMod:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "chronoMod:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X chronomod:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 chronomod:Keywords."
-  },
   "chronoMod:DefaultRareAttack": {
     "NAME": "TOUCH",
     "DESCRIPTION": "Deal !D! damage."
-  },
-  "chronoMod:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
-  },
-  "chronoMod:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "chronoMod:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !chronoMod:ENERGY_DAMAGE! damage total.)"
-  },
-  "chronoMod:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! Vulnerable and !chronoMod:SecondMagic! poison to an enemy."
-  },
-  "chronoMod:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
   }
 }

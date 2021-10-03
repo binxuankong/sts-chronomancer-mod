@@ -3,15 +3,11 @@ package chronoMod.cards;
 import chronoMod.DefaultMod;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static chronoMod.DefaultMod.makeCardPath;
 
@@ -31,7 +27,7 @@ public class Surge extends AbstractDynamicCard {
     public Surge() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = CARD_DRAW;
-        this.magicNumber = baseMagicNumber;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override

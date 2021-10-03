@@ -4,9 +4,7 @@ import chronoMod.DefaultMod;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -35,7 +33,7 @@ public class MysticShot extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.baseMagicNumber = BONUS_DMG;
-        this.magicNumber = baseMagicNumber;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override

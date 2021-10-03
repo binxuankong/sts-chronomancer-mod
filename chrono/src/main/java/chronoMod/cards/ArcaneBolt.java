@@ -1,35 +1,22 @@
 package chronoMod.cards;
 
-import basemod.AutoAdd;
+import chronoMod.DefaultMod;
+import chronoMod.characters.Chronomancer;
+import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import chronoMod.DefaultMod;
-import chronoMod.characters.Chronomancer;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static chronoMod.DefaultMod.makeCardPath;
 
-@AutoAdd.Ignore
-public class DefaultUncommonAttack extends AbstractDynamicCard {
-
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Big Slap Deal 10(15)) damage.
-     */
-
-    // TEXT DECLARATION 
-
-    public static final String ID = DefaultMod.makeID(DefaultUncommonAttack.class.getSimpleName());
+public class ArcaneBolt extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(ArcaneBolt.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
-
-    // /TEXT DECLARATION/
-
-
-    // STAT DECLARATION 	
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -38,28 +25,27 @@ public class DefaultUncommonAttack extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
-    // /STAT DECLARATION/
-
-
-    public DefaultUncommonAttack() {
+    public ArcaneBolt() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
+        this.baseDamage = DAMAGE;
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
+        AbstractPower jade = AbstractDungeon.player.getPower(JadePower.POWER_ID);
+        if (jade != null) {
+            this.damage *= 2;
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        }
+        else{
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
     }
 
-    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
@@ -67,5 +53,10 @@ public class DefaultUncommonAttack extends AbstractDynamicCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
+    }
+
+    @Override
+    public AbstractCard makeCopy() {
+        return new ArcaneBolt();
     }
 }

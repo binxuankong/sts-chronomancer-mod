@@ -1,26 +1,25 @@
 package chronoMod.cards;
 
 import chronoMod.DefaultMod;
+import chronoMod.actions.ArcaneBarrageAction;
+import chronoMod.actions.ModifyNumberHitsAction;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static chronoMod.DefaultMod.makeCardPath;
 
-public class Flux extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(Flux.class.getSimpleName());
+public class ArcaneBarrage extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(ArcaneBarrage.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
@@ -28,22 +27,29 @@ public class Flux extends AbstractDynamicCard {
     private static final int COST = 0;
     private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int VULNERABLE = 2;
-    private static final int UPGRADE_PLUS_VUL = 1;
+    private static final int BASE_HITS = 1;
 
-    public Flux() {
+    public ArcaneBarrage() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = VULNERABLE;
+        this.baseMagicNumber = BASE_HITS;
         this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        for(int i = 1; i <= this.magicNumber; i++) {
+            this.addToBot(new ArcaneBarrageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        }
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.LIGHTNING));
-        this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 1), 1));
+                AbstractGameAction.AttackEffect.FIRE));
+    }
+
+    @Override
+    public void triggerWhenDrawn() {
+        this.addToBot(new ModifyNumberHitsAction(this.uuid, 1));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                new JadePower(AbstractDungeon.player, 1), 1));
     }
 
     @Override
@@ -51,13 +57,12 @@ public class Flux extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(UPGRADE_PLUS_VUL);
             initializeDescription();
         }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new Flux();
+        return new ArcaneBarrage();
     }
 }
