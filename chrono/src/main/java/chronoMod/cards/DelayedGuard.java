@@ -2,34 +2,34 @@ package chronoMod.cards;
 
 import chronoMod.DefaultMod;
 import chronoMod.characters.Chronomancer;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import chronoMod.powers.RecallBlockPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static chronoMod.DefaultMod.makeCardPath;
 
-public class DefendCHR extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(DefendCHR.class.getSimpleName());
+public class DelayedGuard extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(DelayedGuard.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    public DefendCHR() {
+    public DelayedGuard() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
-        this.tags.add(CardTags.STARTER_DEFEND);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainBlockAction(p, p, this.block));
+        this.addToBot(new ApplyPowerAction(p, p, new RecallBlockPower(p, this.block), this.block));
     }
 
     @Override
@@ -43,6 +43,6 @@ public class DefendCHR extends AbstractDynamicCard {
 
     @Override
     public AbstractDynamicCard makeCopy() {
-        return new DefendCHR();
+        return new DelayedGuard();
     }
 }

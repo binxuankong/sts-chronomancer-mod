@@ -105,12 +105,19 @@ public class Chronomancer extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         retVal.add(StrikeCHR.ID);
+        retVal.add(StrikeCHR.ID);
+        retVal.add(StrikeCHR.ID);
+        retVal.add(StrikeCHR.ID);
+        retVal.add(StrikeCHR.ID);
+        retVal.add(DefendCHR.ID);
+        retVal.add(DefendCHR.ID);
+        retVal.add(DefendCHR.ID);
+        retVal.add(DefendCHR.ID);
         retVal.add(DefendCHR.ID);
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
         retVal.add(TwilightAssault.ID);
-        retVal.add(MysticShot.ID);
 
         return retVal;
     }
@@ -173,7 +180,7 @@ public class Chronomancer extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new DefaultCommonAttack();
+        return new MysticBlast();
     }
 
     // The class name as it appears next to your player name in-game

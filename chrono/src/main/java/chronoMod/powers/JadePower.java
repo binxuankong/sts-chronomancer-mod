@@ -38,13 +38,14 @@ public class JadePower extends AbstractPower {
         this.flash();
         AbstractDungeon.player.loseEnergy(this.amount);
         if (this.amount > 0) {
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, this.POWER_ID, 1));
+            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
         }
         if (this.amount == 0) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
     }
 
+    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }

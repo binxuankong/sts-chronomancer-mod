@@ -1,35 +1,38 @@
 package chronoMod.powers;
 
 import chronoMod.DefaultMod;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import chronoMod.patches.AbstractPowerEnum;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-import chronoMod.patches.AbstractPowerEnum;
-
-public class RecallEnergyPower extends AbstractPower {
-    public static final String POWER_ID = DefaultMod.makeID("RecallEnergy");
+public class RecallBlockPower extends AbstractPower {
+    public static final String POWER_ID = DefaultMod.makeID("RecallBlock");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public RecallEnergyPower(AbstractCreature owner, int energyAmt) {
+    public RecallBlockPower(AbstractCreature owner, int blockAmt) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = energyAmt;
+        this.amount = blockAmt;
         this.type = AbstractPowerEnum.RECALL;
         this.updateDescription();
-        this.loadRegion("energized_blue");
+        this.loadRegion("defenseNext");
     }
 
     @Override
-    public void onEnergyRecharge() {
+    public void atStartOfTurn() {
         this.flash();
-        this.addToBot(new GainEnergyAction(this.amount));
+        AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.owner.hb.cX, this.owner.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
+        this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 
@@ -39,6 +42,6 @@ public class RecallEnergyPower extends AbstractPower {
     }
 
     public AbstractPower makeCopy() {
-        return new RecallEnergyPower(this.owner, this.amount);
+        return new RecallBlockPower(this.owner, this.amount);
     }
 }

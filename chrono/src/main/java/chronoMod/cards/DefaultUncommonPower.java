@@ -1,5 +1,6 @@
 package chronoMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,6 +13,7 @@ import chronoMod.characters.Chronomancer;
 
 import static chronoMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class DefaultUncommonPower extends AbstractDynamicCard {
 
     /*

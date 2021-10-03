@@ -7,18 +7,34 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "chronoMod:MysticBarrier": {
+    "NAME": "Mystic Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! additional Block for each chronomod:Jade that you have."
+  },
   "chronoMod:MysticBlast": {
     "NAME": "Mystic Blast",
-    "DESCRIPTION": "Deal !D! X damage. NL Gain 1 Jade."
-  },
-  "chronoMod:MysticShot": {
-    "NAME": "Mystic Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each chronomod:Jade you have."
+    "DESCRIPTION": "Deal !D! X damage. NL Gain 1 chronomod:Jade."
   },
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",
     "DESCRIPTION": "chronomod:Recall: Gain [E].",
     "UPGRADE_DESCRIPTION": "Draw !M! card. NL chronomod:Recall: Gain [E]."
+  },
+  "chronoMod:DelayedGuard": {
+    "NAME": "Delayed Guard",
+    "DESCRIPTION": "chronomod:Recall: Gain !B! Block."
+  },
+  "chronoMod:Flux": {
+    "NAME": "Flux",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:MysticShot": {
+    "NAME": "Mystic Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each chronomod:Jade you have."
+  },
+  "chronoMod:Surge": {
+    "NAME": "Surge",
+    "DESCRIPTION": "Draw !M! cards. NL Gain 1 chronomod:Jade."
   },
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",

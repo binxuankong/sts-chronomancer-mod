@@ -3,6 +3,14 @@
         "NAME": "Jade",
         "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " energy."]
     },
+    "chronoMod:RecallBlock": {
+        "NAME": "Recall Block",
+        "DESCRIPTIONS": ["Recall: Gain #b",  " block."]
+    },
+    "chronoMod:RecallDraw": {
+        "NAME": "Recall Draw",
+        "DESCRIPTIONS": ["Recall: Draw #b",  " card.", " cards."]
+    },
     "chronoMod:RecallEnergy": {
         "NAME": "Recall Energy",
         "DESCRIPTIONS": ["Recall: Gain #b",  " energy."]

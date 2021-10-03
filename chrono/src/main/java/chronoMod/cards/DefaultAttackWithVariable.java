@@ -1,5 +1,6 @@
 package chronoMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,6 +13,7 @@ import chronoMod.characters.Chronomancer;
 
 import static chronoMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class DefaultAttackWithVariable extends AbstractDynamicCard {
 
     /*
