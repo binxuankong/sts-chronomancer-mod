@@ -4,6 +4,7 @@ import chronoMod.DefaultMod;
 import chronoMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -35,7 +36,7 @@ public class RecallEnergyPower extends AbstractPower {
 
     public void onEnergyRecharge() {
         this.flash();
-        AbstractDungeon.player.gainEnergy(this.amount);
+        this.addToBot(new GainEnergyAction(this.amount));
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
     }
 

@@ -24,12 +24,12 @@ public class TimeWarp extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 0;
-    private static final int INITIAL_CARD_DRAW = 0;
-    private static final int UPGRADE_CARD_DRAW = 1;
+    private static final int CARD_DRAW = 0;
+    private static final int UPGRADE_PLUS_DRAW = 1;
 
     public TimeWarp() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = this.INITIAL_CARD_DRAW;
+        this.baseMagicNumber = CARD_DRAW;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -43,8 +43,8 @@ public class TimeWarp extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(this.UPGRADE_CARD_DRAW);
-            rawDescription = this.UPGRADE_DESCRIPTION;
+            upgradeMagicNumber(UPGRADE_PLUS_DRAW);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

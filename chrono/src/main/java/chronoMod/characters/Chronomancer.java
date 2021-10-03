@@ -105,15 +105,12 @@ public class Chronomancer extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         retVal.add(StrikeCHR.ID);
-        retVal.add(StrikeCHR.ID);
-        retVal.add(StrikeCHR.ID);
-        retVal.add(DefendCHR.ID);
-        retVal.add(DefendCHR.ID);
         retVal.add(DefendCHR.ID);
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
         retVal.add(TwilightAssault.ID);
+        retVal.add(MysticShot.ID);
 
         return retVal;
     }
@@ -121,9 +118,9 @@ public class Chronomancer extends CustomPlayer {
     // Starting Relics	
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(Goggles.ID);
+        retVal.add(BrokenWatch.ID);
         // Mark relics as seen - makes it visible in the compendium immediately
-        UnlockTracker.markRelicAsSeen(Goggles.ID);
+        UnlockTracker.markRelicAsSeen(BrokenWatch.ID);
         return retVal;
     }
 

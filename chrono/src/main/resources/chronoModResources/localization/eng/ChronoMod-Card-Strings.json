@@ -9,12 +9,16 @@
   },
   "chronoMod:MysticBlast": {
     "NAME": "Mystic Blast",
-    "DESCRIPTION": "Deal !D!X damage. Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D! X damage. NL Gain 1 Jade."
+  },
+  "chronoMod:MysticShot": {
+    "NAME": "Mystic Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each chronomod:Jade you have."
   },
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",
     "DESCRIPTION": "chronomod:Recall: Gain [E].",
-    "UPGRADE_DESCRIPTION": "Draw !M! card. chronomod:Recall: Gain [E]."
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL chronomod:Recall: Gain [E]."
   },
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",

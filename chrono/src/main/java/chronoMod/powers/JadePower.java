@@ -33,6 +33,7 @@ public class JadePower extends AbstractPower {
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
     }
 
+    @Override
     public void onEnergyRecharge() {
         this.flash();
         AbstractDungeon.player.loseEnergy(this.amount);

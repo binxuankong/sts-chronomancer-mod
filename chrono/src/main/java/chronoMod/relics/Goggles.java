@@ -23,25 +23,30 @@ public class Goggles extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
+    @Override
     public void atBattleStart() {
         this.flash();
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.addToBot(new ApplyGogglesAction());
     }
 
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         this.addToBot(new ReverseGogglesAction());
         this.grayscale = true;
     }
 
+    @Override
     public void onVictory() {
         this.grayscale = false;
     }
 
+    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }
 
+    @Override
     public CustomRelic makeCopy() {
         return new Goggles();
     }

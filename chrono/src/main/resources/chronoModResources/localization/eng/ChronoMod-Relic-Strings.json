@@ -3,14 +3,14 @@
     "NAME": "Broken Watch",
     "FLAVOR": "You cannot tell the time with this.",
     "DESCRIPTIONS": [
-      "The first card you play each combat costs 0."
+      "The first time you consume #yJade each combat, gain #b1 [E] ."
     ]
   },
   "chronoMod:Goggles": {
     "NAME": "Goggles",
     "FLAVOR": "You can see further with this.",
     "DESCRIPTIONS": [
-      "The first card you play each combat costs 0."
+      "The first card you play each combat costs #b0."
     ]
   },
   "chronoMod:PlaceholderRelic": {
