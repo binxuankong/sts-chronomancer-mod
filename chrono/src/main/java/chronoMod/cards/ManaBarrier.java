@@ -1,0 +1,57 @@
+package chronoMod.cards;
+
+import chronoMod.DefaultMod;
+import chronoMod.characters.Chronomancer;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import static chronoMod.DefaultMod.makeCardPath;
+
+public class ManaBarrier extends AbstractDynamicCard {
+    public static final String ID = DefaultMod.makeID(ManaBarrier.class.getSimpleName());
+    public static final String IMG = makeCardPath("Skill.png");
+
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
+    public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
+
+    private static final int COST = 1;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int BONUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BONUS_BLOCK = 1;
+
+    public ManaBarrier() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.baseBlock = BLOCK;
+        this.baseMagicNumber = BONUS_BLOCK;
+        this.magicNumber = this.baseMagicNumber;
+    }
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new GainBlockAction(p, this.block));
+    }
+
+    @Override
+    public void triggerWhenDrawn() {
+        this.upgradeBlock(this.magicNumber);
+    }
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
+            upgradeMagicNumber(UPGRADE_PLUS_BONUS_BLOCK);
+            initializeDescription();
+        }
+    }
+
+    @Override
+    public AbstractDynamicCard makeCopy() {
+        return new ManaBarrier();
+    }
+}

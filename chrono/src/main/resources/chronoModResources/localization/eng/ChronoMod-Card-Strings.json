@@ -17,16 +17,26 @@
   },
   "chronoMod:AstralBeam": {
     "NAME": "Astral Beam",
-    "DESCRIPTION": "Deal !D! damage and draw !M! cards. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D! damage and draw !M! card. NL Gain 1 chronomod:Jade.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and draw !M! cards. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:BlackHole": {
+    "NAME": "Black Hole",
+    "DESCRIPTION": "Deal !D! X damage. NL Gain X chronomod:Jade. NL Exhaust."
   },
   "chronoMod:Causality": {
     "NAME": "Causality",
-    "DESCRIPTION": "Gain [E][E]. NL Gain 1 chronomod:Jade.",
-    "UPGRADE_DESCRIPTION": "Gain [E][E][E]. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Gain [E] [E]. NL Gain 1 chronomod:Jade.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Gain 1 chronomod:Jade."
   },
   "chronoMod:DarkMatter": {
     "NAME": "Dark Matter",
     "DESCRIPTION": "Gain !B! Block. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:DejaVu": {
+    "NAME": "Deja Vu",
+    "DESCRIPTION": "Play the last card that you played.",
+    "EXTENDED_DESCRIPTION": [" NL Last card played: [#ffff00]", "[]."]
   },
   "chronoMod:DelayedGuard": {
     "NAME": "Delayed Guard",
@@ -45,6 +55,14 @@
   "chronoMod:Flux": {
     "NAME": "Flux",
     "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:ManaBall": {
+    "NAME": "Mana Ball",
+    "DESCRIPTION": "Deal !D! damage. NL When you draw this card, increase its damage by !M! this combat."
+  },
+  "chronoMod:ManaBarrier": {
+    "NAME": "Mana Barrier",
+    "DESCRIPTION": "Gain !B! Block. NL When you draw this card, increase its Block by !M! this combat."
   },
   "chronoMod:Memento": {
     "NAME": "Memento",
@@ -86,6 +104,15 @@
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",
     "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 chronomod:Jade."
+  },
+  "chronoMod:WheelOfTime": {
+    "NAME": "Wheel of Time",
+    "DESCRIPTION": "Your next Attack deals !M! X additional damage."
+  },
+  "chronoMod:Wormhole": {
+    "NAME": "Wormhole",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! chronomod:Jade. NL Ethereal.",
+    "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:DefaultRareAttack": {
     "NAME": "TOUCH",

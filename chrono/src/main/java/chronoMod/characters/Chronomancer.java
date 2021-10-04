@@ -117,8 +117,8 @@ public class Chronomancer extends CustomPlayer {
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
-        retVal.add(DelayedGuard.ID);
-        retVal.add(TidesOfTime.ID);
+        retVal.add(BlackHole.ID);
+        retVal.add(WheelOfTime.ID);
 
         return retVal;
     }

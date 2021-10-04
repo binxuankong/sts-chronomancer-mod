@@ -26,7 +26,7 @@ public class Causality extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int ENERGY = 2;
-    private static final int UPGRADE_PLUS_ENERGY = 3;
+    private static final int UPGRADE_PLUS_ENERGY = 1;
 
     public Causality() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
