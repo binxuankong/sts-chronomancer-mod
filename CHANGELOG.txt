@@ -10,3 +10,17 @@ Change Goggles effect
 Change Ancient Watch effect
 - Old: For the next 3 turns, the first card you play each turn costs 0.
 - New: The next 3 times you consume Jade each combat, gain 1 E.
+
+
+2021-10-04
+Change Arcane Barrage effect
+- Old: Deal 8 damage 1 time. When you draw this card, increase its number of hits by 1 this combat and gain 1 Jade. Cost: 0.
+- New: Deal 8 damage 2 times. When you draw this card, increase its number of hits by 1 this combat and gain 1 Jade. Cost: 1.
+
+Change Broken Watch effect
+- Old: The first time you consume Jade each combat, gain 1 E.
+- New: The first time you consume Jade each combat, draw 3 cards.
+
+Change Ancient Watch effect
+- Old: The next 3 times you consume Jade each combat, gain 1 E.
+- New: The next 3 times you consume Jade each combat, gain 1 E and draw 2 cards.

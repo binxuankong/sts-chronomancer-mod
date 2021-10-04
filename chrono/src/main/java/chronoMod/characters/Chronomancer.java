@@ -107,18 +107,18 @@ public class Chronomancer extends CustomPlayer {
         retVal.add(StrikeCHR.ID);
         retVal.add(StrikeCHR.ID);
         retVal.add(StrikeCHR.ID);
-        retVal.add(StrikeCHR.ID);
-        retVal.add(StrikeCHR.ID);
+        //retVal.add(StrikeCHR.ID);
+        //retVal.add(StrikeCHR.ID);
         retVal.add(DefendCHR.ID);
         retVal.add(DefendCHR.ID);
         retVal.add(DefendCHR.ID);
-        retVal.add(DefendCHR.ID);
-        retVal.add(DefendCHR.ID);
+        //retVal.add(DefendCHR.ID);
+        //retVal.add(DefendCHR.ID);
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
-        retVal.add(EventHorizon.ID);
-        retVal.add(ArcaneBarrage.ID);
+        retVal.add(DelayedGuard.ID);
+        retVal.add(TidesOfTime.ID);
 
         return retVal;
     }

@@ -5,6 +5,7 @@ import chronoMod.powers.JadePower;
 import chronoMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -31,11 +32,11 @@ public class BrokenWatch extends CustomRelic {
     }
 
     @Override
-    public void onEnergyRecharge() {
+    public void atTurnStartPostDraw () {
         if (this.activate) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new GainEnergyAction(1));
+            this.addToBot(new DrawCardAction(2));
             this.activate = false;
             this.grayscale = true;
         }

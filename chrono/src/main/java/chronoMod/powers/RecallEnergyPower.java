@@ -8,29 +8,31 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import chronoMod.patches.AbstractPowerEnum;
-
-public class RecallEnergyPower extends AbstractPower {
+public class RecallEnergyPower extends RecallPower {
     public static final String POWER_ID = DefaultMod.makeID("RecallEnergy");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     public RecallEnergyPower(AbstractCreature owner, int energyAmt) {
+        super(owner);
         this.name = NAME;
         this.ID = POWER_ID;
-        this.owner = owner;
         this.amount = energyAmt;
-        this.type = AbstractPowerEnum.RECALL;
         this.updateDescription();
         this.loadRegion("energized_blue");
+        this.priority = 10;
+    }
+
+    @Override
+    public void recallEffect () {
+        this.addToBot(new GainEnergyAction(this.amount));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     @Override
     public void onEnergyRecharge() {
-        this.flash();
-        this.addToBot(new GainEnergyAction(this.amount));
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+        this.triggerRecall();
     }
 
     @Override

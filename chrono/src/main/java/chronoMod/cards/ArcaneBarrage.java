@@ -24,10 +24,10 @@ public class ArcaneBarrage extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int BASE_HITS = 1;
+    private static final int BASE_HITS = 2;
 
     public ArcaneBarrage() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -38,7 +38,7 @@ public class ArcaneBarrage extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 1; i <= this.magicNumber; i++) {
+        for (int i = 1; i <= this.magicNumber; i++) {
             this.addToBot(new ArcaneBarrageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
         }
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
