@@ -3,7 +3,7 @@
     "NAME": "Broken Watch",
     "FLAVOR": "You cannot tell the time with this.",
     "DESCRIPTIONS": [
-      "The first time you consume #yJade each combat, gain #b1 [E] ."
+      "The first time you consume #yJade each combat, draw #b2 cards."
     ]
   },
   "chronoMod:Goggles": {

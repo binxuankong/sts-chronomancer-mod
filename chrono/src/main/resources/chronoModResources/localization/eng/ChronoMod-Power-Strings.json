@@ -3,9 +3,13 @@
         "NAME": "Jade",
         "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " energy."]
     },
+    "chronoMod:Memento": {
+        "NAME": "Memento",
+        "DESCRIPTIONS": ["At the end of the turn, you can choose to place #b", " card", " cards", " from your hand onto the top of your draw pile."]
+    },
     "chronoMod:RecallBlock": {
         "NAME": "Recall Block",
-        "DESCRIPTIONS": ["Recall: Gain #b",  " block."]
+        "DESCRIPTIONS": ["Recall: Gain #b",  " Block."]
     },
     "chronoMod:RecallDraw": {
         "NAME": "Recall Draw",
@@ -14,6 +18,18 @@
     "chronoMod:RecallEnergy": {
         "NAME": "Recall Energy",
         "DESCRIPTIONS": ["Recall: Gain #b",  " energy."]
+    },
+    "chronoMod:StarSurge": {
+        "NAME": "Star Surge",
+        "DESCRIPTIONS": ["Recall: Deal #b",  " damage to all enemies."]
+    },
+    "chronoMod:TemperedFate": {
+        "NAME": "Tempered Fate",
+        "DESCRIPTIONS": ["Prevent the next time you would lose HP.", "Prevent the next #b", " times you would lose HP.", " Gain 1 Jade when this effect triggers."]
+    },
+    "chronoMod:TidesOfTime": {
+        "NAME": "Tides of Time",
+        "DESCRIPTIONS": ["Whenever you trigger a Recall effect, apply #b", " Weak to all enemies."]
     },
     "chronoMod:CommonPower": {
         "NAME": "Placeholder Power",

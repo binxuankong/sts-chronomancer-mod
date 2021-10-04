@@ -9,7 +9,7 @@
   },
   "chronoMod:ArcaneBarrage": {
     "NAME": "Arcane Barrage",
-    "DESCRIPTION": "Deal !D! damage !M! time(s). NL When you draw this card, increase its number of hits by 1 this combat and gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL When you draw this card, increase its number of hits by 1 this combat and gain 1 chronomod:Jade."
   },
   "chronoMod:ArcaneBolt": {
     "NAME": "Arcane Bolt",
@@ -19,9 +19,22 @@
     "NAME": "Astral Beam",
     "DESCRIPTION": "Deal !D! damage and draw !M! cards. NL Gain 1 chronomod:Jade."
   },
+  "chronoMod:Causality": {
+    "NAME": "Causality",
+    "DESCRIPTION": "Gain [E][E]. NL Gain 1 chronomod:Jade.",
+    "UPGRADE_DESCRIPTION": "Gain [E][E][E]. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:DarkMatter": {
+    "NAME": "Dark Matter",
+    "DESCRIPTION": "Gain !B! Block. NL Gain 1 chronomod:Jade."
+  },
   "chronoMod:DelayedGuard": {
     "NAME": "Delayed Guard",
     "DESCRIPTION": "chronomod:Recall: Gain !B! Block."
+  },
+  "chronoMod:DistortReality": {
+    "NAME": "Distort Reality",
+    "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile onto the top of your draw pile."
   },
   "chronoMod:EventHorizon": {
     "NAME": "Event Horizion",
@@ -32,6 +45,10 @@
   "chronoMod:Flux": {
     "NAME": "Flux",
     "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:Memento": {
+    "NAME": "Memento",
+    "DESCRIPTION": "At the end of your turn, you can choose to place !M! card from your hand onto the top of your draw pile."
   },
   "chronoMod:MysticBarrier": {
     "NAME": "Mystic Barrier",
@@ -45,9 +62,21 @@
     "NAME": "Mystic Shot",
     "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each chronomod:Jade you have."
   },
+  "chronoMod:StarSurge": {
+    "NAME": "Star Surge",
+    "DESCRIPTION": "chronomod:Recall: Deal !D! damage to ALL enemies."
+  },
   "chronoMod:Surge": {
     "NAME": "Surge",
     "DESCRIPTION": "Draw !M! cards. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:TemperedFate": {
+    "NAME": "Tempered Fate",
+    "DESCRIPTION": "Prevent the next time you would lose HP. Gain 1 chronomod:Jade when this effect triggers."
+  },
+  "chronoMod:TidesOfTime": {
+    "NAME": "Tides of Time",
+    "DESCRIPTION": "Whenever you trigger a chronomod:Recall effect, apply !M! Weak to ALL enemies."
   },
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",
