@@ -22,7 +22,7 @@ public class DarkMatter extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 0;
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 10;
     private static final int UPGRADE_PLUS_BLOCK = 4;
 
     public DarkMatter() {

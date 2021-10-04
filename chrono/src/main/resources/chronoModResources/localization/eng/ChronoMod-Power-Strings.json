@@ -1,4 +1,12 @@
 {
+    "chronoMod:ArcaneBlessing": {
+        "NAME": "Arcane Blessing",
+        "DESCRIPTIONS": ["Whenever you consume Jade, gain #b", " Strength and #b", " Dexterity."]
+    },
+    "chronoMod:FalsePromise": {
+        "NAME": "False Promise",
+        "DESCRIPTIONS": ["If you play #b", " more card this turn, gain #b", " more cards this turn, gain #b", " energy, #b", " Jade and draw #b", " card.", " cards."]
+    },
     "chronoMod:Jade": {
         "NAME": "Jade",
         "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " energy."]

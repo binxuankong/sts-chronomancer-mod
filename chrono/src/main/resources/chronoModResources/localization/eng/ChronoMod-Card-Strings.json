@@ -11,9 +11,19 @@
     "NAME": "Arcane Barrage",
     "DESCRIPTION": "Deal !D! damage !M! times. NL When you draw this card, increase its number of hits by 1 this combat and gain 1 chronomod:Jade."
   },
+  "chronoMod:ArcaneBlessing": {
+    "NAME": "Arcane Blessing",
+    "DESCRIPTION": "Whenever you consume chronomod:Jade, gain !M! Strength and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you consume chronomod:Jade, gain !M! Strength and !M! Dexterity."
+  },
   "chronoMod:ArcaneBolt": {
     "NAME": "Arcane Bolt",
     "DESCRIPTION": "Deal !D! damage. NL If you have chronomod:Jade, gain 1 chronomod:Jade to deal double damage."
+  },
+  "chronoMod:AstralBanishment": {
+    "NAME": "Astral Banishment",
+    "DESCRIPTION": "Require at least [E] [E] [E]. NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
+    "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:AstralBeam": {
     "NAME": "Astral Beam",
@@ -47,10 +57,15 @@
     "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile onto the top of your draw pile."
   },
   "chronoMod:EventHorizon": {
-    "NAME": "Event Horizion",
+    "NAME": "Event Horizon",
     "DESCRIPTION": "Unplayable. NL When you draw this card, gain !M! [E].",
     "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw this card, gain !B! Block and !M! [E].",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
+  },
+  "chronoMod:FalsePromise": {
+    "NAME": "False Promise",
+    "DESCRIPTION": "Whenever you play 4 cards in a single turn, gain [E] , !M! chronomod:Jade and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 4 cards in a single turn, gain [E] , !M! chronomod:Jade and draw !M! card."
   },
   "chronoMod:Flux": {
     "NAME": "Flux",

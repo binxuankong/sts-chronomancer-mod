@@ -23,7 +23,7 @@ Broken Watch
 
 Ancient Watch
 - Old: The next 3 times you consume Jade each combat, gain 1 E.
-- New: The next 3 times you consume Jade each combat, gain 1 E and draw 2 cards.
+- New: The first time you consume Jade each combat, gain 2 E and draw 3 cards.
 
 Astral Beam
 - Old: Deal 6(9) damage and draw 2(3) cards. Gain 1 Jade.
@@ -31,4 +31,8 @@ Astral Beam
 
 Wormhole
 - Old: Unplayable. When you draw this card, gain 1 Intangible and 3(2) Jade.
-- New: Unplayable. When you draw this card, gain 1 Intangible and 2(1) Jade. Ethereal.
+- New: Unplayable. When you draw this card, gain 1 Intangible and 2(1) Jade. Exhaust.
+
+Black Hole
+- Old: Deal 18(24)X damage. Gain X Jade. Exhaust.
+- New: Deal 15(20)X damage. Gain X Jade. Exhaust.
