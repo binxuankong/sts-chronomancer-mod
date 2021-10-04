@@ -31,17 +31,15 @@ public class AstralBanishment extends AbstractXCostCard {
     public AstralBanishment() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = ENERGY_GAINED_AMOUNT;
-        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int effect = this.getEffectNum(p);
         if (effect > 0) {
-            for(int i = 0; i < effect; i++) {
+            for (int i = 0; i < effect; i++) {
                 this.addToBot(new AstralBanishmentAction(new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        this.magicNumber));
+                        ENERGY_GAINED_AMOUNT));
             }
         }
     }

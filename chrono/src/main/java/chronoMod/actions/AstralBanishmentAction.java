@@ -1,11 +1,13 @@
 package chronoMod.actions;
 
+import chronoMod.DefaultMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class AstralBanishmentAction extends AbstractGameAction {
     private DamageInfo info;
@@ -23,9 +25,11 @@ public class AstralBanishmentAction extends AbstractGameAction {
                 AbstractDungeon.cardRandomRng);
 
         if (this.target != null) {
+            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.FIRE));
             this.setValues(target, info);
-            this.addToBot(new DamageAction(this.target, this.info, this.attackEffect));
+            this.target.damage(this.info);
             if (this.target.isDying || this.target.currentHealth <= 0) {
+                DefaultMod.logger.info(this.target.name, this.target.currentHealth);
                 this.addToBot(new GainEnergyAction(this.energyGainAmt));
             }
         }

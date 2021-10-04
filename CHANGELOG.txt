@@ -36,3 +36,7 @@ Wormhole
 Black Hole
 - Old: Deal 18(24)X damage. Gain X Jade. Exhaust.
 - New: Deal 15(20)X damage. Gain X Jade. Exhaust.
+
+Fortune's End
+- Old: Deal 10 damage to ALL enemies. Deal 3(5) additional damage for each Jade gained this combat. Exhaust.
+- New: Gain 2 Jade. Deal 10(13) damage for each Jade you have.

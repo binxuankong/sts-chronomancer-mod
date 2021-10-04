@@ -22,7 +22,7 @@
   },
   "chronoMod:AstralBanishment": {
     "NAME": "Astral Banishment",
-    "DESCRIPTION": "Require at least [E] [E] [E]. NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
+    "DESCRIPTION": "Require [E] [E] [E] or more. NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:AstralBeam": {
@@ -32,12 +32,20 @@
   },
   "chronoMod:BlackHole": {
     "NAME": "Black Hole",
-    "DESCRIPTION": "Deal !D! X damage. NL Gain X chronomod:Jade. NL Exhaust."
+    "DESCRIPTION": "Deal !D!X damage. NL Gain X chronomod:Jade. NL Exhaust."
+  },
+  "chronoMod:BoomerangBlade": {
+    "NAME": "Boomerang Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Place this card onto the top of your draw pile."
   },
   "chronoMod:Causality": {
     "NAME": "Causality",
     "DESCRIPTION": "Gain [E] [E]. NL Gain 1 chronomod:Jade.",
     "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Gain 1 chronomod:Jade."
+  },
+  "chronoMod:ContinuumShift": {
+    "NAME": "Continuum Shift",
+    "DESCRIPTION": "Gain !B! Block. NL chronomod:Recall: Gain !B! Block."
   },
   "chronoMod:DarkMatter": {
     "NAME": "Dark Matter",
@@ -71,6 +79,24 @@
     "NAME": "Flux",
     "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 chronomod:Jade."
   },
+  "chronoMod:FortunesEnd": {
+    "NAME": "Fortune's End",
+    "DESCRIPTION": "Gain 2 chronomod:Jade. NL Deal !D! damage for each chronomod:Jade you have."
+  },
+  "chronoMod:Glimpse": {
+    "NAME": "Glimpse",
+    "DESCRIPTION": "Draw !M! card. NL Put a card from your hand onto the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Put a card from your hand onto the top of your draw pile."
+  },
+  "chronoMod:GoofOff": {
+    "NAME": "Goof Off",
+    "DESCRIPTION": "Deal !D! damage. NL Discard the top !M! cards of your draw pile."
+  },
+  "chronoMod:LucidDream": {
+    "NAME": "Lucid Dream",
+    "DESCRIPTION": "Ethereal. NL Gain [E] and 1 chronomod:Jade. NL Put this card onto the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain [E] and 1 chronomod:Jade. NL Put this card onto the top of your draw pile."
+  },
   "chronoMod:ManaBall": {
     "NAME": "Mana Ball",
     "DESCRIPTION": "Deal !D! damage. NL When you draw this card, increase its damage by !M! this combat."
@@ -89,11 +115,15 @@
   },
   "chronoMod:MysticBlast": {
     "NAME": "Mystic Blast",
-    "DESCRIPTION": "Deal !D! X damage. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D!X damage. NL Gain 1 chronomod:Jade."
   },
   "chronoMod:MysticShot": {
     "NAME": "Mystic Shot",
     "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each chronomod:Jade you have."
+  },
+  "chronoMod:RingSingularity": {
+    "NAME": "Ring Singularity",
+    "DESCRIPTION": "Deal !D! damage. NL chronomod:Recall: Gain [E] [E]."
   },
   "chronoMod:StarSurge": {
     "NAME": "Star Surge",
@@ -116,17 +146,22 @@
     "DESCRIPTION": "chronomod:Recall: Gain [E].",
     "UPGRADE_DESCRIPTION": "Draw !M! card. NL chronomod:Recall: Gain [E]."
   },
+  "chronoMod:TipOfTheTongue": {
+    "NAME": "Tip of the Tongue",
+    "DESCRIPTION": "Deal !D! damage. NL Put a random card from your discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Deal 6 damage. NL Put a card from your discard pile into your hand."
+  },
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",
     "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 chronomod:Jade."
   },
   "chronoMod:WheelOfTime": {
     "NAME": "Wheel of Time",
-    "DESCRIPTION": "Your next Attack deals !M! X additional damage."
+    "DESCRIPTION": "Your next Attack deals !M!X additional damage."
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",
-    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! chronomod:Jade. NL Ethereal.",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! chronomod:Jade. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:DefaultRareAttack": {

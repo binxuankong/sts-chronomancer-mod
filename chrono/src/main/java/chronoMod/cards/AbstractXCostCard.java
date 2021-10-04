@@ -20,6 +20,10 @@ public abstract class AbstractXCostCard extends AbstractDynamicCard {
             effect += 2;
             p.getRelic("Chemical X").flash();
         }
+        // Use energy
+        if (!this.freeToPlayOnce) {
+            p.energy.use(EnergyPanel.totalCount);
+        }
         return effect;
     }
 }
