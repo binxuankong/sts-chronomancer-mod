@@ -19,9 +19,9 @@ public class TidesOfTime extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int COST = 2;
-    private static final int UPGRADE_COST = 1;
+    private static final int COST = 1;
     private static final int NUM_WEAK = 1;
+    private static final int UPGRADE_PLUS_WEAK = 1;
 
     public TidesOfTime() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -38,7 +38,7 @@ public class TidesOfTime extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_WEAK);
             initializeDescription();
         }
     }

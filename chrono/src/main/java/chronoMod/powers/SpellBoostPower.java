@@ -1,12 +1,7 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -26,6 +21,13 @@ public class SpellBoostPower extends AbstractPower {
         this.updateDescription();
         this.loadRegion("establishment");
         this.isTurnBased = false;
+    }
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 
     @Override

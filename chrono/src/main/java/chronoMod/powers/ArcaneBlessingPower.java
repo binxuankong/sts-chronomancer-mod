@@ -12,18 +12,18 @@ public class ArcaneBlessingPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public ArcaneBlessingPower(AbstractCreature owner, int numBuff) {
+    public ArcaneBlessingPower(AbstractCreature owner, int extraDamage) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = numBuff;
+        this.amount = extraDamage;
         this.updateDescription();
-        this.loadRegion("fasting");
+        this.loadRegion("hymn");
     }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     public AbstractPower makeCopy() {

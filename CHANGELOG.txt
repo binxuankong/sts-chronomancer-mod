@@ -40,3 +40,25 @@ Black Hole
 Fortune's End
 - Old: Deal 10 damage to ALL enemies. Deal 3(5) additional damage for each Jade gained this combat. Exhaust.
 - New: Gain 2 Jade. Deal 10(13) damage for each Jade you have.
+
+
+2021-10-05
+Ring Singularity
+- Old: Uncommon
+- New: Common
+
+Timestream Shift
+- Old: Deal 9(12) damage. Recall: If this card is in your discard pile, return it to your hand.
+- New: Deal 8(10) damage. Recall: If the enemy intends to attack, gain 1(2) Strength.
+
+Mystic Barrier
+- Old: Gain 8(10) Block. Gain 1(2) additional Block for each Jade that you have.
+- New: Gain 4(5) Block. Gain 1(2) additional Block for each Jade that you have.
+
+Dark Matter
+- Old: Gain 10(14) Block. Gain 1 Jade.
+- New: Gain 14(18) Block. Gain 1 Jade.
+
+Tides of Time
+- Old: Whenever you trigger a Recall effect, apply 1 Weak to ALL enemies.
+- New: The first time you trigger a Recall effect each turn, apply 1(2) Weak to ALL enemies.

@@ -9,7 +9,8 @@
   },
   "chronoMod:Accelerate": {
     "NAME": "Accelerate",
-    "DESCRIPTION": "Trigger all Recall effects this turn."
+    "DESCRIPTION": "Trigger all Recall effects this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Trigger all Recall effects this turn."
   },
   "chronoMod:ArcaneBarrage": {
     "NAME": "Arcane Barrage",
@@ -17,8 +18,7 @@
   },
   "chronoMod:ArcaneBlessing": {
     "NAME": "Arcane Blessing",
-    "DESCRIPTION": "Whenever you consume Jade, gain !M! Strength and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you consume Jade, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "Whenever you consume Jade, your next Attack deals !M! additional damage."
   },
   "chronoMod:ArcaneBolt": {
     "NAME": "Arcane Bolt",
@@ -135,7 +135,7 @@
   },
   "chronoMod:SpellBoost": {
     "NAME": "Spell Boost",
-    "DESCRIPTION": "Increase the effect of the next cost X card played by !M!."
+    "DESCRIPTION": "Increase the effect of the next cost X card played this turn by !M!."
   },
   "chronoMod:StarSurge": {
     "NAME": "Star Surge",
@@ -151,7 +151,7 @@
   },
   "chronoMod:TidesOfTime": {
     "NAME": "Tides of Time",
-    "DESCRIPTION": "Whenever you trigger a Recall effect, apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Apply !M! Weak to ALL enemies at the end of your turn if you have triggered a Recall effect this turn."
   },
   "chronoMod:TimeDilation": {
     "NAME": "Time Dilation",

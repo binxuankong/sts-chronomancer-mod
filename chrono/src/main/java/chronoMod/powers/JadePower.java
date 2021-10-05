@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 public class JadePower extends AbstractPower {
     public static final String POWER_ID = ChronoMod.makeID("Jade");
@@ -41,9 +42,8 @@ public class JadePower extends AbstractPower {
         AbstractPower arcaneBlessing = this.owner.getPower(ArcaneBlessingPower.POWER_ID);
         if (arcaneBlessing != null) {
             arcaneBlessing.flash();
-            int buff_amt = arcaneBlessing.amount;
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, buff_amt), buff_amt));
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, buff_amt), buff_amt));
+            int extraDmg = arcaneBlessing.amount;
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new VigorPower(this.owner, extraDmg), extraDmg));
         }
     }
 

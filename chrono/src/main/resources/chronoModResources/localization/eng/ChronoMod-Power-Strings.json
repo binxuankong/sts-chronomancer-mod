@@ -1,7 +1,7 @@
 {
     "chronoMod:ArcaneBlessing": {
         "NAME": "Arcane Blessing",
-        "DESCRIPTIONS": ["Whenever you consume Jade, gain #b", " Strength and #b", " Dexterity."]
+        "DESCRIPTIONS": ["Whenever you consume Jade, your next Attack deals #b", " additional damage."]
     },
     "chronoMod:FalsePromise": {
         "NAME": "False Promise",
@@ -33,7 +33,7 @@
     },
     "chronoMod:SpellBoost": {
         "NAME": "Spell Boost",
-        "DESCRIPTIONS": ["Increase the effect of the next cost X card played by #b", " ."]
+        "DESCRIPTIONS": ["Increase the effect of the next cost X card played this turn by #b", " ."]
     },
     "chronoMod:StarSurge": {
         "NAME": "Star Surge",
@@ -45,7 +45,7 @@
     },
     "chronoMod:TidesOfTime": {
         "NAME": "Tides of Time",
-        "DESCRIPTIONS": ["Whenever you trigger a Recall effect, apply #b", " Weak to all enemies."]
+        "DESCRIPTIONS": ["Apply #b", " Weak to ALL enemies at the end of your turn if you have triggered a Recall effect this turn."]
     },
     "chronoMod:TimeDilation": {
         "NAME": "Time Dilation",
