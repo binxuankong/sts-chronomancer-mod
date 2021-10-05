@@ -1,6 +1,6 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -9,15 +9,13 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class Flux extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(Flux.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(Flux.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;

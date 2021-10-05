@@ -1,25 +1,20 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.JadePower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class WheelOfTime extends AbstractXCostCard {
-    public static final String ID = DefaultMod.makeID(WheelOfTime.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(WheelOfTime.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
 
     private static final CardRarity RARITY = CardRarity.RARE;

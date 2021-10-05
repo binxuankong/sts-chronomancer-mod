@@ -1,15 +1,15 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class ManaBarrier extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(ManaBarrier.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(ManaBarrier.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;

@@ -4,7 +4,7 @@ import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import chronoMod.cards.AbstractDefaultCard;
 
-import static chronoMod.DefaultMod.makeID;
+import static chronoMod.ChronoMod.makeID;
 
 public class DefaultSecondMagicNumber extends DynamicVariable {
 

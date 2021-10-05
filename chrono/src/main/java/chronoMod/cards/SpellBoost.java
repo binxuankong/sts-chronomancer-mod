@@ -2,49 +2,48 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.TemperedFatePower;
+import chronoMod.powers.SpellBoostPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
-public class TemperedFate extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(TemperedFate.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+public class SpellBoost extends AbstractDynamicCard {
+    public static final String ID = ChronoMod.makeID(SpellBoost.class.getSimpleName());
+    public static final String IMG = makeCardPath("Skill.png");
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
-    private static final int BUFFER_AMOUNT = 1;
+    private static final int EFFECT_AMOUNT = 2;
+    private static final int UPGRADE_PLUS_AMOUNT = 1;
 
-    public TemperedFate() {
+    public SpellBoost() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = BUFFER_AMOUNT;
+        this.baseMagicNumber = EFFECT_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new TemperedFatePower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new SpellBoostPower(p, this.magicNumber), this.magicNumber));
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_AMOUNT);
             initializeDescription();
         }
     }
 
     @Override
-    public AbstractCard makeCopy() {
-        return new TemperedFate();
+    public AbstractDynamicCard makeCopy() {
+        return new SpellBoost();
     }
 }

@@ -7,15 +7,15 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.util.TextureLoader;
 import chronoMod.actions.ApplyGogglesAction;
 import chronoMod.actions.ReverseGogglesAction;
-import static chronoMod.DefaultMod.makeRelicOutlinePath;
-import static chronoMod.DefaultMod.makeRelicPath;
+import static chronoMod.ChronoMod.makeRelicOutlinePath;
+import static chronoMod.ChronoMod.makeRelicPath;
 
 public class Goggles extends CustomRelic {
-    public static final String ID = DefaultMod.makeID("Goggles");
+    public static final String ID = ChronoMod.makeID("Goggles");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 

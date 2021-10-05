@@ -1,16 +1,16 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.RecallBlockPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class DelayedGuard extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(DelayedGuard.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(DelayedGuard.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;

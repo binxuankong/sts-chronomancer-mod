@@ -13,17 +13,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.util.TextureLoader;
 
-import static chronoMod.DefaultMod.makePowerPath;
+import static chronoMod.ChronoMod.makePowerPath;
 
 //Gain 1 dex for the turn for each card played.
 
 public class CommonPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = DefaultMod.makeID("CommonPower");
+    public static final String POWER_ID = ChronoMod.makeID("CommonPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

@@ -1,6 +1,6 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.actions.AstralBanishmentAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class AstralBanishment extends AbstractXCostCard {
-    public static final String ID = DefaultMod.makeID(AstralBanishment.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(AstralBanishment.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION[0];

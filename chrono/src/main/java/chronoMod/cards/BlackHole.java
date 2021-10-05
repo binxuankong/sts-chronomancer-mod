@@ -1,6 +1,6 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,10 +15,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class BlackHole extends AbstractXCostCard {
-    public static final String ID = DefaultMod.makeID(BlackHole.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(BlackHole.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     private static final CardRarity RARITY = CardRarity.RARE;

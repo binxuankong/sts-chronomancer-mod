@@ -1,6 +1,6 @@
 package chronoMod.powers;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.actions.MementoAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class MementoPower extends AbstractPower {
-    public static final String POWER_ID = DefaultMod.makeID("Memento");
+    public static final String POWER_ID = ChronoMod.makeID("Memento");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

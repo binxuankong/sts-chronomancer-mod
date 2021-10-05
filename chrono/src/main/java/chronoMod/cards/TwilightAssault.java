@@ -1,6 +1,6 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -12,10 +12,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import chronoMod.powers.JadePower;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class TwilightAssault extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(TwilightAssault.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(TwilightAssault.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;

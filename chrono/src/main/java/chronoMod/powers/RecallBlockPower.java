@@ -1,6 +1,6 @@
 package chronoMod.powers;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class RecallBlockPower extends RecallPower {
-    public static final String POWER_ID = DefaultMod.makeID("RecallBlock");
+    public static final String POWER_ID = ChronoMod.makeID("RecallBlock");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -31,7 +31,6 @@ public class RecallBlockPower extends RecallPower {
     public void recallEffect() {
         AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.owner.hb.cX, this.owner.hb.cY, AbstractGameAction.AttackEffect.SHIELD));
         this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     @Override

@@ -3,6 +3,7 @@ package chronoMod.powers;
 import chronoMod.patches.AbstractPowerEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -23,7 +24,6 @@ public abstract class RecallPower extends AbstractPower {
     public void triggerRecall() {
         this.flash();
         this.recallEffect();
-
         // Tides of Time
         AbstractPower tidesOfTime = this.owner.getPower(TidesOfTimePower.POWER_ID);
         if (tidesOfTime != null) {
@@ -34,5 +34,6 @@ public abstract class RecallPower extends AbstractPower {
                         tidesOfTime.amount, true, AbstractGameAction.AttackEffect.NONE));
             }
         }
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 }

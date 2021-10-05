@@ -1,16 +1,16 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class DefendCHR extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(DefendCHR.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String ID = ChronoMod.makeID(DefendCHR.class.getSimpleName());
+    public static final String IMG = makeCardPath("Defend.png");
 
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;

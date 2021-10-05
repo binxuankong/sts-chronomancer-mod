@@ -1,6 +1,6 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.FalsePromisePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class FalsePromise extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(FalsePromise.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(FalsePromise.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

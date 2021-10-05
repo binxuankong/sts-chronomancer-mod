@@ -1,8 +1,7 @@
 package chronoMod.actions;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -29,7 +28,7 @@ public class AstralBanishmentAction extends AbstractGameAction {
             this.setValues(target, info);
             this.target.damage(this.info);
             if (this.target.isDying || this.target.currentHealth <= 0) {
-                DefaultMod.logger.info(this.target.name, this.target.currentHealth);
+                ChronoMod.logger.info(this.target.name, this.target.currentHealth);
                 this.addToBot(new GainEnergyAction(this.energyGainAmt));
             }
         }

@@ -1,6 +1,6 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.RecallEnergyPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class RingSingularity extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(RingSingularity.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(RingSingularity.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;

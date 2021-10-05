@@ -1,6 +1,6 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.actions.ArcaneBarrageAction;
 import chronoMod.actions.ModifyNumberHitsAction;
 import chronoMod.characters.Chronomancer;
@@ -13,10 +13,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class ArcaneBarrage extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(ArcaneBarrage.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(ArcaneBarrage.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     private static final CardRarity RARITY = CardRarity.RARE;

@@ -1,9 +1,8 @@
 package chronoMod.cards;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.actions.DejaVuAction;
 import chronoMod.characters.Chronomancer;
-import com.megacrit.cardcrawl.actions.watcher.CrushJointsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,10 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
 
-import static chronoMod.DefaultMod.makeCardPath;
+import static chronoMod.ChronoMod.makeCardPath;
 
 public class DejaVu extends AbstractDynamicCard {
-    public static final String ID = DefaultMod.makeID(DejaVu.class.getSimpleName());
+    public static final String ID = ChronoMod.makeID(DejaVu.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -38,14 +37,14 @@ public class DejaVu extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (lastCard != null) {
-            DefaultMod.logger.info("DejaVu : last card :" + lastCard.cardID);
+            ChronoMod.logger.info("DejaVu : last card :" + lastCard.cardID);
             AbstractCard card = lastCard.makeStatEquivalentCopy();
             if (card.costForTurn >= 0) {
                 card.setCostForTurn(0);
             }
             this.addToBot(new DejaVuAction(card));
         } else {
-            DefaultMod.logger.info("DejaVu : error : last card is null ");
+            ChronoMod.logger.info("DejaVu : error : last card is null ");
         }
     }
 

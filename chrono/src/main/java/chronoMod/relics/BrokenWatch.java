@@ -1,20 +1,19 @@
 package chronoMod.relics;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import chronoMod.powers.JadePower;
 import chronoMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static chronoMod.DefaultMod.makeRelicOutlinePath;
-import static chronoMod.DefaultMod.makeRelicPath;
+import static chronoMod.ChronoMod.makeRelicOutlinePath;
+import static chronoMod.ChronoMod.makeRelicPath;
 
 public class BrokenWatch extends CustomRelic {
-    public static final String ID = DefaultMod.makeID("BrokenWatch");
+    public static final String ID = ChronoMod.makeID("BrokenWatch");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 

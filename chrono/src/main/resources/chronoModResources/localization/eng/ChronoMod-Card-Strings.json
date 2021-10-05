@@ -7,32 +7,36 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "chronoMod:Accelerate": {
+    "NAME": "Accelerate",
+    "DESCRIPTION": "Trigger all Recall effects this turn."
+  },
   "chronoMod:ArcaneBarrage": {
     "NAME": "Arcane Barrage",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL When you draw this card, increase its number of hits by 1 this combat and gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL When you draw this card, increase its number of hits by 1 this combat and gain 1 Jade."
   },
   "chronoMod:ArcaneBlessing": {
     "NAME": "Arcane Blessing",
-    "DESCRIPTION": "Whenever you consume chronomod:Jade, gain !M! Strength and !M! Dexterity.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you consume chronomod:Jade, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "Whenever you consume Jade, gain !M! Strength and !M! Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you consume Jade, gain !M! Strength and !M! Dexterity."
   },
   "chronoMod:ArcaneBolt": {
     "NAME": "Arcane Bolt",
-    "DESCRIPTION": "Deal !D! damage. NL If you have chronomod:Jade, gain 1 chronomod:Jade to deal double damage."
+    "DESCRIPTION": "Deal !D! damage. NL If you have Jade, gain 1 Jade to deal double damage."
   },
   "chronoMod:AstralBanishment": {
     "NAME": "Astral Banishment",
-    "DESCRIPTION": "Require [E] [E] [E] or more. NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
+    "DESCRIPTION": "Require: [E] [E] [E]. NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:AstralBeam": {
     "NAME": "Astral Beam",
-    "DESCRIPTION": "Deal !D! damage and draw !M! card. NL Gain 1 chronomod:Jade.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage and draw !M! cards. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D! damage and draw !M! card. NL Gain 1 Jade.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and draw !M! cards. NL Gain 1 Jade."
   },
   "chronoMod:BlackHole": {
     "NAME": "Black Hole",
-    "DESCRIPTION": "Deal !D!X damage. NL Gain X chronomod:Jade. NL Exhaust."
+    "DESCRIPTION": "Deal !D!X damage. NL Gain X Jade. NL Exhaust."
   },
   "chronoMod:BoomerangBlade": {
     "NAME": "Boomerang Blade",
@@ -40,16 +44,16 @@
   },
   "chronoMod:Causality": {
     "NAME": "Causality",
-    "DESCRIPTION": "Gain [E] [E]. NL Gain 1 chronomod:Jade.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Gain [E] [E]. NL Gain 1 Jade.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E]. NL Gain 1 Jade."
   },
   "chronoMod:ContinuumShift": {
     "NAME": "Continuum Shift",
-    "DESCRIPTION": "Gain !B! Block. NL chronomod:Recall: Gain !B! Block."
+    "DESCRIPTION": "Gain !B! Block. NL Recall: Gain !B! Block."
   },
   "chronoMod:DarkMatter": {
     "NAME": "Dark Matter",
-    "DESCRIPTION": "Gain !B! Block. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Gain !B! Block. NL Gain 1 Jade."
   },
   "chronoMod:DejaVu": {
     "NAME": "Deja Vu",
@@ -58,7 +62,7 @@
   },
   "chronoMod:DelayedGuard": {
     "NAME": "Delayed Guard",
-    "DESCRIPTION": "chronomod:Recall: Gain !B! Block."
+    "DESCRIPTION": "Recall: Gain !B! Block."
   },
   "chronoMod:DistortReality": {
     "NAME": "Distort Reality",
@@ -72,16 +76,16 @@
   },
   "chronoMod:FalsePromise": {
     "NAME": "False Promise",
-    "DESCRIPTION": "Whenever you play 4 cards in a single turn, gain [E] , !M! chronomod:Jade and draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 4 cards in a single turn, gain [E] , !M! chronomod:Jade and draw !M! card."
+    "DESCRIPTION": "Whenever you play 4 cards in a single turn, gain [E] , !M! Jade and draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 4 cards in a single turn, gain [E] , !M! Jade and draw !M! card."
   },
   "chronoMod:Flux": {
     "NAME": "Flux",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 Jade."
   },
   "chronoMod:FortunesEnd": {
     "NAME": "Fortune's End",
-    "DESCRIPTION": "Gain 2 chronomod:Jade. NL Deal !D! damage for each chronomod:Jade you have."
+    "DESCRIPTION": "Gain 2 Jade. NL Deal !D! damage for each Jade you have."
   },
   "chronoMod:Glimpse": {
     "NAME": "Glimpse",
@@ -94,8 +98,8 @@
   },
   "chronoMod:LucidDream": {
     "NAME": "Lucid Dream",
-    "DESCRIPTION": "Ethereal. NL Gain [E] and 1 chronomod:Jade. NL Put this card onto the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain [E] and 1 chronomod:Jade. NL Put this card onto the top of your draw pile."
+    "DESCRIPTION": "Ethereal. NL Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile."
   },
   "chronoMod:ManaBall": {
     "NAME": "Mana Ball",
@@ -111,40 +115,52 @@
   },
   "chronoMod:MysticBarrier": {
     "NAME": "Mystic Barrier",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! additional Block for each chronomod:Jade that you have."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! additional Block for each Jade that you have."
   },
   "chronoMod:MysticBlast": {
     "NAME": "Mystic Blast",
-    "DESCRIPTION": "Deal !D!X damage. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D!X damage. NL Gain 1 Jade."
+  },
+  "chronoMod:MysticFlare": {
+    "NAME": "Mystic Flare",
+    "DESCRIPTION": "Recall: Deal !D! damage twice X times."
   },
   "chronoMod:MysticShot": {
     "NAME": "Mystic Shot",
-    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each chronomod:Jade you have."
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each Jade you have."
   },
   "chronoMod:RingSingularity": {
     "NAME": "Ring Singularity",
-    "DESCRIPTION": "Deal !D! damage. NL chronomod:Recall: Gain [E] [E]."
+    "DESCRIPTION": "Deal !D! damage. NL Recall: Gain [E] [E]."
+  },
+  "chronoMod:SpellBoost": {
+    "NAME": "Spell Boost",
+    "DESCRIPTION": "Increase the effect of the next cost X card played by !M!."
   },
   "chronoMod:StarSurge": {
     "NAME": "Star Surge",
-    "DESCRIPTION": "chronomod:Recall: Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Recall: Deal !D! damage to ALL enemies."
   },
   "chronoMod:Surge": {
     "NAME": "Surge",
-    "DESCRIPTION": "Draw !M! cards. NL Gain 1 chronomod:Jade."
+    "DESCRIPTION": "Draw !M! cards. NL Gain 1 Jade."
   },
   "chronoMod:TemperedFate": {
     "NAME": "Tempered Fate",
-    "DESCRIPTION": "Prevent the next time you would lose HP. Gain 1 chronomod:Jade when this effect triggers."
+    "DESCRIPTION": "Prevent the next time you would lose HP. Gain 1 Jade when this effect triggers."
   },
   "chronoMod:TidesOfTime": {
     "NAME": "Tides of Time",
-    "DESCRIPTION": "Whenever you trigger a chronomod:Recall effect, apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Whenever you trigger a Recall effect, apply !M! Weak to ALL enemies."
+  },
+  "chronoMod:TimeDilation": {
+    "NAME": "Time Dilation",
+    "DESCRIPTION": "Recall: Apply !M! Weak to enemies who intend to attack, and !M! Vulnerable to those who do not."
   },
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",
-    "DESCRIPTION": "chronomod:Recall: Gain [E].",
-    "UPGRADE_DESCRIPTION": "Draw !M! card. NL chronomod:Recall: Gain [E]."
+    "DESCRIPTION": "Recall: Gain [E].",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. NL Recall: Gain [E]."
   },
   "chronoMod:TipOfTheTongue": {
     "NAME": "Tip of the Tongue",
@@ -153,7 +169,7 @@
   },
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",
-    "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 chronomod:Jade."
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 Jade."
   },
   "chronoMod:WheelOfTime": {
     "NAME": "Wheel of Time",
@@ -161,7 +177,7 @@
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",
-    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! chronomod:Jade. NL Exhaust.",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:DefaultRareAttack": {

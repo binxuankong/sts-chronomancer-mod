@@ -1,6 +1,6 @@
 package chronoMod.powers;
 
-import chronoMod.DefaultMod;
+import chronoMod.ChronoMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class JadePower extends AbstractPower {
-    public static final String POWER_ID = DefaultMod.makeID("Jade");
+    public static final String POWER_ID = ChronoMod.makeID("Jade");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -40,6 +40,7 @@ public class JadePower extends AbstractPower {
         // Arcane Blessing
         AbstractPower arcaneBlessing = this.owner.getPower(ArcaneBlessingPower.POWER_ID);
         if (arcaneBlessing != null) {
+            arcaneBlessing.flash();
             int buff_amt = arcaneBlessing.amount;
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, buff_amt), buff_amt));
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, buff_amt), buff_amt));
