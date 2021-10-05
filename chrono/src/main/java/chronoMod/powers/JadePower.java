@@ -2,6 +2,7 @@ package chronoMod.powers;
 
 import chronoMod.ChronoMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
@@ -24,7 +25,7 @@ public class JadePower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = jadeAmt;
-        this.priority = 80;
+        this.priority = 10;
         this.updateDescription();
         this.loadRegion("reactive");
     }
@@ -44,6 +45,13 @@ public class JadePower extends AbstractPower {
             arcaneBlessing.flash();
             int extraDmg = arcaneBlessing.amount;
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new VigorPower(this.owner, extraDmg), extraDmg));
+        }
+
+        // Willpower
+        AbstractPower willpower = this.owner.getPower(WillpowerPower.POWER_ID);
+        if (willpower != null) {
+            this.addToBot(new ReducePowerAction(this.owner, this.owner, willpower, 1));
+            this.addToBot(new GainEnergyAction(1));
         }
     }
 

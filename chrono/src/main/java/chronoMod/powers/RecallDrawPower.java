@@ -21,7 +21,7 @@ public class RecallDrawPower extends RecallPower {
         this.amount = drawAmt;
         this.updateDescription();
         this.loadRegion("carddraw");
-        this.priority = 20;
+        this.priority = 25;
     }
 
     @Override

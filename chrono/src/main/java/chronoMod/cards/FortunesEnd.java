@@ -35,13 +35,15 @@ public class FortunesEnd extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 2), 2));
         AbstractPower jade = AbstractDungeon.player.getPower(JadePower.POWER_ID);
+        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 2), 2));
+        int numberHits = 2;
         if (jade != null) {
-            for (int i = 0; i < jade.amount; i++) {
-                this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.FIRE));
-            }
+            numberHits += jade.amount;
+        }
+        for (int i = 0; i < numberHits; i++) {
+            this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.FIRE));
         }
     }
 

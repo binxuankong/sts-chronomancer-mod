@@ -42,6 +42,10 @@
     "NAME": "Boomerang Blade",
     "DESCRIPTION": "Deal !D! damage. NL Place this card onto the top of your draw pile."
   },
+  "chronoMod:BorrowedTime": {
+    "NAME": "Borrowed Time",
+    "DESCRIPTION": "Recall any unblocked damage you receive at the end of your turn."
+  },
   "chronoMod:Causality": {
     "NAME": "Causality",
     "DESCRIPTION": "Gain [E] [E]. NL Gain 1 Jade.",
@@ -96,6 +100,11 @@
     "NAME": "Goof Off",
     "DESCRIPTION": "Deal !D! damage. NL Discard the top !M! cards of your draw pile."
   },
+  "chronoMod:Inheritance": {
+    "NAME": "Inheritance",
+    "DESCRIPTION": "At the end of your turn, Recall your unused [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the end of your turn, Recall your unused [E]."
+  },
   "chronoMod:LucidDream": {
     "NAME": "Lucid Dream",
     "DESCRIPTION": "Ethereal. NL Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile.",
@@ -133,6 +142,11 @@
     "NAME": "Ring Singularity",
     "DESCRIPTION": "Deal !D! damage. NL Recall: Gain [E] [E]."
   },
+  "chronoMod:Singularity": {
+    "NAME": "Singularity",
+    "DESCRIPTION": "Whenever you play a card, upgrade the card for the rest of the combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a card, upgrade the card for the rest of the combat."
+  },
   "chronoMod:SpellBoost": {
     "NAME": "Spell Boost",
     "DESCRIPTION": "Increase the effect of the next cost X card played this turn by !M!."
@@ -148,6 +162,10 @@
   "chronoMod:TemperedFate": {
     "NAME": "Tempered Fate",
     "DESCRIPTION": "Prevent the next time you would lose HP. Gain 1 Jade when this effect triggers."
+  },
+  "chronoMod:TemporalParadox": {
+    "NAME": "Temporal Paradox",
+    "DESCRIPTION": "Whenever you spend at least [E] [E] [E] on a cost X card, gain !M! Strength and !M! Dexterity."
   },
   "chronoMod:TidesOfTime": {
     "NAME": "Tides of Time",
@@ -174,6 +192,10 @@
   "chronoMod:WheelOfTime": {
     "NAME": "Wheel of Time",
     "DESCRIPTION": "Your next Attack deals !M!X additional damage."
+  },
+  "chronoMod:Willpower": {
+    "NAME": "Willpower",
+    "DESCRIPTION": "The next !M! times you consume Jade, gain [E]."
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",

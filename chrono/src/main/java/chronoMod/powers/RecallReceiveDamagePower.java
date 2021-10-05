@@ -1,36 +1,38 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class RecallEnergyPower extends RecallPower {
-    public static final String POWER_ID = ChronoMod.makeID("RecallEnergy");
+public class RecallReceiveDamagePower extends RecallPower {
+    public static final String POWER_ID = ChronoMod.makeID("RecallReceiveDamage");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public RecallEnergyPower(AbstractCreature owner, int energyAmt) {
+    public RecallReceiveDamagePower(AbstractCreature owner, int damageAmt) {
         super(owner);
         this.name = NAME;
         this.ID = POWER_ID;
-        this.amount = energyAmt;
+        this.amount = damageAmt;
         this.updateDescription();
-        this.loadRegion("energized_blue");
-        this.priority = 20;
+        this.loadRegion("brutality");
+        this.priority = 50;
     }
 
     @Override
-    public void recallEffect () {
-        this.addToBot(new GainEnergyAction(this.amount));
+    public void recallEffect() {
+        this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS),
+                AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override
-    public void onEnergyRecharge() {
+    public void atStartOfTurn() {
         this.triggerRecall();
     }
 
@@ -40,6 +42,6 @@ public class RecallEnergyPower extends RecallPower {
     }
 
     public AbstractPower makeCopy() {
-        return new RecallEnergyPower(this.owner, this.amount);
+        return new RecallReceiveDamagePower(this.owner, this.amount);
     }
 }

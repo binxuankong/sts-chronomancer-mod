@@ -24,7 +24,7 @@ public class RecallBlockPower extends RecallPower {
         this.amount = blockAmt;
         this.updateDescription();
         this.loadRegion("defenseNext");
-        this.priority = 40;
+        this.priority = 30;
     }
 
     @Override

@@ -3,9 +3,17 @@
         "NAME": "Arcane Blessing",
         "DESCRIPTIONS": ["Whenever you consume Jade, your next Attack deals #b", " additional damage."]
     },
+    "chronoMod:BorrowedTime": {
+        "NAME": "Borrowed Time",
+        "DESCRIPTIONS": ["Recall any unblocked damage you receive at the end of your turn."]
+    },
     "chronoMod:FalsePromise": {
         "NAME": "False Promise",
         "DESCRIPTIONS": ["If you play #b", " more card this turn, gain #b", " more cards this turn, gain #b", " energy, #b", " Jade and draw #b", " card.", " cards."]
+    },
+    "chronoMod:Inheritance": {
+        "NAME": "Inheritance",
+        "DESCRIPTIONS": ["At the end of your turn, Recall your unused energy."]
     },
     "chronoMod:Jade": {
         "NAME": "Jade",
@@ -23,6 +31,10 @@
         "NAME": "Recall Block",
         "DESCRIPTIONS": ["Recall: Gain #b",  " Block."]
     },
+    "chronoMod:RecallReceiveDamage": {
+        "NAME": "Recall Receive Damage",
+        "DESCRIPTIONS": ["Recall: Receive #b",  " damage."]
+    },
     "chronoMod:RecallDraw": {
         "NAME": "Recall Draw",
         "DESCRIPTIONS": ["Recall: Draw #b",  " card.", " cards."]
@@ -31,6 +43,10 @@
         "NAME": "Recall Energy",
         "DESCRIPTIONS": ["Recall: Gain #b",  " energy."]
     },
+    "chronoMod:Singularity": {
+        "NAME": "Singularity",
+        "DESCRIPTIONS": ["Whenever you play a card, upgrade the card for the rest of the combat."]
+},
     "chronoMod:SpellBoost": {
         "NAME": "Spell Boost",
         "DESCRIPTIONS": ["Increase the effect of the next cost X card played this turn by #b", " ."]
@@ -43,6 +59,10 @@
         "NAME": "Tempered Fate",
         "DESCRIPTIONS": ["Prevent the next time you would lose HP.", "Prevent the next #b", " times you would lose HP.", " Gain 1 Jade when this effect triggers."]
     },
+    "chronoMod:TemporalParadox": {
+        "NAME": "Temporal Paradox",
+        "DESCRIPTIONS": ["Whenever you spend at least 3 energy on a cost X card, gain #b", " Strength and #b", " Dexterity."]
+    },
     "chronoMod:TidesOfTime": {
         "NAME": "Tides of Time",
         "DESCRIPTIONS": ["Apply #b", " Weak to ALL enemies at the end of your turn if you have triggered a Recall effect this turn."]
@@ -50,6 +70,10 @@
     "chronoMod:TimeDilation": {
         "NAME": "Time Dilation",
         "DESCRIPTIONS": ["Recall: Apply #b", " Weak to enemies who intend to attack, and #b", " Vulnerable to those who do not."]
+    },
+    "chronoMod:Willpower": {
+        "NAME": "Willpower",
+        "DESCRIPTIONS": ["The next time you consume Jade, gain energy.", "The next #b", " times you consume Jade, gain energy."]
     },
     "chronoMod:CommonPower": {
         "NAME": "Placeholder Power",

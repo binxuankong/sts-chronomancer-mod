@@ -2,9 +2,13 @@ package chronoMod.cards;
 
 import chronoMod.powers.JadePower;
 import chronoMod.powers.SpellBoostPower;
+import chronoMod.powers.TemporalParadoxPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public abstract class AbstractXCostCard extends AbstractDynamicCard {
@@ -34,6 +38,12 @@ public abstract class AbstractXCostCard extends AbstractDynamicCard {
         }
         // Use energy
         if (!this.freeToPlayOnce) {
+            // Temporal Paradox
+            AbstractPower temporalParadox = p.getPower(TemporalParadoxPower.POWER_ID);
+            if (EnergyPanel.totalCount >= 3 && temporalParadox != null) {
+                this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, temporalParadox.amount), temporalParadox.amount));
+                this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, temporalParadox.amount), temporalParadox.amount));
+            }
             p.energy.use(EnergyPanel.totalCount);
         }
         return effect;
