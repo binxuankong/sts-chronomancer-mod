@@ -1,11 +1,19 @@
 {
+    "chronoMod:AdeptSpellcaster": {
+        "NAME": "Adept Spellcaster",
+        "DESCRIPTIONS": ["Whenever you play a cost X card, its effects are increased by #b", " ."]
+    },
     "chronoMod:ArcaneBlessing": {
         "NAME": "Arcane Blessing",
         "DESCRIPTIONS": ["Whenever you consume Jade, your next Attack deals #b", " additional damage."]
     },
     "chronoMod:BorrowedTime": {
         "NAME": "Borrowed Time",
-        "DESCRIPTIONS": ["Recall any unblocked damage you receive at the end of your turn."]
+        "DESCRIPTIONS": ["Whenever you receive unblocked damage, Recall the amount of damage received as Block."]
+    },
+    "chronoMod:EternalForm": {
+        "NAME": "Eternal Form",
+        "DESCRIPTIONS": ["At the start of your turn, you can choose to put a card from your discard pile into your hand. It costs #b", " less energy this turn."]
     },
     "chronoMod:FalsePromise": {
         "NAME": "False Promise",
@@ -18,6 +26,10 @@
     "chronoMod:Jade": {
         "NAME": "Jade",
         "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " energy."]
+    },
+    "chronoMod:Malefice": {
+        "NAME": "Malefice",
+        "DESCRIPTIONS": ["Recall: Recall: Deal #b", " damage."]
     },
     "chronoMod:Memento": {
         "NAME": "Memento",

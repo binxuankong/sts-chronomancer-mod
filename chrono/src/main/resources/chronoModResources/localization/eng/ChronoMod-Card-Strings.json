@@ -12,6 +12,10 @@
     "DESCRIPTION": "Trigger all Recall effects this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Trigger all Recall effects this turn."
   },
+  "chronoMod:AdeptSpellcaster": {
+    "NAME": "Adept Spellcaster",
+    "DESCRIPTION": "Whenever you play a cost X card, its effects are increased by !M!."
+  },
   "chronoMod:ArcaneBarrage": {
     "NAME": "Arcane Barrage",
     "DESCRIPTION": "Deal !D! damage !M! times. NL When you draw this card, increase its number of hits by 1 this combat and gain 1 Jade."
@@ -44,7 +48,7 @@
   },
   "chronoMod:BorrowedTime": {
     "NAME": "Borrowed Time",
-    "DESCRIPTION": "Recall any unblocked damage you receive at the end of your turn."
+    "DESCRIPTION": "Whenever you receive unblocked damage, Recall the amount of damage received as Block."
   },
   "chronoMod:Causality": {
     "NAME": "Causality",
@@ -54,6 +58,10 @@
   "chronoMod:ContinuumShift": {
     "NAME": "Continuum Shift",
     "DESCRIPTION": "Gain !B! Block. NL Recall: Gain !B! Block."
+  },
+  "chronoMod:Convergence": {
+    "NAME": "Convergence",
+    "DESCRIPTION": "Deal !D! damage. NL Recall: Gain !B! Block."
   },
   "chronoMod:DarkMatter": {
     "NAME": "Dark Matter",
@@ -71,6 +79,10 @@
   "chronoMod:DistortReality": {
     "NAME": "Distort Reality",
     "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile onto the top of your draw pile."
+  },
+  "chronoMod:EternalForm": {
+    "NAME": "Eternal Form",
+    "DESCRIPTION": "At the start of your turn, you can choose to put a card from your discard pile into your hand. It costs !M! less [E] this turn."
   },
   "chronoMod:EventHorizon": {
     "NAME": "Event Horizon",
@@ -110,6 +122,10 @@
     "DESCRIPTION": "Ethereal. NL Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile."
   },
+  "chronoMod:Malefice": {
+  "NAME": "Malefice",
+  "DESCRIPTION": "Deal !D! damage. NL Recall: Deal !D! damage."
+},
   "chronoMod:ManaBall": {
     "NAME": "Mana Ball",
     "DESCRIPTION": "Deal !D! damage. NL When you draw this card, increase its damage by !M! this combat."
