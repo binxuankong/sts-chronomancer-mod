@@ -28,6 +28,10 @@
     "NAME": "Arcane Bolt",
     "DESCRIPTION": "Deal !D! damage. NL If you have Jade, gain 1 Jade to deal double damage."
   },
+  "chronoMod:ArrowOfTime": {
+    "NAME": "Arrow of Time",
+    "DESCRIPTION": "Deal !D! damage. NL Increase this card's cost by 1 and double its damage this combat."
+  },
   "chronoMod:AstralBanishment": {
     "NAME": "Astral Banishment",
     "DESCRIPTION": "Require: [E] [E] [E]. NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
@@ -117,8 +121,7 @@
   },
   "chronoMod:Glimpse": {
     "NAME": "Glimpse",
-    "DESCRIPTION": "Draw !M! card. NL Put a card from your hand onto the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Put a card from your hand onto the top of your draw pile."
+    "DESCRIPTION": "Scry !M!. NL Draw 1 card."
   },
   "chronoMod:GoofOff": {
     "NAME": "Goof Off",
@@ -221,6 +224,11 @@
   "chronoMod:TimeDilation": {
     "NAME": "Time Dilation",
     "DESCRIPTION": "Recall: Apply !M! Weak to enemies who intend to attack, and !M! Vulnerable to those who do not."
+  },
+  "chronoMod:TimestreamShift": {
+    "NAME": "Timestream Shift",
+    "DESCRIPTION": "Require: [E] [E]. NL Deal !D! damage. NL If you have Jade, consume Jade to deal !D! damage to ALL enemies.",
+    "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",
