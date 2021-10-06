@@ -58,10 +58,14 @@
     "chronoMod:Singularity": {
         "NAME": "Singularity",
         "DESCRIPTIONS": ["Whenever you play a card, upgrade the card for the rest of the combat."]
-},
+    },
     "chronoMod:SpellBoost": {
         "NAME": "Spell Boost",
         "DESCRIPTIONS": ["Increase the effect of the next cost X card played this turn by #b", " ."]
+    },
+    "chronoMod:SplitSecond": {
+        "NAME": "Split Second",
+        "DESCRIPTIONS": ["Split Second costs 0 this turn."]
     },
     "chronoMod:StarSurge": {
         "NAME": "Star Surge",

@@ -1,10 +1,13 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class TemporalParadoxPower extends AbstractPower {
     public static final String POWER_ID = ChronoMod.makeID("TemporalParadox");
@@ -19,6 +22,12 @@ public class TemporalParadoxPower extends AbstractPower {
         this.amount = buffAmt;
         this.updateDescription();
         this.loadRegion("fasting");
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, this.amount), this.amount));
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.amount), this.amount));
     }
 
     @Override

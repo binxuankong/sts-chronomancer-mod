@@ -42,6 +42,7 @@ public class MementoAction extends AbstractGameAction {
                 AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
             }
             this.tickDuration();
+            this.isDone = true;
         }
     }
 

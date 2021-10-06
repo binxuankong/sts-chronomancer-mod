@@ -14,40 +14,21 @@ public class BorrowedTimePower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private boolean activate;
-
     public BorrowedTimePower(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = -1;
-        this.activate = false;
         this.updateDescription();
         this.loadRegion("corruption");
         this.priority = 50;
     }
 
     @Override
-    public void atStartOfTurn() {
-        this.activate = false;
-    }
-
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            this.activate = true;
-        }
-    }
-
-    @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0 && this.activate) {
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new RecallReceiveDamagePower(this.owner, damageAmount),
-                    damageAmount));
-            return 0;
-        } else {
-            return damageAmount;
-        }
+        this.flash();
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new RecallBlockPower(this.owner, damageAmount), damageAmount));
+        return damageAmount;
     }
 
     @Override

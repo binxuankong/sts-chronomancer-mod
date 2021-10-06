@@ -7,19 +7,19 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class SpellBoostPower extends AbstractPower {
-    public static final String POWER_ID = ChronoMod.makeID("SpellBoost");
+public class SplitSecondPower extends AbstractPower {
+    public static final String POWER_ID = ChronoMod.makeID("SplitSecond");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public SpellBoostPower(AbstractCreature owner, int addAmount) {
+    public SplitSecondPower(AbstractCreature owner) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = addAmount;
+        this.amount = -1;
         this.updateDescription();
-        this.loadRegion("establishment");
+        this.loadRegion("swivel");
     }
 
     @Override
@@ -31,10 +31,10 @@ public class SpellBoostPower extends AbstractPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0];
     }
 
     public AbstractPower makeCopy() {
-        return new SpellBoostPower(this.owner, this.amount);
+        return new SplitSecondPower(this.owner);
     }
 }

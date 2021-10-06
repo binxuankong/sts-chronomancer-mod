@@ -20,7 +20,7 @@ public class DiscardDrawPileAction extends AbstractGameAction {
                 return;
             } else {
                 AbstractCard card = p.drawPile.getTopCard();
-                AbstractDungeon.player.drawPile.moveToDiscardPile(card);
+                p.drawPile.moveToDiscardPile(card);
             }
         }
 

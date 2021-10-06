@@ -16,7 +16,7 @@ import static chronoMod.ChronoMod.makeCardPath;
 
 public class Flux extends AbstractDynamicCard {
     public static final String ID = ChronoMod.makeID(Flux.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Flux.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

@@ -167,6 +167,10 @@
     "NAME": "Spell Boost",
     "DESCRIPTION": "Increase the effect of the next cost X card played this turn by !M!."
   },
+  "chronoMod:SplitSecond": {
+    "NAME": "Split Second",
+    "DESCRIPTION": "Deal !D! damage. NL It costs 0 if you have used at least [E] [E] on a cost X card this turn."
+  },
   "chronoMod:StarSurge": {
     "NAME": "Star Surge",
     "DESCRIPTION": "Recall: Deal !D! damage to ALL enemies."
@@ -174,6 +178,10 @@
   "chronoMod:Surge": {
     "NAME": "Surge",
     "DESCRIPTION": "Draw !M! cards. NL Gain 1 Jade."
+  },
+  "chronoMod:Teleport": {
+    "NAME": "Teleport",
+    "DESCRIPTION": "Gain !B! Block. NL Recall: Draw !M! cards."
   },
   "chronoMod:TemperedFate": {
     "NAME": "Tempered Fate",
@@ -194,7 +202,7 @@
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",
     "DESCRIPTION": "Recall: Gain [E].",
-    "UPGRADE_DESCRIPTION": "Draw !M! card. NL Recall: Gain [E]."
+    "UPGRADE_DESCRIPTION": "Draw 1 card. NL Recall: Gain [E]."
   },
   "chronoMod:TipOfTheTongue": {
     "NAME": "Tip of the Tongue",

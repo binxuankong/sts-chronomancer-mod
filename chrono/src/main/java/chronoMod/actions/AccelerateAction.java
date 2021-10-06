@@ -1,6 +1,6 @@
 package chronoMod.actions;
 
-import chronoMod.patches.AbstractPowerEnum;
+import chronoMod.patches.RecallEnum;
 import chronoMod.powers.RecallPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,7 +22,7 @@ public class AccelerateAction extends AbstractGameAction {
         while(var1.hasNext()) {
             AbstractPower pow = (AbstractPower)var1.next();
 
-            if (pow.type == AbstractPowerEnum.RECALL) {
+            if (pow.type == RecallEnum.RECALL) {
                 RecallPower recall_pow = (RecallPower)pow;
                 recall_pow.triggerRecall();
             }

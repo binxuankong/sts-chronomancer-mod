@@ -14,7 +14,7 @@ import static chronoMod.ChronoMod.makeCardPath;
 
 public class Glimpse extends AbstractDynamicCard {
     public static final String ID = ChronoMod.makeID(Glimpse.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Glimpse.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
@@ -24,7 +24,7 @@ public class Glimpse extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int CARD_DRAW = 1;
+    private static final int CARD_DRAW = 2;
     private static final int UPGRADE_PLUS_DRAW = 1;
 
     public Glimpse() {

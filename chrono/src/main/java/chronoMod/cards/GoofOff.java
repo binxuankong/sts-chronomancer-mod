@@ -14,7 +14,7 @@ import static chronoMod.ChronoMod.makeCardPath;
 
 public class GoofOff extends AbstractDynamicCard {
     public static final String ID = ChronoMod.makeID(GoofOff.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("GoofOff.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -36,7 +36,7 @@ public class GoofOff extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                    AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                    AbstractGameAction.AttackEffect.POISON));
        this.addToBot(new DiscardDrawPileAction(p, this.magicNumber));
     }
 

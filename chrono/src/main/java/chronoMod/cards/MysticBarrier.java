@@ -13,7 +13,7 @@ import static chronoMod.ChronoMod.makeCardPath;
 
 public class MysticBarrier extends AbstractDynamicCard {
     public static final String ID = ChronoMod.makeID(MysticBarrier.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("MysticBarrier.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

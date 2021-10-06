@@ -16,7 +16,7 @@ import static chronoMod.ChronoMod.makeCardPath;
 
 public class TwilightAssault extends AbstractDynamicCard {
     public static final String ID = ChronoMod.makeID(TwilightAssault.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("TwilightAssault.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -35,7 +35,7 @@ public class TwilightAssault extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new GainEnergyAction(1));
         this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 1), 1));
     }

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class RecallDrawPower extends RecallPower {
-    public static final String POWER_ID = ChronoMod.makeID("RecallEnergy");
+    public static final String POWER_ID = ChronoMod.makeID("RecallDraw");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
