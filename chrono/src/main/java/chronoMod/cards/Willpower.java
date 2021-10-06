@@ -20,8 +20,8 @@ public class Willpower extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int NUM_TURNS = 3;
-    private static final int UPGRADE_PLUS_TURNS = 2;
+    private static final int NUM_TURNS = 2;
+    private static final int UPGRADE_PLUS_TURNS = 1;
 
     public Willpower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

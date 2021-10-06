@@ -1,16 +1,15 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import chronoMod.powers.JadePower;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
@@ -37,7 +36,7 @@ public class TwilightAssault extends AbstractDynamicCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new GainEnergyAction(1));
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 1), 1));
+        this.addToBot(new GainJadeAction(1));
     }
 
     @Override

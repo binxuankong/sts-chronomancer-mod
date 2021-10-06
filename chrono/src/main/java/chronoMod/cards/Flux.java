@@ -1,8 +1,8 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -41,7 +41,7 @@ public class Flux extends AbstractDynamicCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.LIGHTNING));
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 1), 1));
+        this.addToBot(new GainJadeAction(1));
     }
 
     @Override

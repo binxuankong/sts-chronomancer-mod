@@ -141,9 +141,10 @@ public class Chronomancer extends CustomPlayer {
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
-        retVal.add(SplitSecond.ID);
-        retVal.add(AdeptSpellcaster.ID);
+        retVal.add(FortunesEnd.ID);
+        retVal.add(Willpower.ID);
         retVal.add(Teleport.ID);
+        retVal.add(ArcaneBlessing.ID);
 
         return retVal;
     }

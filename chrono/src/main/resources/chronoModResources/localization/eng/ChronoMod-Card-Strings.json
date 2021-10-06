@@ -219,7 +219,7 @@
   },
   "chronoMod:Willpower": {
     "NAME": "Willpower",
-    "DESCRIPTION": "The next !M! times you consume Jade, gain [E]."
+    "DESCRIPTION": "Prevent the next !M! times you gain Jade."
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",

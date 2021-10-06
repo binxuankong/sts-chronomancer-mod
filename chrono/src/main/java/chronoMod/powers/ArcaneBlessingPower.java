@@ -1,10 +1,12 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 public class ArcaneBlessingPower extends AbstractPower {
     public static final String POWER_ID = ChronoMod.makeID("ArcaneBlessing");
@@ -19,6 +21,11 @@ public class ArcaneBlessingPower extends AbstractPower {
         this.amount = extraDamage;
         this.updateDescription();
         this.loadRegion("hymn");
+    }
+
+    @Override
+    public void onSpecificTrigger() {
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new VigorPower(this.owner, this.amount), this.amount));
     }
 
     @Override

@@ -1,10 +1,9 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -45,7 +44,7 @@ public class AstralBeam extends AbstractDynamicCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new DrawCardAction(p, this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 1), 1));
+        this.addToBot(new GainJadeAction(1));
     }
 
     @Override

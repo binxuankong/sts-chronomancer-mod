@@ -1,6 +1,8 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.FortunesEndAction;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -35,16 +37,8 @@ public class FortunesEnd extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower jade = AbstractDungeon.player.getPower(JadePower.POWER_ID);
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 2), 2));
-        int numberHits = 2;
-        if (jade != null) {
-            numberHits += jade.amount;
-        }
-        for (int i = 0; i < numberHits; i++) {
-            this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                    AbstractGameAction.AttackEffect.FIRE));
-        }
+        this.addToBot(new GainJadeAction(2));
+        this.addToBot(new FortunesEndAction(p, m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
     }
 
     @Override

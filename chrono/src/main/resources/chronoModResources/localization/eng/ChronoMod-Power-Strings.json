@@ -89,7 +89,7 @@
     },
     "chronoMod:Willpower": {
         "NAME": "Willpower",
-        "DESCRIPTIONS": ["The next time you consume Jade, gain energy.", "The next #b", " times you consume Jade, gain energy."]
+        "DESCRIPTIONS": ["Prevent the next time you gain Jade.", "Prevent the next #b", " times you gain Jade."]
     },
     "chronoMod:CommonPower": {
         "NAME": "Placeholder Power",

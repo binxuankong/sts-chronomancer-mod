@@ -1,6 +1,7 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -38,11 +39,8 @@ public class MysticBlast extends AbstractXCostCard {
             int total_damage = this.damage * effect;
             this.addToBot(new DamageAction(m, new DamageInfo(p, total_damage, this.damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-            if (!this.freeToPlayOnce) {
-                p.energy.use(EnergyPanel.totalCount);
-            }
         }
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 1), 1));
+        this.addToBot(new GainJadeAction(1));
     }
 
     @Override

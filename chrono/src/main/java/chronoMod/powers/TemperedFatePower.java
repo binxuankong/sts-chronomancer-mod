@@ -1,7 +1,7 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import chronoMod.actions.GainJadeAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -35,7 +35,7 @@ public class TemperedFatePower extends AbstractPower {
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         if (damageAmount > 0) {
             this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new JadePower(this.owner, 1), 1));
+            this.addToBot(new GainJadeAction(1));
         }
         return 0;
     }

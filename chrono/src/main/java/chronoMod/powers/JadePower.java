@@ -1,11 +1,13 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.ConsumeJadeAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -33,26 +35,7 @@ public class JadePower extends AbstractPower {
     @Override
     public void onEnergyRecharge() {
         this.flash();
-        this.addToBot(new LoseEnergyAction(this.amount));
-        this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
-        if (this.amount == 0) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        }
-
-        // Arcane Blessing
-        AbstractPower arcaneBlessing = this.owner.getPower(ArcaneBlessingPower.POWER_ID);
-        if (arcaneBlessing != null) {
-            arcaneBlessing.flash();
-            int extraDmg = arcaneBlessing.amount;
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new VigorPower(this.owner, extraDmg), extraDmg));
-        }
-
-        // Willpower
-        AbstractPower willpower = this.owner.getPower(WillpowerPower.POWER_ID);
-        if (willpower != null) {
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, willpower, 1));
-            this.addToBot(new GainEnergyAction(1));
-        }
+        this.addToBot(new ConsumeJadeAction((AbstractPlayer)this.owner, 1));
     }
 
     @Override

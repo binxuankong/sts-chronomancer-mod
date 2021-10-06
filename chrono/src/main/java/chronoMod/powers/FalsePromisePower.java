@@ -1,6 +1,7 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -43,8 +44,7 @@ public class FalsePromisePower extends AbstractPower {
             this.amount = CARD_AMT;
             this.addToBot(new GainEnergyAction(this.drawEnergyAmount));
             this.addToBot(new DrawCardAction(this.owner, this.drawEnergyAmount));
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new JadePower(this.owner, this.drawEnergyAmount),
-                    this.drawEnergyAmount));
+            this.addToBot(new GainJadeAction(this.drawEnergyAmount));
         }
         this.updateDescription();
     }

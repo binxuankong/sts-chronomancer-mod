@@ -28,7 +28,6 @@ public class TimeDilationPower extends RecallPower {
         this.amount = debuffAmt;
         this.updateDescription();
         this.loadRegion("like_water");
-        this.priority = 20;
     }
 
     @Override
@@ -47,7 +46,7 @@ public class TimeDilationPower extends RecallPower {
     }
 
     @Override
-    public void atStartOfTurn() {
+    public void atStartOfTurnPostDraw() {
         this.triggerRecall();
     }
 

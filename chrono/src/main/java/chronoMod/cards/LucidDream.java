@@ -1,9 +1,8 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.JadePower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -40,7 +39,7 @@ public class LucidDream extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainEnergyAction(this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new GainJadeAction(this.magicNumber));
         this.played = true;
     }
 

@@ -1,6 +1,7 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -34,12 +35,11 @@ public class ArcaneBolt extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower jade = p.getPower(JadePower.POWER_ID);
-        if (jade != null) {
+        if (p.hasPower(JadePower.POWER_ID)) {
             this.damage *= 2;
             this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-            this.addToBot(new ApplyPowerAction(p, p, new JadePower(p, 1), 1));
+            this.addToBot(new GainJadeAction(1));
         }
         else{
             this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),

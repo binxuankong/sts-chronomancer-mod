@@ -2,15 +2,14 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.actions.ArcaneBarrageAction;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.actions.ModifyNumberHitsAction;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.JadePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static chronoMod.ChronoMod.makeCardPath;
@@ -48,8 +47,7 @@ public class ArcaneBarrage extends AbstractDynamicCard {
     @Override
     public void triggerWhenDrawn() {
         this.addToBot(new ModifyNumberHitsAction(this.uuid, 1));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new JadePower(AbstractDungeon.player, 1), 1));
+        this.addToBot(new GainJadeAction(1));
     }
 
     @Override
