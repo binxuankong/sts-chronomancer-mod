@@ -7,9 +7,17 @@
         "NAME": "Arcane Blessing",
         "DESCRIPTIONS": ["Whenever you consume Jade, your next Attack deals #b", " additional damage."]
     },
+    "chronoMod:BackInTime": {
+        "NAME": "Back in Time",
+        "DESCRIPTIONS": ["Recall: Set your HP to #b", " ."]
+    },
     "chronoMod:BorrowedTime": {
         "NAME": "Borrowed Time",
         "DESCRIPTIONS": ["Whenever you receive unblocked damage, Recall the amount of damage received as Block."]
+    },
+    "chronoMod:ButterflyEffect": {
+        "NAME": "Butterfly Effect",
+        "DESCRIPTIONS": ["Recall: If any enemy intends to attack, gain #b", " Block. Otehrwise, gain #b", " Artifact."]
     },
     "chronoMod:EternalForm": {
         "NAME": "Eternal Form",

@@ -27,7 +27,7 @@ public class JadePower extends AbstractPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = jadeAmt;
-        this.priority = 10;
+        this.priority = 80;
         this.updateDescription();
         this.loadRegion("reactive");
     }

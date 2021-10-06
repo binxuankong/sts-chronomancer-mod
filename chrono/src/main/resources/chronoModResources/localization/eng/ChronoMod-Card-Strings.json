@@ -38,6 +38,14 @@
     "DESCRIPTION": "Deal !D! damage and draw !M! card. NL Gain 1 Jade.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and draw !M! cards. NL Gain 1 Jade."
   },
+  "chronoMod:BackInTime": {
+    "NAME": "Back in Time",
+    "DESCRIPTION": "Recall: Set your HP to its current amount. NL Exhaust."
+  },
+  "chronoMod:BigBang": {
+    "NAME": "Big Bang",
+    "DESCRIPTION": "Double your Jade. NL Gain [E] equal to your Jade and draw !M! cards. NL Exhaust."
+  },
   "chronoMod:BlackHole": {
     "NAME": "Black Hole",
     "DESCRIPTION": "Deal !D!X damage. NL Gain X Jade. NL Exhaust."
@@ -49,6 +57,10 @@
   "chronoMod:BorrowedTime": {
     "NAME": "Borrowed Time",
     "DESCRIPTION": "Whenever you receive unblocked damage, Recall the amount of damage received as Block."
+  },
+  "chronoMod:ButterflyEffect": {
+    "NAME": "Butterfly Effect",
+    "DESCRIPTION": "Recall: If any enemy intends to attack, gain !B! Block. Otherwise gain !M! Artifact."
   },
   "chronoMod:Causality": {
     "NAME": "Causality",
@@ -153,6 +165,17 @@
   "chronoMod:MysticShot": {
     "NAME": "Mystic Shot",
     "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each Jade you have."
+  },
+  "chronoMod:Predestination": {
+    "NAME": "Predestination",
+    "DESCRIPTION": "Require: [E] [E] [E]. NL Draw X cards. NL They cost 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Require: [E] [E] [E]. NL Draw X cards. NL They cost 0 this turn.",
+    "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
+  },
+  "chronoMod:Rewinder": {
+    "NAME": "Rewinder",
+    "DESCRIPTION": "Consume Jade and gain !M! [E]. When you draw this card, increase its [E] by 1 this combat.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Consume Jade and gain !M! [E]. When you draw this card, increase its [E] by 1 this combat."
   },
   "chronoMod:RingSingularity": {
     "NAME": "Ring Singularity",

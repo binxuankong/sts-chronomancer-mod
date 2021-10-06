@@ -25,10 +25,13 @@ public class FortunesEndAction extends AbstractGameAction {
 
     public void update() {
         int numberOfHits = 0;
+
         // Willpower
         if (!this.p.hasPower(WillpowerPower.POWER_ID)) {
             numberOfHits += 2;
         }
+
+        this.addToBot(new GainJadeAction(2));
         AbstractPower jade = this.p.getPower(JadePower.POWER_ID);
         if (jade != null) {
             numberOfHits += jade.amount;
