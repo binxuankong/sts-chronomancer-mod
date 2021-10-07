@@ -25,7 +25,6 @@ public class MysticShiftPower extends RecallPower {
         idOffset++;
         this.updateDescription();
         this.loadRegion("modeShift");
-        this.priority = 50;
     }
 
     @Override
@@ -35,11 +34,6 @@ public class MysticShiftPower extends RecallPower {
                     DamageInfo.createDamageMatrix(this.owner.currentBlock, true), DamageInfo.DamageType.THORNS,
                     AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
     }
 
     @Override

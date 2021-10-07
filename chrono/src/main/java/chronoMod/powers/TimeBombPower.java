@@ -26,7 +26,6 @@ public class TimeBombPower extends RecallPower {
         this.amount = damage;
         this.updateDescription();
         this.loadRegion("the_bomb");
-        this.priority = 30;
     }
 
     @Override
@@ -36,11 +35,6 @@ public class TimeBombPower extends RecallPower {
                     DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS,
                     AbstractGameAction.AttackEffect.FIRE));
         }
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
     }
 
     @Override

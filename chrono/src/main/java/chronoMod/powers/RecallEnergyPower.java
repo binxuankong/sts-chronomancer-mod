@@ -14,24 +14,21 @@ public class RecallEnergyPower extends RecallPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static int idOffset;
+
     public RecallEnergyPower(AbstractCreature owner, int energyAmt) {
         super(owner);
         this.name = NAME;
-        this.ID = POWER_ID;
+        this.ID = POWER_ID + idOffset;
+        idOffset++;
         this.amount = energyAmt;
         this.updateDescription();
         this.loadRegion("energized_blue");
-        this.priority = 20;
     }
 
     @Override
     public void recallEffect () {
         this.addToBot(new GainEnergyAction(this.amount));
-    }
-
-    @Override
-    public void onEnergyRecharge() {
-        this.triggerRecall();
     }
 
     @Override

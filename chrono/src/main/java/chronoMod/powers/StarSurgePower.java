@@ -33,7 +33,6 @@ public class StarSurgePower extends RecallPower {
         this.damageType = damageType;
         this.updateDescription();
         this.loadRegion("doubleDamage");
-        this.priority = 40;
     }
 
     @Override
@@ -42,11 +41,6 @@ public class StarSurgePower extends RecallPower {
         this.addToBot(new VFXAction(this.owner, new CleaveEffect(), 0.1F));
         this.addToBot(new DamageAllEnemiesAction(this.owner, this.multiDamage, this.damageType,
                 AbstractGameAction.AttackEffect.NONE));
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
     }
 
     @Override

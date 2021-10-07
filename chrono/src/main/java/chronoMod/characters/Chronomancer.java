@@ -131,18 +131,20 @@ public class Chronomancer extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         retVal.add(StrikeCHR.ID);
-        retVal.add(StrikeCHR.ID);
-        retVal.add(StrikeCHR.ID);
-        retVal.add(StrikeCHR.ID);
-        retVal.add(DefendCHR.ID);
-        retVal.add(DefendCHR.ID);
-        retVal.add(DefendCHR.ID);
+        //retVal.add(StrikeCHR.ID);
+        //retVal.add(StrikeCHR.ID);
+        //retVal.add(StrikeCHR.ID);
+        //retVal.add(DefendCHR.ID);
+        //retVal.add(DefendCHR.ID);
+        //retVal.add(DefendCHR.ID);
         retVal.add(DefendCHR.ID);
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
         retVal.add(DelayedGuard.ID);
         retVal.add(Teleport.ID);
+        retVal.add(StarSurge.ID);
+        retVal.add(Accelerate.ID);
 
         return retVal;
     }

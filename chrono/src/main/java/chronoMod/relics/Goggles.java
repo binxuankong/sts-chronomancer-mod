@@ -33,8 +33,10 @@ public class Goggles extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        this.addToBot(new ReverseGogglesAction());
-        this.grayscale = true;
+        if (!this.grayscale) {
+            this.addToBot(new ReverseGogglesAction());
+            this.grayscale = true;
+        }
     }
 
     @Override

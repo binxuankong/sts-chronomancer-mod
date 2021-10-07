@@ -24,7 +24,6 @@ public class RecallReceiveDamagePower extends RecallPower {
         this.amount = damageAmt;
         this.updateDescription();
         this.loadRegion("brutality");
-        this.priority = 50;
     }
 
     @Override
@@ -32,11 +31,6 @@ public class RecallReceiveDamagePower extends RecallPower {
         this.addToBot(new VFXAction(new ClashEffect(this.owner.hb.cX, this.owner.hb.cY), 0.1F));
         this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.THORNS),
                 AbstractGameAction.AttackEffect.NONE));
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
     }
 
     @Override

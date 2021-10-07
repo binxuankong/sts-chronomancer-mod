@@ -32,11 +32,6 @@ public class MemorizePower extends RecallPower {
     }
 
     @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
-    }
-
-    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.card.name + DESCRIPTIONS[1];
     }

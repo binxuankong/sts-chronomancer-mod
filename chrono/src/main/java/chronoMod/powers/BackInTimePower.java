@@ -29,7 +29,6 @@ public class BackInTimePower extends RecallPower {
         this.amount = hpAmount;
         this.updateDescription();
         this.loadRegion("afterImage");
-        this.priority = 60;
     }
 
     @Override
@@ -42,11 +41,6 @@ public class BackInTimePower extends RecallPower {
         //    this.addToBot(new DamageAction(this.owner, new DamageInfo(this.owner, this.amount, DamageInfo.DamageType.HP_LOSS),
         //            AbstractGameAction.AttackEffect.NONE));
         //}
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
     }
 
     @Override

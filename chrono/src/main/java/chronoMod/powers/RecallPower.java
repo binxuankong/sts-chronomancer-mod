@@ -7,15 +7,25 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public abstract class RecallPower extends AbstractPower {
+
     AbstractPlayer p;
+    private static int idOffset;
 
     public RecallPower(AbstractCreature owner) {
         super();
         this.owner = owner;
         this.p = AbstractDungeon.player;
         this.type = RecallEnum.RECALL;
+        this.priority = idOffset;
+        idOffset++;
+    }
+
+    @Override
+    public void atStartOfTurnPostDraw() {
+        this.triggerRecall();
     }
 
     public void recallEffect() {}
@@ -30,10 +40,15 @@ public abstract class RecallPower extends AbstractPower {
         }
 
         // Winder
-        if (this.p.hasRelic(Winder.ID)) {
-            this.p.getRelic(Winder.ID).onTrigger();
+        AbstractRelic winder = this.p.getRelic(Winder.ID);
+        if (winder != null) {
+            if (!winder.grayscale) {
+                winder.onTrigger();
+                this.recallEffect();
+            }
         }
 
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
+
 }

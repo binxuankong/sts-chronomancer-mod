@@ -21,7 +21,7 @@ public class BorrowedTimePower extends AbstractPower {
         this.amount = -1;
         this.updateDescription();
         this.loadRegion("closeUp");
-        this.priority = 50;
+        this.priority = 5;
     }
 
     @Override

@@ -1,6 +1,7 @@
 package chronoMod.cards;
 
 import chronoMod.powers.*;
+import chronoMod.relics.Grimoire;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -52,6 +53,10 @@ public abstract class AbstractXCostCard extends AbstractDynamicCard {
             // Temporal Paradox
             if (EnergyPanel.totalCount >= 3 && p.hasPower(TemporalParadoxPower.POWER_ID)) {
                 p.getPower(TemporalParadoxPower.POWER_ID).onSpecificTrigger();
+            }
+            // Grimoire
+            if (EnergyPanel.totalCount >= 1 && p.hasRelic(Grimoire.ID)) {
+                p.getRelic(Grimoire.ID).onTrigger();
             }
             p.energy.use(EnergyPanel.totalCount);
         }

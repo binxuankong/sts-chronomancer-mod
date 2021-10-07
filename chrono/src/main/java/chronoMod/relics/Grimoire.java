@@ -5,11 +5,9 @@ import chronoMod.ChronoMod;
 import chronoMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,56 +25,54 @@ public class Grimoire extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.cost == -2 && EnergyPanel.totalCount > 0) {
-            this.flash();
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            ArrayList<AbstractCard> groupCopy = new ArrayList();
-            Iterator var4 = AbstractDungeon.player.hand.group.iterator();
+    public void onTrigger() {
+        this.flash();
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        ArrayList<AbstractCard> groupCopy = new ArrayList();
+        Iterator var4 = AbstractDungeon.player.hand.group.iterator();
 
-            while (true) {
-                while (var4.hasNext()) {
-                    AbstractCard c = (AbstractCard) var4.next();
-                    if (c.cost > 0 && c.costForTurn > 0 && !c.freeToPlayOnce) {
-                        groupCopy.add(c);
-                    } else {
-                        ChronoMod.logger.info("COST IS 0: " + c.name);
-                    }
-                }
-
-                var4 = AbstractDungeon.actionManager.cardQueue.iterator();
-
-                while (var4.hasNext()) {
-                    CardQueueItem i = (CardQueueItem) var4.next();
-                    if (i.card != null) {
-                        ChronoMod.logger.info("INVALID: " + i.card.name);
-                        groupCopy.remove(i.card);
-                    }
-                }
-
-                AbstractCard c = null;
-                if (groupCopy.isEmpty()) {
-                    ChronoMod.logger.info("NO VALID CARDS");
+        while (true) {
+            while (var4.hasNext()) {
+                AbstractCard c = (AbstractCard) var4.next();
+                if (c.cost > 0 && c.costForTurn > 0 && !c.freeToPlayOnce) {
+                    groupCopy.add(c);
                 } else {
-                    ChronoMod.logger.info("VALID CARDS: ");
-                    Iterator var9 = groupCopy.iterator();
-
-                    while (var9.hasNext()) {
-                        AbstractCard cc = (AbstractCard) var9.next();
-                        ChronoMod.logger.info(cc.name);
-                    }
-
-                    c = (AbstractCard) groupCopy.get(AbstractDungeon.cardRandomRng.random(0, groupCopy.size() - 1));
+                    ChronoMod.logger.info("COST IS 0: " + c.name);
                 }
-
-                if (c != null) {
-                    ChronoMod.logger.info("Mummified hand: " + c.name);
-                    c.setCostForTurn(0);
-                } else {
-                    ChronoMod.logger.info("ERROR: MUMMIFIED HAND NOT WORKING");
-                }
-                break;
             }
+
+            var4 = AbstractDungeon.actionManager.cardQueue.iterator();
+
+            while (var4.hasNext()) {
+                CardQueueItem i = (CardQueueItem) var4.next();
+                if (i.card != null) {
+                    ChronoMod.logger.info("INVALID: " + i.card.name);
+                    groupCopy.remove(i.card);
+                }
+            }
+
+            AbstractCard c = null;
+            if (groupCopy.isEmpty()) {
+                ChronoMod.logger.info("NO VALID CARDS");
+            } else {
+                ChronoMod.logger.info("VALID CARDS: ");
+                Iterator var9 = groupCopy.iterator();
+
+                while (var9.hasNext()) {
+                    AbstractCard cc = (AbstractCard) var9.next();
+                    ChronoMod.logger.info(cc.name);
+                }
+
+                c = (AbstractCard) groupCopy.get(AbstractDungeon.cardRandomRng.random(0, groupCopy.size() - 1));
+            }
+
+            if (c != null) {
+                ChronoMod.logger.info("Mummified hand: " + c.name);
+                c.setCostForTurn(0);
+            } else {
+                ChronoMod.logger.info("ERROR: MUMMIFIED HAND NOT WORKING");
+            }
+            break;
         }
     }
 

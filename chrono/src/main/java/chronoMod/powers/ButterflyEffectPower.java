@@ -54,11 +54,6 @@ public class ButterflyEffectPower extends RecallPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
-        this.triggerRecall();
-    }
-
-    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.block + DESCRIPTIONS[1] + this.artifact + DESCRIPTIONS[2];
     }

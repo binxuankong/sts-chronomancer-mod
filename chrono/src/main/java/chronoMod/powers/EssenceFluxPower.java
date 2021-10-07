@@ -29,7 +29,6 @@ public class EssenceFluxPower extends RecallPower {
         this.hitCount = hitCount;
         this.updateDescription();
         this.loadRegion("static_discharge");
-        this.priority = 40;
     }
 
     @Override
@@ -37,11 +36,6 @@ public class EssenceFluxPower extends RecallPower {
         for (int i=0; i < this.hitCount; i++) {
             this.addToBot(new EssenceFluxAction(new DamageInfo(this.owner, damage, damageType)));
         }
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
     }
 
     @Override

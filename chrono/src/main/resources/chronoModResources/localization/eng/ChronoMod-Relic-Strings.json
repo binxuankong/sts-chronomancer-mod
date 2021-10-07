@@ -27,6 +27,6 @@
   "chronoMod:Winder": {
     "NAME": "Winder",
     "FLAVOR": "The key does not fit in the clock that you have.",
-    "DESCRIPTIONS": ["The first time you trigger a #yRecall effect each turn, gain [E] ."]
+    "DESCRIPTIONS": ["Once per turn, trigger the first Recall effect twice."]
   }
 }

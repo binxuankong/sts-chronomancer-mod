@@ -23,12 +23,9 @@ public class Winder extends CustomRelic {
 
     @Override
     public void onTrigger() {
-        if (!this.grayscale) {
-            this.flash();
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new GainEnergyAction(1));
-            this.grayscale = true;
-        }
+        this.flash();
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.grayscale = true;
     }
 
     @Override

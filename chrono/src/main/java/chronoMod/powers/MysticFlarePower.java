@@ -36,7 +36,6 @@ public class MysticFlarePower extends RecallPower {
         this.target = monster;
         this.updateDescription();
         this.loadRegion("flameBarrier");
-        this.priority = 40;
     }
 
     @Override
@@ -50,11 +49,6 @@ public class MysticFlarePower extends RecallPower {
             this.addToBot(new DamageAction(this.target, new DamageInfo(this.owner, this.damage, this.damageType),
                     AbstractGameAction.AttackEffect.NONE));
         }
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        this.triggerRecall();
     }
 
     @Override

@@ -14,24 +14,21 @@ public class RecallDrawPower extends RecallPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static int idOffset;
+
     public RecallDrawPower(AbstractCreature owner, int drawAmt) {
         super(owner);
         this.name = NAME;
-        this.ID = POWER_ID;
+        this.ID = POWER_ID + idOffset;
+        idOffset++;
         this.amount = drawAmt;
         this.updateDescription();
         this.loadRegion("carddraw");
-        this.priority = 25;
     }
 
     @Override
     public void recallEffect() {
         this.addToBot(new DrawCardAction(this.owner, this.amount));
-    }
-
-    @Override
-    public void atStartOfTurnPostDraw() {
-        this.triggerRecall();
     }
 
     @Override
