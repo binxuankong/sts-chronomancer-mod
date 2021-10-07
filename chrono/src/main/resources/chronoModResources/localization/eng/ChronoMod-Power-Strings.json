@@ -5,47 +5,47 @@
     },
     "chronoMod:ArcaneBlessing": {
         "NAME": "Arcane Blessing",
-        "DESCRIPTIONS": ["Whenever you consume Jade, your next Attack deals #b", " additional damage."]
+        "DESCRIPTIONS": ["Whenever you consume #yJade, your next Attack deals #b", " additional damage."]
     },
     "chronoMod:BackInTime": {
         "NAME": "Back in Time",
-        "DESCRIPTIONS": ["Recall: Set your HP to #b", " ."]
+        "DESCRIPTIONS": ["#yRecall: Set your HP to #b", " ."]
     },
     "chronoMod:BorrowedTime": {
         "NAME": "Borrowed Time",
-        "DESCRIPTIONS": ["Whenever you receive unblocked damage, Recall the amount of damage received as Block."]
+        "DESCRIPTIONS": ["Whenever you receive unblocked damage, #yRecall the amount of damage received as #yBlock."]
     },
     "chronoMod:ButterflyEffect": {
         "NAME": "Butterfly Effect",
-        "DESCRIPTIONS": ["Recall: If any enemy intends to attack, gain #b", " Block. Otehrwise, gain #b", " Artifact."]
+        "DESCRIPTIONS": ["#yRecall: If any enemy intends to attack, gain #b", " #yBlock. Otherwise, gain #b", " #yArtifact."]
     },
     "chronoMod:EssenceFlux": {
         "NAME": "Essence Flux",
-        "DESCRIPTIONS": ["Recall: Deal #b", " damage to a random enemy #b", " times."]
+        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage to a random enemy #b", " times."]
     },
     "chronoMod:EternalForm": {
         "NAME": "Eternal Form",
-        "DESCRIPTIONS": ["At the start of your turn, you can choose to put a card from your discard pile into your hand. It costs #b", " less energy this turn."]
+        "DESCRIPTIONS": ["At the start of your turn, you can choose to put a card from your discard pile into your hand. It costs #b", " less [E] this turn."]
     },
     "chronoMod:FalsePromise": {
         "NAME": "False Promise",
-        "DESCRIPTIONS": ["If you play #b", " more card this turn, gain #b", " more cards this turn, gain #b", " energy, #b", " Jade and draw #b", " card.", " cards."]
+        "DESCRIPTIONS": ["If you play #b", " more card this turn, gain [E] , #b", " more cards this turn, gain [E] , #b", " #yJade and draw #b", " card.", " cards."]
     },
     "chronoMod:Flashback": {
         "NAME": "Flashback",
-        "DESCRIPTIONS": ["Recall: Gain #b", " Jade."]
+        "DESCRIPTIONS": ["#yRecall: Gain #b", " #yJade."]
     },
     "chronoMod:Inheritance": {
         "NAME": "Inheritance",
-        "DESCRIPTIONS": ["At the end of your turn, Recall your unused energy."]
+        "DESCRIPTIONS": ["At the end of your turn, #yRecall your unused [E] ."]
     },
     "chronoMod:Jade": {
         "NAME": "Jade",
-        "DESCRIPTIONS": ["At the start of your turn, consume 1 Jade and lose #b",  " energy."]
+        "DESCRIPTIONS": ["At the start of your turn, consume 1 #yJade and lose #b",  " [E] ."]
     },
     "chronoMod:Malefice": {
         "NAME": "Malefice",
-        "DESCRIPTIONS": ["Recall: Recall: Deal #b", " damage."]
+        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage."]
     },
     "chronoMod:Memento": {
         "NAME": "Memento",
@@ -53,15 +53,15 @@
     },
     "chronoMod:Memorize": {
         "NAME": "Memorize",
-        "DESCRIPTIONS": ["Recall: ", " costs 0 this turn."]
+        "DESCRIPTIONS": ["#yRecall: ", " costs 0 this turn."]
     },
     "chronoMod:MysticFlare": {
         "NAME": "Mystic Flare",
-        "DESCRIPTIONS": ["Recall: Deal #b", " damage twice #b", " times."]
+        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage twice #b", " times."]
     },
     "chronoMod:MysticShift": {
         "NAME": "Mystic Shift",
-        "DESCRIPTIONS": ["Recall: Deal damage to ALL enemies equal to your Block."]
+        "DESCRIPTIONS": ["#yRecall: Deal damage to ALL enemies equal to your #yBlock."]
     },
     "chronoMod:Nightmare": {
         "NAME": "Nightmare",
@@ -69,27 +69,27 @@
     },
     "chronoMod:RecallBlock": {
         "NAME": "Recall Block",
-        "DESCRIPTIONS": ["Recall: Gain #b",  " Block."]
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " #yBlock."]
     },
     "chronoMod:RecallReceiveDamage": {
         "NAME": "Recall Receive Damage",
-        "DESCRIPTIONS": ["Recall: Receive #b",  " damage."]
+        "DESCRIPTIONS": ["#yRecall: Receive #b",  " damage."]
     },
     "chronoMod:RecallDraw": {
         "NAME": "Recall Draw",
-        "DESCRIPTIONS": ["Recall: Draw #b",  " card.", " cards."]
+        "DESCRIPTIONS": ["#yRecall: Draw #b",  " card.", " cards."]
     },
     "chronoMod:RecallEnergy": {
         "NAME": "Recall Energy",
-        "DESCRIPTIONS": ["Recall: Gain #b",  " energy."]
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " [E]."]
     },
     "chronoMod:RecurringDream": {
         "NAME": "Recurring Dream",
-        "DESCRIPTIONS": ["Gain #b", " Block at the start of your next #b", " turns."]
+        "DESCRIPTIONS": ["Gain #b", " #yBlock at the start of your next #b", " turns."]
     },
     "chronoMod:Singularity": {
         "NAME": "Singularity",
-        "DESCRIPTIONS": ["Whenever you play a card, upgrade the card for the rest of the combat."]
+        "DESCRIPTIONS": ["Whenever you play a card, #yupgrade the card for the rest of the combat."]
     },
     "chronoMod:SpellBoost": {
         "NAME": "Spell Boost",
@@ -97,38 +97,38 @@
     },
     "chronoMod:SplitSecond": {
         "NAME": "Split Second",
-        "DESCRIPTIONS": ["Split Second costs 0 this turn."]
+        "DESCRIPTIONS": ["#ySplit #ySecond costs 0 this turn."]
     },
     "chronoMod:StarSurge": {
         "NAME": "Star Surge",
-        "DESCRIPTIONS": ["Recall: Deal #b",  " damage to all enemies."]
+        "DESCRIPTIONS": ["#yRecall: Deal #b",  " damage to all enemies."]
     },
     "chronoMod:TemperedFate": {
         "NAME": "Tempered Fate",
-        "DESCRIPTIONS": ["Prevent the next time you would lose HP.", "Prevent the next #b", " times you would lose HP.", " Gain 1 Jade when this effect triggers."]
+        "DESCRIPTIONS": ["Prevent the next time you would lose HP.", "Prevent the next #b", " times you would lose HP.", " Gain 1 #yJade when this effect triggers."]
     },
     "chronoMod:TemporalParadox": {
         "NAME": "Temporal Paradox",
-        "DESCRIPTIONS": ["Whenever you spend at least 3 energy on a cost X card, gain #b", " Strength and #b", " Dexterity."]
+        "DESCRIPTIONS": ["Whenever you spend at least 3 [E] on a cost X card, gain #b", " #yStrength and #b", " #yDexterity."]
     },
     "chronoMod:TidesOfTime": {
         "NAME": "Tides of Time",
-        "DESCRIPTIONS": ["Apply #b", " Weak to ALL enemies at the end of your turn if you have triggered a Recall effect this turn."]
+        "DESCRIPTIONS": ["Apply #b", " #yWeak to ALL enemies at the end of your turn if you have triggered a #yRecall effect this turn."]
     },
     "chronoMod:TimeBomb": {
         "NAME": "Time Bomb",
-        "DESCRIPTIONS": ["Recall: Deal #b", " damage to ALL enemies."]
+        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage to ALL enemies."]
     },
     "chronoMod:TimeDilation": {
         "NAME": "Time Dilation",
-        "DESCRIPTIONS": ["Recall: Apply #b", " Weak to enemies who intend to attack, and #b", " Vulnerable to those who do not."]
+        "DESCRIPTIONS": ["#yRecall: Apply #b", " #yWeak to enemies who intend to attack, and #b", " #yVulnerable to those who do not."]
     },
     "chronoMod:TimeSink": {
         "NAME": "Time Sink",
-        "DESCRIPTIONS": ["Gain 1 E and draw 1 card at the start of your next #b", " turns."]
+        "DESCRIPTIONS": ["Gain [E] and draw 1 card at the start of your next #b", " turns."]
     },
     "chronoMod:Willpower": {
         "NAME": "Willpower",
-        "DESCRIPTIONS": ["Prevent the next time you gain Jade.", "Prevent the next #b", " times you gain Jade."]
+        "DESCRIPTIONS": ["Prevent the next time you gain #yJade.", "Prevent the next #b", " times you gain #yJade."]
     }
 }

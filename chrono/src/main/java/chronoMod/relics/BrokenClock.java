@@ -1,49 +1,38 @@
 package chronoMod.relics;
 
 import chronoMod.ChronoMod;
-import chronoMod.powers.JadePower;
 import chronoMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static chronoMod.ChronoMod.makeRelicOutlinePath;
 import static chronoMod.ChronoMod.makeRelicPath;
 
-public class BrokenWatch extends CustomRelic {
-    public static final String ID = ChronoMod.makeID("BrokenWatch");
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+public class BrokenClock extends CustomRelic {
+    private static final String relic = "BrokenClock";
+    public static final String ID = ChronoMod.makeID(relic);
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(relic + ".png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
 
-    private boolean activate = false;
-
-    public BrokenWatch() {
+    public BrokenClock() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
     }
 
     @Override
-    public void atTurnStart() {
-        if (AbstractDungeon.player.hasPower(JadePower.POWER_ID) && !this.grayscale) {
-            this.activate = true;
-        }
-    }
-
-    @Override
-    public void atTurnStartPostDraw () {
-        if (this.activate) {
+    public void onTrigger() {
+        if (!this.grayscale) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new DrawCardAction(2));
-            this.activate = false;
+            this.addToBot(new GainEnergyAction(1));
             this.grayscale = true;
         }
     }
 
     @Override
     public void onVictory() {
-        this.activate = false;
         this.grayscale = false;
     }
 
@@ -54,6 +43,6 @@ public class BrokenWatch extends CustomRelic {
 
     @Override
     public CustomRelic makeCopy() {
-        return new BrokenWatch();
+        return new BrokenClock();
     }
 }

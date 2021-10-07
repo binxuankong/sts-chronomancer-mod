@@ -2,6 +2,8 @@ package chronoMod.actions;
 
 import chronoMod.powers.ArcaneBlessingPower;
 import chronoMod.powers.JadePower;
+import chronoMod.relics.AncientClock;
+import chronoMod.relics.BrokenClock;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -26,10 +28,22 @@ public class ConsumeJadeAction extends AbstractGameAction {
                 this.addToBot(new RemoveSpecificPowerAction(this.p, this.p, jade));
             }
         }
+
         // Arcane Blessing
         if (this.p.hasPower(ArcaneBlessingPower.POWER_ID)) {
             this.p.getPower(ArcaneBlessingPower.POWER_ID).onSpecificTrigger();
         }
+
+        // Broken Watch
+        if (p.hasRelic(BrokenClock.ID)) {
+            p.getRelic(BrokenClock.ID).onTrigger();
+        }
+
+        // Ancient Watch
+        if (p.hasRelic(AncientClock.ID)) {
+            p.getRelic(AncientClock.ID).onTrigger();
+        }
+
         this.isDone = true;
     }
 }

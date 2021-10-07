@@ -1,9 +1,16 @@
 {
+  "chronoMod:AncientWatch": {
+    "NAME": "Ancient Watch",
+    "FLAVOR": "It does not show the actual time?",
+    "DESCRIPTIONS": [
+      "The first #b3 times you consume #yJade each combat, gain [E]."
+    ]
+  },
   "chronoMod:BrokenWatch": {
     "NAME": "Broken Watch",
     "FLAVOR": "You cannot tell the time with this.",
     "DESCRIPTIONS": [
-      "The first time you consume #yJade each combat, draw #b2 cards."
+      "The first time you consume #yJade each combat, gain [E]."
     ]
   },
   "chronoMod:Goggles": {
