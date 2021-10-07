@@ -51,9 +51,21 @@
         "NAME": "Memento",
         "DESCRIPTIONS": ["At the end of the turn, you can choose to place #b", " card", " cards", " from your hand onto the top of your draw pile."]
     },
+    "chronoMod:Memorize": {
+        "NAME": "Memorize",
+        "DESCRIPTIONS": ["Recall: ", " costs 0 this turn."]
+    },
     "chronoMod:MysticFlare": {
         "NAME": "Mystic Flare",
         "DESCRIPTIONS": ["Recall: Deal #b", " damage twice #b", " times."]
+    },
+    "chronoMod:MysticShift": {
+        "NAME": "Mystic Shift",
+        "DESCRIPTIONS": ["Recall: Deal damage to ALL enemies equal to your Block."]
+    },
+    "chronoMod:Nightmare": {
+        "NAME": "Nightmare",
+        "DESCRIPTIONS": ["Lose #b", " HP at the start of its next #b", " turns."]
     },
     "chronoMod:RecallBlock": {
         "NAME": "Recall Block",
@@ -70,6 +82,10 @@
     "chronoMod:RecallEnergy": {
         "NAME": "Recall Energy",
         "DESCRIPTIONS": ["Recall: Gain #b",  " energy."]
+    },
+    "chronoMod:RecurringDream": {
+        "NAME": "Recurring Dream",
+        "DESCRIPTIONS": ["Gain #b", " Block at the start of your next #b", " turns."]
     },
     "chronoMod:Singularity": {
         "NAME": "Singularity",
@@ -106,6 +122,10 @@
     "chronoMod:TimeDilation": {
         "NAME": "Time Dilation",
         "DESCRIPTIONS": ["Recall: Apply #b", " Weak to enemies who intend to attack, and #b", " Vulnerable to those who do not."]
+    },
+    "chronoMod:TimeSink": {
+        "NAME": "Time Sink",
+        "DESCRIPTIONS": ["Gain 1 E and draw 1 card at the start of your next #b", " turns."]
     },
     "chronoMod:Willpower": {
         "NAME": "Willpower",

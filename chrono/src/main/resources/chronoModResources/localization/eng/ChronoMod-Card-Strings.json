@@ -100,6 +100,10 @@
     "NAME": "Distort Reality",
     "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile onto the top of your draw pile."
   },
+  "chronoMod:Encode": {
+    "NAME": "Encode",
+    "DESCRIPTION": "Select a card in your hand. NL It costs 0 this combat. NL Gain Jade equal to its cost. NL Exhaust."
+  },
   "chronoMod:EssenceFlux": {
     "NAME": "Essence Flux",
     "DESCRIPTION": "Recall: Deal !D! damage to a random enemy X times."
@@ -177,6 +181,10 @@
     "NAME": "Memento",
     "DESCRIPTION": "At the end of your turn, you can choose to place !M! card from your hand onto the top of your draw pile."
   },
+  "chronoMod:Memorize": {
+    "NAME": "Memorize",
+    "DESCRIPTION": "Retain a card. NL Recall: It costs 0 this turn."
+  },
   "chronoMod:MysticBarrier": {
     "NAME": "Mystic Barrier",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! additional Block for each Jade that you have."
@@ -189,15 +197,36 @@
     "NAME": "Mystic Flare",
     "DESCRIPTION": "Recall: Deal !D! damage twice X times."
   },
+  "chronoMod:MysticShift": {
+    "NAME": "Mystic Shift",
+    "DESCRIPTION": "Gain 1 Blur. NL Recall: Deal damage to ALL enemies equal to your Block."
+  },
   "chronoMod:MysticShot": {
     "NAME": "Mystic Shot",
     "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each Jade you have."
+  },
+  "chronoMod:Nightmare": {
+    "NAME": "Nightmare",
+    "DESCRIPTION": "The enemy loses !M! HP at the start of its next X turns. NL Exhaust."
+  },
+  "chronoMod:ParallelUniverse": {
+    "NAME": "Parallel Universe",
+    "DESCRIPTION": "Recall your Block. NL Gain !B! Block X times."
+  },
+  "chronoMod:Precognition": {
+    "NAME": "Precognition",
+    "DESCRIPTION": "Require: [E] [E]. NL Gain !B! Block and 1 Jade. NL Gain !B! Block X times.",
+    "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
     "DESCRIPTION": "Require: [E] [E] [E]. NL Draw X cards. NL They cost 0 this turn. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Require: [E] [E] [E]. NL Draw X cards. NL They cost 0 this turn.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
+  },
+  "chronoMod:RecurringDream": {
+    "NAME": "Recurring Dream",
+    "DESCRIPTION": "Gain !B! Block at the start of your next X turns. NL Exhaust."
   },
   "chronoMod:Rewinder": {
     "NAME": "Rewinder",
@@ -252,6 +281,11 @@
   "chronoMod:TimeDilation": {
     "NAME": "Time Dilation",
     "DESCRIPTION": "Recall: Apply !M! Weak to enemies who intend to attack, and !M! Vulnerable to those who do not."
+  },
+  "chronoMod:TimeSink": {
+    "NAME": "Time Sink",
+    "DESCRIPTION": "Gain [E] and draw 1 card at the start of your next X turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 card at the start of your next X turns."
   },
   "chronoMod:TimestreamShift": {
     "NAME": "Timestream Shift",
