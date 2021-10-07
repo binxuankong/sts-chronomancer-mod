@@ -141,13 +141,20 @@ public class Chronomancer extends CustomPlayer {
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
+        retVal.add(DelayedGuard.ID);
+        retVal.add(Teleport.ID);
+
         return retVal;
     }
 
     // Starting Relics	
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(BrokenClock.ID);
+        retVal.add(AncientClock.ID);
+        retVal.add(Goggles.ID);
+        retVal.add(Grimoire.ID);
+        retVal.add(OldWine.ID);
+        retVal.add(Winder.ID);
         // Mark relics as seen - makes it visible in the compendium immediately
         UnlockTracker.markRelicAsSeen(BrokenClock.ID);
         return retVal;

@@ -35,13 +35,13 @@ public class ConsumeJadeAction extends AbstractGameAction {
         }
 
         // Broken Watch
-        if (p.hasRelic(BrokenClock.ID)) {
-            p.getRelic(BrokenClock.ID).onTrigger();
+        if (this.p.hasRelic(BrokenClock.ID)) {
+            this.p.getRelic(BrokenClock.ID).onTrigger();
         }
 
         // Ancient Watch
-        if (p.hasRelic(AncientClock.ID)) {
-            p.getRelic(AncientClock.ID).onTrigger();
+        if (this.p.hasRelic(AncientClock.ID)) {
+            this.p.getRelic(AncientClock.ID).onTrigger();
         }
 
         this.isDone = true;

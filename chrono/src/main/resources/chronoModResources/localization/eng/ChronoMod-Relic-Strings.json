@@ -1,55 +1,32 @@
 {
-  "chronoMod:AncientWatch": {
-    "NAME": "Ancient Watch",
+  "chronoMod:AncientClock": {
+    "NAME": "Ancient Clock",
     "FLAVOR": "It does not show the actual time?",
-    "DESCRIPTIONS": [
-      "The first #b3 times you consume #yJade each combat, gain [E]."
-    ]
+    "DESCRIPTIONS": ["The first #b3 times you consume #yJade each combat, gain [E] ."]
   },
-  "chronoMod:BrokenWatch": {
-    "NAME": "Broken Watch",
+  "chronoMod:BrokenClock": {
+    "NAME": "Broken Clock",
     "FLAVOR": "You cannot tell the time with this.",
-    "DESCRIPTIONS": [
-      "The first time you consume #yJade each combat, gain [E]."
-    ]
+    "DESCRIPTIONS": ["The first time you consume #yJade each combat, gain [E] ."]
   },
   "chronoMod:Goggles": {
     "NAME": "Goggles",
     "FLAVOR": "You can see further with this.",
-    "DESCRIPTIONS": [
-      "The first card you play each combat costs #b0."
-    ]
+    "DESCRIPTIONS": ["The first card you play each combat costs #b0."]
   },
-  "chronoMod:PlaceholderRelic": {
-    "NAME": "Placeholder Energy Relic",
-    "FLAVOR": "The snake is a friend.",
-    "DESCRIPTIONS": [
-      "Gain #b1 [E] ."
-    ]
+  "chronoMod:Grimoire": {
+    "NAME": "Grimoire",
+    "FLAVOR": "This handbook only contains useless spells like summoning a flower bed.",
+    "DESCRIPTIONS": ["Whenever you spend [E] on a cost X card, a random card in your hand costs #b0 this turn."]
   },
-  "chronoMod:PlaceholderRelic2": {
-    "NAME": "Placeholder Relic 2",
-    "FLAVOR": "You feel stronger.",
-    "DESCRIPTIONS": [
-      "At the start of each combat, gain #b1 #yStrength."
-    ]
+  "chronoMod:OldWine": {
+    "NAME": "Old Wine",
+    "FLAVOR": "It smells funny. You feel funny after smelling it.",
+    "DESCRIPTIONS": ["At the start of your turn, gain #b2 #yStrength and #b1 #yJade."]
   },
-  "chronoMod:DefaultClickableRelic": {
-    "NAME": "Right-Clicky Relic",
-    "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
-    "DESCRIPTIONS": [
-      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yEvoke your rightmost Orb.",
-      "YOU ARE MINE!"
-    ]
-  },
-  "chronoMod:BottledPlaceholderRelic": {
-    "NAME": "Bottled Placeholder",
-    "FLAVOR": "What is this?",
-    "DESCRIPTIONS": [
-      "Choose a card. Whenever you take play any card, draw the chosen card.",
-      "Whenever you play a card, draw ",
-      ".",
-      "Select a card to bottle for "
-    ]
+  "chronoMod:Winder": {
+    "NAME": "Winder",
+    "FLAVOR": "The key does not fit in the clock that you have.",
+    "DESCRIPTIONS": ["The first time you trigger a #yRecall effect each turn, gain [E] ."]
   }
 }

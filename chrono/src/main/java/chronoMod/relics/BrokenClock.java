@@ -18,7 +18,7 @@ public class BrokenClock extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
 
     public BrokenClock() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.SOLID);
     }
 
     @Override

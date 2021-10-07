@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class AccelerateAction extends AbstractGameAction {
@@ -17,7 +19,9 @@ public class AccelerateAction extends AbstractGameAction {
     }
 
     public void update() {
-        Iterator var1 = p.powers.iterator();
+        ArrayList<AbstractPower> powers = p.powers;
+        Collections.sort(powers);
+        Iterator var1 = powers.iterator();
 
         while(var1.hasNext()) {
             AbstractPower pow = (AbstractPower)var1.next();
