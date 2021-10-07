@@ -79,6 +79,10 @@
     "NAME": "Convergence",
     "DESCRIPTION": "Deal !D! damage. NL Recall: Gain !B! Block."
   },
+  "chronoMod:CosmicBinding": {
+    "NAME": "Cosmic Binding",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL If X is 3 or more, gain 1 Jade to apply !M! Weak and !M! Vulnerable to ALL enemies."
+  },
   "chronoMod:DarkMatter": {
     "NAME": "Dark Matter",
     "DESCRIPTION": "Gain !B! Block. NL Gain 1 Jade."
@@ -96,6 +100,10 @@
     "NAME": "Distort Reality",
     "DESCRIPTION": "Gain !B! Block. NL Put a card from your discard pile onto the top of your draw pile."
   },
+  "chronoMod:EssenceFlux": {
+    "NAME": "Essence Flux",
+    "DESCRIPTION": "Recall: Deal !D! damage to a random enemy X times."
+  },
   "chronoMod:EternalForm": {
     "NAME": "Eternal Form",
     "DESCRIPTION": "At the start of your turn, you can choose to put a card from your discard pile into your hand. It costs !M! less [E] this turn."
@@ -111,6 +119,22 @@
     "DESCRIPTION": "Whenever you play 4 cards in a single turn, gain [E] , !M! Jade and draw !M! card.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play 4 cards in a single turn, gain [E] , !M! Jade and draw !M! card."
   },
+  "chronoMod:FatesEdict": {
+    "NAME": "Fate's Edict",
+    "DESCRIPTION": "If the enemy intends to attack, gain !B!X Block. Otherwise, deal !D!X damage."
+  },
+  "chronoMod:Flashback": {
+    "NAME": "Flashback",
+    "DESCRIPTION": "Deal !D! damage. NL Recall your Jade."
+  },
+  "chronoMod:Flashbulb": {
+    "NAME": "Flashbulb",
+    "DESCRIPTION": "Deal !D! damage. NL Put a random Attack card from your discard pile into your hand. It costs 0 this turn."
+  },
+  "chronoMod:FlashForward": {
+    "NAME": "Flash Forward",
+    "DESCRIPTION": "Deal !D! damage. NL Trigger all Recall effects this turn."
+  },
   "chronoMod:Flux": {
     "NAME": "Flux",
     "DESCRIPTION": "Deal !D! damage and apply !M! Vulnerable. NL Gain 1 Jade."
@@ -121,7 +145,7 @@
   },
   "chronoMod:Glimpse": {
     "NAME": "Glimpse",
-    "DESCRIPTION": "Scry !M!. NL Draw 1 card."
+    "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL Exhaust."
   },
   "chronoMod:GoofOff": {
     "NAME": "Goof Off",
@@ -221,6 +245,10 @@
     "NAME": "Tides of Time",
     "DESCRIPTION": "Apply !M! Weak to ALL enemies at the end of your turn if you have triggered a Recall effect this turn."
   },
+  "chronoMod:TimeBomb": {
+    "NAME": "Time Bomb",
+    "DESCRIPTION": "Deal !D! damage. NL Recall: Deal damage to ALL enemies based on unblocked damage dealt."
+  },
   "chronoMod:TimeDilation": {
     "NAME": "Time Dilation",
     "DESCRIPTION": "Recall: Apply !M! Weak to enemies who intend to attack, and !M! Vulnerable to those who do not."
@@ -256,9 +284,5 @@
     "NAME": "Wormhole",
     "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
-  },
-  "chronoMod:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! damage."
   }
 }

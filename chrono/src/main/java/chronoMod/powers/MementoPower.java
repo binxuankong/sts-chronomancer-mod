@@ -20,7 +20,7 @@ public class MementoPower extends AbstractPower {
         this.owner = owner;
         this.amount = numCards;
         this.updateDescription();
-        this.loadRegion("retain");
+        this.loadRegion("rebound");
     }
 
     @Override

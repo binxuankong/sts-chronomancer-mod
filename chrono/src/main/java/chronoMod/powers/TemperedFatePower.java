@@ -21,7 +21,7 @@ public class TemperedFatePower extends AbstractPower {
         this.owner = owner;
         this.amount = bufferAmt;
         this.updateDescription();
-        this.loadRegion("buffer");
+        this.loadRegion("heartDef");
         this.priority = 10;
     }
 

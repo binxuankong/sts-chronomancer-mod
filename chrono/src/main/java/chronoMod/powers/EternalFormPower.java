@@ -24,7 +24,7 @@ public class EternalFormPower extends AbstractPower {
         this.amount = numCards;
         this.costReduction = costReduction;
         this.updateDescription();
-        this.loadRegion("echo");
+        this.loadRegion("time");
         this.priority = 25;
     }
 

@@ -20,7 +20,7 @@ public class BorrowedTimePower extends AbstractPower {
         this.owner = owner;
         this.amount = -1;
         this.updateDescription();
-        this.loadRegion("corruption");
+        this.loadRegion("closeUp");
         this.priority = 50;
     }
 

@@ -19,6 +19,10 @@
         "NAME": "Butterfly Effect",
         "DESCRIPTIONS": ["Recall: If any enemy intends to attack, gain #b", " Block. Otehrwise, gain #b", " Artifact."]
     },
+    "chronoMod:EssenceFlux": {
+        "NAME": "Essence Flux",
+        "DESCRIPTIONS": ["Recall: Deal #b", " damage to a random enemy #b", " times."]
+    },
     "chronoMod:EternalForm": {
         "NAME": "Eternal Form",
         "DESCRIPTIONS": ["At the start of your turn, you can choose to put a card from your discard pile into your hand. It costs #b", " less energy this turn."]
@@ -26,6 +30,10 @@
     "chronoMod:FalsePromise": {
         "NAME": "False Promise",
         "DESCRIPTIONS": ["If you play #b", " more card this turn, gain #b", " more cards this turn, gain #b", " energy, #b", " Jade and draw #b", " card.", " cards."]
+    },
+    "chronoMod:Flashback": {
+        "NAME": "Flashback",
+        "DESCRIPTIONS": ["Recall: Gain #b", " Jade."]
     },
     "chronoMod:Inheritance": {
         "NAME": "Inheritance",
@@ -45,7 +53,7 @@
     },
     "chronoMod:MysticFlare": {
         "NAME": "Mystic Flare",
-        "DESCRIPTIONS": ["Recall: Recall: Deal #b", " damage twice #b", " times."]
+        "DESCRIPTIONS": ["Recall: Deal #b", " damage twice #b", " times."]
     },
     "chronoMod:RecallBlock": {
         "NAME": "Recall Block",
@@ -91,6 +99,10 @@
         "NAME": "Tides of Time",
         "DESCRIPTIONS": ["Apply #b", " Weak to ALL enemies at the end of your turn if you have triggered a Recall effect this turn."]
     },
+    "chronoMod:TimeBomb": {
+        "NAME": "Time Bomb",
+        "DESCRIPTIONS": ["Recall: Deal #b", " damage to ALL enemies."]
+    },
     "chronoMod:TimeDilation": {
         "NAME": "Time Dilation",
         "DESCRIPTIONS": ["Recall: Apply #b", " Weak to enemies who intend to attack, and #b", " Vulnerable to those who do not."]
@@ -98,13 +110,5 @@
     "chronoMod:Willpower": {
         "NAME": "Willpower",
         "DESCRIPTIONS": ["Prevent the next time you gain Jade.", "Prevent the next #b", " times you gain Jade."]
-    },
-    "chronoMod:CommonPower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-    },
-    "chronoMod:RarePower": {
-        "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
     }
 }

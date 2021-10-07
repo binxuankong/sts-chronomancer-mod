@@ -26,7 +26,7 @@ public class FalsePromisePower extends AbstractPower {
         this.amount = CARD_AMT;
         this.drawEnergyAmount = amount;
         this.updateDescription();
-        this.loadRegion("panache");
+        this.loadRegion("fading");
     }
 
     @Override

@@ -18,9 +18,9 @@ public class StarSurgePower extends RecallPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
+    private static int baseDamage;
     public int[] multiDamage;
     private DamageInfo.DamageType damageType;
-    private static int baseDamage;
     private static int idOffset;
 
     public StarSurgePower(AbstractCreature owner, int baseDamage, int[] multiDamage, DamageInfo.DamageType damageType) {
@@ -33,6 +33,7 @@ public class StarSurgePower extends RecallPower {
         this.damageType = damageType;
         this.updateDescription();
         this.loadRegion("doubleDamage");
+        this.priority = 40;
     }
 
     @Override

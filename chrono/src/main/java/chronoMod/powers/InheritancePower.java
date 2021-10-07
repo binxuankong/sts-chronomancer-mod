@@ -28,7 +28,7 @@ public class InheritancePower extends AbstractPower {
         this.owner = owner;
         this.amount = -1;
         this.updateDescription();
-        this.loadRegion("energized_green");
+        this.loadRegion("regrow");
     }
 
     @Override
