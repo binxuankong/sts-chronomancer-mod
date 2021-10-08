@@ -143,6 +143,8 @@ public class Chronomancer extends CustomPlayer {
         retVal.add(TimeWarp.ID);
 
         retVal.add(MagicChantSpring.ID);
+        retVal.add(Rewinder.ID);
+        retVal.add(Precognition.ID);
 
         return retVal;
     }

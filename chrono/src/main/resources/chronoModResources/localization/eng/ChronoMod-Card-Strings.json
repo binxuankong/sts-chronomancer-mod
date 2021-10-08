@@ -227,7 +227,7 @@
   },
   "chronoMod:Nightmare": {
     "NAME": "Nightmare",
-    "DESCRIPTION": "The enemy loses !M! HP at the start of its next X turns. NL Exhaust."
+    "DESCRIPTION": "The enemy loses !M! HP at the start of its next X turns."
   },
   "chronoMod:ParallelUniverse": {
     "NAME": "Parallel Universe",
@@ -235,7 +235,8 @@
   },
   "chronoMod:Precognition": {
     "NAME": "Precognition",
-    "DESCRIPTION": "Require: [E] [E]. NL Gain !B! Block and 1 Jade. NL Gain !B! Block X times.",
+    "DESCRIPTION": "Require: [E] [E]. Consume Jade X-1 times.",
+    "UPGRADE_DESCRIPTION": "Require: [E]. Consume Jade X times.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:Predestination": {
@@ -250,8 +251,7 @@
   },
   "chronoMod:Rewinder": {
     "NAME": "Rewinder",
-    "DESCRIPTION": "Consume Jade and gain !M! [E]. When you draw this card, increase its [E] by 1 this combat.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Consume Jade and gain !M! [E]. When you draw this card, increase its [E] by 1 this combat."
+    "DESCRIPTION": "Repeat your next Recall effect 3 times. Gain 2 Jade."
   },
   "chronoMod:RingSingularity": {
     "NAME": "Ring Singularity",

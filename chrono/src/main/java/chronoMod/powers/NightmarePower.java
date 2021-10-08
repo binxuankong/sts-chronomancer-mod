@@ -29,7 +29,7 @@ public class NightmarePower extends AbstractPower {
             this.amount = 999;
         }
         this.updateDescription();
-        this.loadRegion("phantasmal");
+        this.loadRegion("nightmare");
         this.type = PowerType.DEBUFF;
         this.priority = 30;
     }

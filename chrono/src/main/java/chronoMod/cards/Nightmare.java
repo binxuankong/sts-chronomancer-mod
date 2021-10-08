@@ -26,7 +26,6 @@ public class Nightmare extends AbstractXCostCard {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = HP_LOST_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
     @Override
@@ -36,7 +35,6 @@ public class Nightmare extends AbstractXCostCard {
             this.addToBot(new ApplyPowerAction(m, p, new NightmarePower(m, effect, this.magicNumber)));
         }
     }
-
 
     @Override
     public void upgrade() {
