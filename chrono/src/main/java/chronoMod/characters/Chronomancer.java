@@ -149,7 +149,6 @@ public class Chronomancer extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(BrokenClock.ID);
-        retVal.add(MagnifyingGlass.ID);
         // Mark relics as seen - makes it visible in the compendium immediately
         UnlockTracker.markRelicAsSeen(BrokenClock.ID);
         return retVal;
