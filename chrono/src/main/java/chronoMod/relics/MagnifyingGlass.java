@@ -12,17 +12,17 @@ import static chronoMod.ChronoMod.makeRelicOutlinePath;
 import static chronoMod.ChronoMod.makeRelicPath;
 
 public class MagnifyingGlass extends CustomRelic {
-    private static final String relic = "MagnifyingGlass";
-    public static final String ID = ChronoMod.makeID(relic);
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(relic + ".png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
+    private static final String RELIC_ID = MagnifyingGlass.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(RELIC_ID);
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(RELIC_ID + ".png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public MagnifyingGlass() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.SOLID);
     }
 
     @Override
-    public void atBattleStart() {
+    public void atBattleStartPreDraw() {
         this.flash();
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.addToBot(new CardFromDeckToDiscardAction(5));

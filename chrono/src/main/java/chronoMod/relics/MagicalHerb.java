@@ -14,10 +14,10 @@ import static chronoMod.ChronoMod.makeRelicOutlinePath;
 import static chronoMod.ChronoMod.makeRelicPath;
 
 public class MagicalHerb extends CustomRelic {
-    private static final String relic = "MagicalHerb";
-    public static final String ID = ChronoMod.makeID(relic);
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(relic + ".png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
+    private static final String RELIC_ID = MagicalHerb.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(RELIC_ID);
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(RELIC_ID + ".png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public MagicalHerb() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);

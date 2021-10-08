@@ -88,7 +88,7 @@ public class ChronoMod implements
     
     // MAKE IMAGE PATHS
     public static String makeCardPath(String resourcePath) {
-        return getModID() + "Resources/images/cards/beta/" + resourcePath;
+        return getModID() + "Resources/images/cards/" + resourcePath;
         // return getModID() + "Resources/images/cards/" + resourcePath;
     }
 

@@ -16,10 +16,10 @@ import static chronoMod.ChronoMod.makeRelicOutlinePath;
 import static chronoMod.ChronoMod.makeRelicPath;
 
 public class Grimoire extends CustomRelic {
-    private static final String relic = "Grimoire";
-    public static final String ID = ChronoMod.makeID(relic);
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(relic + ".png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
+    private static final String RELIC_ID = Grimoire.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(RELIC_ID);
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(RELIC_ID + ".png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public Grimoire() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

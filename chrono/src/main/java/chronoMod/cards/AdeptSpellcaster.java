@@ -11,8 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class AdeptSpellcaster extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(AdeptSpellcaster.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    private static final String CARD_ID = AdeptSpellcaster.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("power/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -14,10 +14,10 @@ import static chronoMod.ChronoMod.makeRelicOutlinePath;
 import static chronoMod.ChronoMod.makeRelicPath;
 
 public class OldWine extends CustomRelic {
-    private static final String relic = "OldWine";
-    public static final String ID = ChronoMod.makeID(relic);
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(relic + ".png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
+    private static final String RELIC_ID = OldWine.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(RELIC_ID);
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(RELIC_ID + ".png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public OldWine() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);

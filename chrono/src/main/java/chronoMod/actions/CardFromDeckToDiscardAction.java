@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
 public class CardFromDeckToDiscardAction extends AbstractGameAction {
-    public static final String[] TEXT = {"Select up to ", " cards to place into your discard pile."};
+    public static final String[] TEXT = {"Select up to ", " card(s) to place into your discard pile."};
     private AbstractPlayer p;
 
     public CardFromDeckToDiscardAction(int amount) {

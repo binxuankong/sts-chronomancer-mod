@@ -14,10 +14,10 @@ import static chronoMod.ChronoMod.makeRelicOutlinePath;
 import static chronoMod.ChronoMod.makeRelicPath;
 
 public class Scroll extends CustomRelic {
-    private static final String relic = "Scroll";
-    public static final String ID = ChronoMod.makeID(relic);
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(relic + ".png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
+    private static final String RELIC_ID = Scroll.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(RELIC_ID);
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(RELIC_ID + ".png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public Scroll() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
