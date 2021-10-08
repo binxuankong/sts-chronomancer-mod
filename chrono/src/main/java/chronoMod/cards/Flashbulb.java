@@ -2,6 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.actions.FlashbulbAction;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -31,8 +32,9 @@ public class Flashbulb extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.addToBot(new GainJadeAction(1));
         this.addToBot(new FlashbulbAction(CardType.ATTACK));
     }
 

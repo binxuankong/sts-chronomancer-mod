@@ -133,7 +133,7 @@
   },
   "chronoMod:Flashbulb": {
     "NAME": "Flashbulb",
-    "DESCRIPTION": "Deal !D! damage. NL Put a random Attack card from your discard pile into your hand. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage and gain 1 Jade. NL Put a random Attack card from your discard pile into your hand. It costs 0 this turn."
   },
   "chronoMod:FlashForward": {
     "NAME": "Flash Forward",
@@ -153,7 +153,7 @@
   },
   "chronoMod:GoofOff": {
     "NAME": "Goof Off",
-    "DESCRIPTION": "Deal !D! damage. NL Discard the top !M! cards of your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Discard the top !M! cards of your draw pile and draw a card."
   },
   "chronoMod:Inheritance": {
     "NAME": "Inheritance",
@@ -165,10 +165,30 @@
     "DESCRIPTION": "Ethereal. NL Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile."
   },
+  "chronoMod:MagicChantFall": {
+    "NAME": "Fall Chant",
+    "DESCRIPTION": "At the start of your turn, gain [E] and draw 1 card. Recall: Add a *Winter *Chant to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] and draw 1 card. Recall: Add a *Winter *Chant+ to your hand."
+  },
+  "chronoMod:MagicChantSpring": {
+    "NAME": "Spring Chant",
+    "DESCRIPTION": "Deal !D! damage. NL Recall: Add a *Summer *Chant to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Recall: Add a *Summer *Chant+ to your hand."
+  },
+  "chronoMod:MagicChantSummer": {
+    "NAME": "Summer Chant",
+    "DESCRIPTION": "Gain !B! Block. NL Recall: Add a *Fall *Chant to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !B! damage. NL Recall: Add a *Fall *Chant+ to your hand. NL Exhaust."
+  },
+  "chronoMod:MagicChantWinter": {
+    "NAME": "Winter Chant",
+    "DESCRIPTION": "Ethereal. NL Gain [E] and draw !M! card. At the end of your turn, gain an extra action. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] and draw !M! cards. At the end of your turn, gain an extra action. NL Exhaust."
+  },
   "chronoMod:Malefice": {
-  "NAME": "Malefice",
-  "DESCRIPTION": "Deal !D! damage. NL Recall: Deal !D! damage."
-},
+    "NAME": "Malefice",
+    "DESCRIPTION": "Deal !D! damage. NL Recall: Deal !D! damage."
+  },
   "chronoMod:ManaBall": {
     "NAME": "Mana Ball",
     "DESCRIPTION": "Deal !D! damage. NL When you draw this card, increase its damage by !M! this combat."
@@ -252,7 +272,7 @@
   },
   "chronoMod:StarSurge": {
     "NAME": "Star Surge",
-    "DESCRIPTION": "Recall: Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain 1 Jade."
   },
   "chronoMod:Surge": {
     "NAME": "Surge",
@@ -286,11 +306,6 @@
     "NAME": "Time Sink",
     "DESCRIPTION": "Gain [E] and draw 1 card at the start of your next X turns. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 card at the start of your next X turns."
-  },
-  "chronoMod:TimestreamShift": {
-    "NAME": "Timestream Shift",
-    "DESCRIPTION": "Require: [E] [E]. NL Deal !D! damage. NL If you have Jade, consume Jade to deal !D! damage to ALL enemies.",
-    "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",

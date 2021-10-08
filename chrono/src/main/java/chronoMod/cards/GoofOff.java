@@ -5,6 +5,7 @@ import chronoMod.actions.DiscardDrawPileAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -38,6 +39,7 @@ public class GoofOff extends AbstractDynamicCard {
        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                     AbstractGameAction.AttackEffect.POISON));
        this.addToBot(new DiscardDrawPileAction(p, this.magicNumber));
+       this.addToBot(new DrawCardAction(p, 1));
     }
 
     @Override

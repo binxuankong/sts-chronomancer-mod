@@ -14,7 +14,7 @@ public class TimeBomb extends AbstractDynamicCard {
     public static final String ID = ChronoMod.makeID(TimeBomb.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;

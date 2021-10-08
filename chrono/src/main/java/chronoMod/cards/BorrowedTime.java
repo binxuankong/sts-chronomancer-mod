@@ -30,7 +30,7 @@ public class BorrowedTime extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower borrowedTime = AbstractDungeon.player.getPower(BorrowedTimePower.POWER_ID);
+        AbstractPower borrowedTime = p.getPower(BorrowedTimePower.POWER_ID);
         if (borrowedTime == null) {
             this.addToBot(new ApplyPowerAction(p, p, new BorrowedTimePower(p)));
         }

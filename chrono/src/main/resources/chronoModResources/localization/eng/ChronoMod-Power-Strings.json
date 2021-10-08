@@ -43,6 +43,18 @@
         "NAME": "Jade",
         "DESCRIPTIONS": ["At the start of your turn, consume 1 #yJade and lose #b",  " [E] ."]
     },
+    "chronoMod:MagicChant": {
+        "NAME": "Magic Chant",
+        "DESCRIPTIONS": ["#yRecall: Add a ", " to your hand."]
+    },
+    "chronoMod:MagicChantFall": {
+        "NAME": "Fall Chant",
+        "DESCRIPTIONS": ["At the start of your turn, gain #b", " [E] and draw #b", " card.", " cards."]
+    },
+    "chronoMod:MagicChantWinter": {
+        "NAME": "Winter Chant",
+        "DESCRIPTIONS": ["At the end of your turn, gain an extra action."]
+    },
     "chronoMod:Malefice": {
         "NAME": "Malefice",
         "DESCRIPTIONS": ["#yRecall: Deal #b", " damage."]
@@ -98,10 +110,6 @@
     "chronoMod:SplitSecond": {
         "NAME": "Split Second",
         "DESCRIPTIONS": ["#ySplit #ySecond costs 0 this turn."]
-    },
-    "chronoMod:StarSurge": {
-        "NAME": "Star Surge",
-        "DESCRIPTIONS": ["#yRecall: Deal #b",  " damage to all enemies."]
     },
     "chronoMod:TemperedFate": {
         "NAME": "Tempered Fate",

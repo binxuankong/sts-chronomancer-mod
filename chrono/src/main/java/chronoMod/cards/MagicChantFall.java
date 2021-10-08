@@ -1,54 +1,49 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.characters.Chronomancer;
-import chronoMod.powers.JadePower;
-import chronoMod.powers.SingularityPower;
-import chronoMod.powers.WillpowerPower;
+import chronoMod.powers.MagicChantFallPower;
+import chronoMod.powers.MagicChantPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.BarricadePower;
-
-import java.util.Iterator;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
-public class Singularity extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(Singularity.class.getSimpleName());
+public class MagicChantFall extends AbstractDynamicCard {
+    private static final String CARD_ID = MagicChantFall.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
     public static final String IMG = makeCardPath("Power.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
+    public static final CardColor COLOR = CardColor.COLORLESS;
 
-    private static final int COST = 1;
+    private static final int COST = 3;
+    private static final int UPGRADE_COST = 2;
 
-    public Singularity() {
+    public MagicChantFall() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.cardsToPreview = new MagicChantWinter();
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower singularity = p.getPower(SingularityPower.POWER_ID);
-        if (singularity == null) {
-            this.addToBot(new ApplyPowerAction(p, p, new SingularityPower(p)));
-        }
+        this.addToBot(new ApplyPowerAction(p, p, new MagicChantFallPower(p, 1)));
+        this.addToBot(new ApplyPowerAction(p, p, new MagicChantPower(p, this.cardsToPreview)));
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate = true;
+            upgradeBaseCost(UPGRADE_COST);
+            this.cardsToPreview.upgrade();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
@@ -56,6 +51,6 @@ public class Singularity extends AbstractDynamicCard {
 
     @Override
     public AbstractCard makeCopy() {
-        return new Singularity();
+        return new MagicChantFall();
     }
 }
