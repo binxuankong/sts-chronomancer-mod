@@ -81,7 +81,7 @@
     },
     "chronoMod:RecallEnergy": {
         "NAME": "Recall Energy",
-        "DESCRIPTIONS": ["#yRecall: Gain #b",  " [E]."]
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " [E] ."]
     },
     "chronoMod:RecurringDream": {
         "NAME": "Recurring Dream",
@@ -93,7 +93,7 @@
     },
     "chronoMod:SpellBoost": {
         "NAME": "Spell Boost",
-        "DESCRIPTIONS": ["Increase the effect of the next cost X card played this turn by #b", " ."]
+        "DESCRIPTIONS": ["Increase the effect of the next cost X card played by #b", " ."]
     },
     "chronoMod:SplitSecond": {
         "NAME": "Split Second",

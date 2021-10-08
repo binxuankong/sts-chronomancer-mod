@@ -4,37 +4,35 @@ import basemod.abstracts.CustomRelic;
 import chronoMod.ChronoMod;
 import chronoMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static chronoMod.ChronoMod.makeRelicOutlinePath;
 import static chronoMod.ChronoMod.makeRelicPath;
 
-public class Winder extends CustomRelic {
-    private static final String relic = "Winder";
+public class Refresher extends CustomRelic {
+    private static final String relic = "Refresher";
     public static final String ID = ChronoMod.makeID(relic);
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(relic + ".png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(relic + ".png"));
 
-    public Winder() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
+    public Refresher() {
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
     @Override
-    public void onTrigger() {
-        this.flash();
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.grayscale = true;
-    }
-
-    @Override
-    public void onPlayerEndTurn() {
-        this.grayscale = false;
-    }
-
-    @Override
-    public void onVictory() {
-        this.grayscale = false;
+    public void onCardDraw(AbstractCard drawnCard) {
+        if (drawnCard.cost == -2) {
+            this.flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToBot(new DrawCardAction(1));
+        }
     }
 
     @Override
@@ -44,6 +42,6 @@ public class Winder extends CustomRelic {
 
     @Override
     public CustomRelic makeCopy() {
-        return new Winder();
+        return new Refresher();
     }
 }

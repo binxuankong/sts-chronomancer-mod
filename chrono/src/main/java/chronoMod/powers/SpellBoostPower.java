@@ -23,13 +23,6 @@ public class SpellBoostPower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        }
-    }
-
-    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }

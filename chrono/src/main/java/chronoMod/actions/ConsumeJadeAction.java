@@ -4,12 +4,14 @@ import chronoMod.powers.ArcaneBlessingPower;
 import chronoMod.powers.JadePower;
 import chronoMod.relics.AncientClock;
 import chronoMod.relics.BrokenClock;
+import chronoMod.relics.RubyAmulet;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class ConsumeJadeAction extends AbstractGameAction {
     private AbstractPlayer p;
@@ -34,14 +36,10 @@ public class ConsumeJadeAction extends AbstractGameAction {
             this.p.getPower(ArcaneBlessingPower.POWER_ID).onSpecificTrigger();
         }
 
-        // Broken Watch
-        if (this.p.hasRelic(BrokenClock.ID)) {
-            this.p.getRelic(BrokenClock.ID).onTrigger();
-        }
-
-        // Ancient Watch
-        if (this.p.hasRelic(AncientClock.ID)) {
-            this.p.getRelic(AncientClock.ID).onTrigger();
+        // Ruby Amulet
+        AbstractRelic rubyAmulet = this.p.getRelic(RubyAmulet.ID);
+        if (rubyAmulet != null) {
+            rubyAmulet.onTrigger();
         }
 
         this.isDone = true;

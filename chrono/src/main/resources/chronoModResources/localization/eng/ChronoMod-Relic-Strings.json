@@ -2,12 +2,27 @@
   "chronoMod:AncientClock": {
     "NAME": "Ancient Clock",
     "FLAVOR": "It does not show the actual time?",
-    "DESCRIPTIONS": ["The first #b3 times you consume #yJade each combat, gain [E] ."]
+    "DESCRIPTIONS": ["At the start of your first #b3 turns, #yRecall: Gain [E] and draw #b1 card."]
   },
   "chronoMod:BrokenClock": {
     "NAME": "Broken Clock",
     "FLAVOR": "You cannot tell the time with this.",
-    "DESCRIPTIONS": ["The first time you consume #yJade each combat, gain [E] ."]
+    "DESCRIPTIONS": ["At the start of each combat, #yRecall: Gain [E] and draw #b1 card."]
+  },
+  "chronoMod:Broom": {
+    "NAME": "Broom",
+    "FLAVOR": "The most dangerous weather to ride a broom in is light rain.",
+    "DESCRIPTIONS": ["Whenever you play #b4 cards that cost #b0, draw #b1 card."]
+  },
+  "chronoMod:CatsTail": {
+    "NAME": "Cat's Tail",
+    "FLAVOR": "Cursed?",
+    "DESCRIPTIONS": ["The first time you receive unblocked #yAttack damage each combat, deal damage to ALL enemies equal to damage received."]
+  },
+  "chronoMod:FeatherQuill": {
+    "NAME": "Feather Quill",
+    "FLAVOR": "The standard writing instrument in the magic world.",
+    "DESCRIPTIONS": ["Whenever you trigger a #yRecall effect, deal #b2 damage to a random enemy."]
   },
   "chronoMod:Goggles": {
     "NAME": "Goggles",
@@ -19,10 +34,35 @@
     "FLAVOR": "This handbook only contains useless spells like summoning a flower bed.",
     "DESCRIPTIONS": ["Whenever you spend [E] on a cost X card, a random card in your hand costs #b0 this turn."]
   },
+  "chronoMod:MagicalHerb": {
+    "NAME": "Magical Herb",
+    "FLAVOR": "It is said to be able to bring protection, love, health, and wealth into your life.",
+    "DESCRIPTIONS": ["Consume a #yJade at the end of your turn."]
+  },
+  "chronoMod:MagnifyingGlass": {
+    "NAME": "MagnifyingGlass",
+    "FLAVOR": "This glass seems to minimize things instead of magnifying them. Weird...",
+    "DESCRIPTIONS": ["At the start of the battle, you can choose to place up to #b5 cards from draw pile into your discard pile."]
+  },
   "chronoMod:OldWine": {
     "NAME": "Old Wine",
     "FLAVOR": "It smells funny. You feel funny after smelling it.",
     "DESCRIPTIONS": ["At the start of your turn, gain #b2 #yStrength and #b1 #yJade."]
+  },
+  "chronoMod:Refresher": {
+    "NAME": "Refresher",
+    "FLAVOR": "Across an epoch of endless battle, the Immortal's will to triumph never faltered.",
+    "DESCRIPTIONS": ["Whenever you draw an #yUnplayable card, draw #b1 card."]
+  },
+  "chronoMod:RubyAmulet": {
+    "NAME": "Ruby Amulet",
+    "FLAVOR": "\"Ruby is the best out of all gem.\" - Kublai the Great",
+    "DESCRIPTIONS": ["Whenever you consume #yJade, gain #b5 #yBlock."]
+  },
+  "chronoMod:Scroll": {
+    "NAME": "Scroll",
+    "FLAVOR": "You cannot understand the ancient language written on this. Let's hope you can find someone who does.",
+    "DESCRIPTIONS": ["The first cost X card you play each combat has its effect increased by #b3."]
   },
   "chronoMod:Winder": {
     "NAME": "Winder",

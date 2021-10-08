@@ -241,11 +241,19 @@ public class ChronoMod implements
         // Character specific relic
         BaseMod.addRelicToCustomPool(new AncientClock(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new BrokenClock(), Chronomancer.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new FeatherQuill(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new Grimoire(), Chronomancer.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new MagicalHerb(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new OldWine(), Chronomancer.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new Refresher(), Chronomancer.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new RubyAmulet(), Chronomancer.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new Scroll(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new Winder(), Chronomancer.Enums.COLOR_BLUE);
         // Shared relic
+        BaseMod.addRelic(new Broom(), RelicType.SHARED);
+        BaseMod.addRelic(new CatsTail(), RelicType.SHARED);
         BaseMod.addRelic(new Goggles(), RelicType.SHARED);
+        BaseMod.addRelic(new MagnifyingGlass(), RelicType.SHARED);
         // Mark relics as seen - makes it visible in the compendium immediately
         UnlockTracker.markRelicAsSeen(Goggles.ID);
         logger.info("Done adding relics!");

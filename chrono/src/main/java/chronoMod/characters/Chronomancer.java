@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.relics.Necronomicon;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
@@ -131,20 +132,17 @@ public class Chronomancer extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         retVal.add(StrikeCHR.ID);
-        //retVal.add(StrikeCHR.ID);
-        //retVal.add(StrikeCHR.ID);
-        //retVal.add(StrikeCHR.ID);
-        //retVal.add(DefendCHR.ID);
-        //retVal.add(DefendCHR.ID);
-        //retVal.add(DefendCHR.ID);
+        retVal.add(StrikeCHR.ID);
+        retVal.add(StrikeCHR.ID);
+        retVal.add(StrikeCHR.ID);
+        retVal.add(DefendCHR.ID);
+        retVal.add(DefendCHR.ID);
+        retVal.add(DefendCHR.ID);
         retVal.add(DefendCHR.ID);
         retVal.add(MysticBlast.ID);
         retVal.add(TimeWarp.ID);
 
-        retVal.add(DelayedGuard.ID);
-        retVal.add(Teleport.ID);
-        retVal.add(StarSurge.ID);
-        retVal.add(Accelerate.ID);
+        retVal.add(EventHorizon.ID);
 
         return retVal;
     }
@@ -152,11 +150,7 @@ public class Chronomancer extends CustomPlayer {
     // Starting Relics	
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(AncientClock.ID);
-        retVal.add(Goggles.ID);
-        retVal.add(Grimoire.ID);
-        retVal.add(OldWine.ID);
-        retVal.add(Winder.ID);
+        retVal.add(BrokenClock.ID);
         // Mark relics as seen - makes it visible in the compendium immediately
         UnlockTracker.markRelicAsSeen(BrokenClock.ID);
         return retVal;

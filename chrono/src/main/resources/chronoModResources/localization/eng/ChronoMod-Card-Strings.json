@@ -244,7 +244,7 @@
   },
   "chronoMod:SpellBoost": {
     "NAME": "Spell Boost",
-    "DESCRIPTION": "Increase the effect of the next cost X card played this turn by !M!."
+    "DESCRIPTION": "Increase the effect of the next cost X card played by !M!."
   },
   "chronoMod:SplitSecond": {
     "NAME": "Split Second",
