@@ -25,12 +25,6 @@ public class BrokenClock extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        this.addToBot(new EmptyDeckShuffleAction());
-        this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
-    }
-
-    @Override
     public void onShuffle() {
         AbstractPlayer p = AbstractDungeon.player;
         this.flash();

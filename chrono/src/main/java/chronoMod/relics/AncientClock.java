@@ -2,11 +2,9 @@ package chronoMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import chronoMod.ChronoMod;
-import chronoMod.powers.RecallDrawPower;
-import chronoMod.powers.RecallEnergyPower;
+import chronoMod.actions.CardFromDeckToDiscardAction;
 import chronoMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,30 +23,11 @@ public class AncientClock extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        this.counter = 3;
-    }
-
-    @Override
-    public void atTurnStartPostDraw() {
-        if (!this.grayscale) {
-            AbstractPlayer p = AbstractDungeon.player;
-            this.flash();
-            this.addToBot(new RelicAboveCreatureAction(p, this));
-            this.addToBot(new ApplyPowerAction(p, p, new RecallEnergyPower(p, 1), 1));
-            this.addToBot(new ApplyPowerAction(p, p, new RecallDrawPower(p, 1), 1));
-            this.counter--;
-            if (this.counter == 0) {
-                this.counter = -1;
-                this.grayscale = true;
-            }
-        }
-    }
-
-    @Override
-    public void onVictory() {
-        this.counter = -1;
-        this.grayscale = false;
+    public void onShuffle() {
+        AbstractPlayer p = AbstractDungeon.player;
+        this.flash();
+        this.addToBot(new RelicAboveCreatureAction(p, this));
+        this.addToBot(new CardFromDeckToDiscardAction(3));
     }
 
     @Override

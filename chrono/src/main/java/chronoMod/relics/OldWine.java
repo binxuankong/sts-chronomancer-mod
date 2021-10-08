@@ -2,12 +2,12 @@ package chronoMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import chronoMod.ChronoMod;
-import chronoMod.actions.GainJadeAction;
 import chronoMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static chronoMod.ChronoMod.makeRelicOutlinePath;
@@ -20,16 +20,25 @@ public class OldWine extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public OldWine() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
     }
 
     @Override
-    public void atTurnStart() {
-        this.flash();
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, 2), 2));
-        this.addToBot(new GainJadeAction(1));
+    public void onTrigger() {
+        if (!this.grayscale) {
+            this.flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new StrengthPower(AbstractDungeon.player, 1), 1));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                    new DexterityPower(AbstractDungeon.player, 1), 1));
+            this.grayscale = true;
+        }
+    }
+
+    @Override
+    public void onVictory() {
+        this.grayscale = false;
     }
 
     @Override

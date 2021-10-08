@@ -2,8 +2,7 @@ package chronoMod.actions;
 
 import chronoMod.powers.ArcaneBlessingPower;
 import chronoMod.powers.JadePower;
-import chronoMod.relics.AncientClock;
-import chronoMod.relics.BrokenClock;
+import chronoMod.relics.OldWine;
 import chronoMod.relics.RubyAmulet;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -40,6 +39,12 @@ public class ConsumeJadeAction extends AbstractGameAction {
         AbstractRelic rubyAmulet = this.p.getRelic(RubyAmulet.ID);
         if (rubyAmulet != null) {
             rubyAmulet.onTrigger();
+        }
+
+        // Old Wine
+        AbstractRelic oldWine = this.p.getRelic(OldWine.ID);
+        if (oldWine != null) {
+            oldWine.onTrigger();
         }
 
         this.isDone = true;
