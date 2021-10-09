@@ -43,7 +43,7 @@ public class AstralBeam extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         this.addToBot(new DrawCardAction(p, this.magicNumber));
         this.addToBot(new GainJadeAction(1));
     }

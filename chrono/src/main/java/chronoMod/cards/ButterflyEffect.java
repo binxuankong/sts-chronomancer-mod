@@ -10,8 +10,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class ButterflyEffect extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(ButterflyEffect.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    private static final String CARD_ID = ButterflyEffect.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL;

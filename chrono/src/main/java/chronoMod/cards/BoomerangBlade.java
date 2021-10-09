@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class BoomerangBlade extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(BoomerangBlade.class.getSimpleName());
-    public static final String IMG = makeCardPath("BoomerangBlade.png");
+    private static final String CARD_ID = BoomerangBlade.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
