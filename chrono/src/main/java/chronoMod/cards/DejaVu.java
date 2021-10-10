@@ -15,8 +15,9 @@ import java.util.ArrayList;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class DejaVu extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(DejaVu.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    private static final String CARD_ID = DejaVu.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;

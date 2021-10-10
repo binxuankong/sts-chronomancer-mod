@@ -9,8 +9,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class Encode extends AbstractDynamicCard {
+    private static final String CARD_ID = Encode.class.getSimpleName();
     public static final String ID = ChronoMod.makeID(Encode.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

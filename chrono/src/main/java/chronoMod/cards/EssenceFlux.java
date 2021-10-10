@@ -11,8 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class EssenceFlux extends AbstractXCostCard {
-    public static final String ID = ChronoMod.makeID(EssenceFlux.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    private static final String CARD_ID = EssenceFlux.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
