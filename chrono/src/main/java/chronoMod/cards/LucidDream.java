@@ -3,6 +3,7 @@ package chronoMod.cards;
 import chronoMod.ChronoMod;
 import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,12 +26,14 @@ public class LucidDream extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 0;
+    private static final int BLOCK = 5;
     private static final int ENERGY_JADE_AMOUNT = 1;
     private boolean played;
 
     public LucidDream() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = ENERGY_JADE_AMOUNT;
+        this.baseBlock = BLOCK;
         this.magicNumber = this.baseMagicNumber;
         this.isEthereal = true;
         this.played = true;
@@ -38,6 +41,7 @@ public class LucidDream extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new GainBlockAction(p, this.block));
         this.addToBot(new GainEnergyAction(this.magicNumber));
         this.addToBot(new GainJadeAction(this.magicNumber));
         this.played = true;

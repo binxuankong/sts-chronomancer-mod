@@ -28,7 +28,7 @@ public class MementoAction extends AbstractGameAction {
             if (this.p.hand.isEmpty()) {
                 this.isDone = true;
             } else {
-                AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, true, true);
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], this.amount, false, false);
                 this.tickDuration();
             }
         } else {

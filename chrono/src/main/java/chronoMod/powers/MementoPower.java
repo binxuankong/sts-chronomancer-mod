@@ -2,9 +2,9 @@ package chronoMod.powers;
 
 import chronoMod.ChronoMod;
 import chronoMod.actions.MementoAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -24,18 +24,17 @@ public class MementoPower extends AbstractPower {
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer && !AbstractDungeon.player.hand.isEmpty()) {
-            this.addToBot(new MementoAction(this.amount));
-        }
+    public void atStartOfTurnPostDraw() {
+        this.addToBot(new DrawCardAction(this.amount));
+        this.addToBot(new MementoAction(this.amount));
     }
 
     @Override
     public void updateDescription() {
-        if (this.amount <= 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[3];
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3] + DESCRIPTIONS[5];
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[4] + DESCRIPTIONS[5];
         }
     }
 

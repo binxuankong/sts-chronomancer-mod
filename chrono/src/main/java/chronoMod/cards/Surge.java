@@ -20,7 +20,7 @@ public class Surge extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 0;
-    private static final int CARD_DRAW = 2;
+    private static final int CARD_DRAW = 3;
     private static final int UPGRADE_PLUS_DRAW = 1;
 
     public Surge() {

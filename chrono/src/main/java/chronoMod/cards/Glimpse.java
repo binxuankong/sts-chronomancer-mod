@@ -22,16 +22,15 @@ public class Glimpse extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int CARD_DRAW = 1;
-    private static final int SCRY_AMOUNT = 2;
-    private static final int UPGRADE_PLUS_SCRY = 1;
+    private static final int SCRY_AMOUNT = 3;
+    private static final int UPGRADE_PLUS_SCRY = 2;
 
     public Glimpse() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = SCRY_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
     @Override

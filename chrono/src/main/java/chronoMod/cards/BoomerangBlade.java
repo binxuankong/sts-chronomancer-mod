@@ -24,8 +24,8 @@ public class BoomerangBlade extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 11;
+    private static final int UPGRADE_PLUS_DMG = 4;
     private boolean played;
 
     public BoomerangBlade() {

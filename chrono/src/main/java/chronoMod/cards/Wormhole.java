@@ -33,7 +33,7 @@ public class Wormhole extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = JADE;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
+        this.isEthereal = true;
     }
 
     @Override

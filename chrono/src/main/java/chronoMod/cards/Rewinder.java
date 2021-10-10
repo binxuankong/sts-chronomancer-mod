@@ -21,7 +21,7 @@ public class Rewinder extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
     private static final int REWIND_COUNT = 3;
-    private static final int JADE_AMOUNT = 2;
+    private static final int JADE_AMOUNT = 1;
 
     public Rewinder() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

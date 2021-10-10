@@ -149,7 +149,7 @@
   },
   "chronoMod:Glimpse": {
     "NAME": "Glimpse",
-    "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Scry !M!. NL Draw 1 card."
   },
   "chronoMod:GoofOff": {
     "NAME": "Goof Off",
@@ -162,8 +162,8 @@
   },
   "chronoMod:LucidDream": {
     "NAME": "Lucid Dream",
-    "DESCRIPTION": "Ethereal. NL Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain [E] and 1 Jade. NL Put this card onto the top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile."
   },
   "chronoMod:MagicChantFall": {
     "NAME": "Fall Chant",
@@ -241,8 +241,8 @@
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
-    "DESCRIPTION": "Require: [E] [E] [E]. NL Draw X cards. NL They cost 0 this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Require: [E] [E] [E]. NL Draw X cards. NL They cost 0 this turn.",
+    "DESCRIPTION": "Require: [E] [E] [E]. NL Shuffle ALL your cards into your draw pile. NL Draw X cards. They cost 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Require: [E] [E] [E]. NL Shuffle ALL your cards into your draw pile. NL Draw X+1 cards. They cost 0 this turn.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:RecurringDream": {
@@ -331,7 +331,7 @@
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",
-    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade. NL Exhaust.",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade. NL Ethereal.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   }
 }

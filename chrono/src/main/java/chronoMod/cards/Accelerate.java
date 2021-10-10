@@ -2,6 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.actions.AccelerateAction;
+import chronoMod.actions.DiscardDrawPileAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,6 +32,7 @@ public class Accelerate extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new DiscardDrawPileAction(p, p.drawPile.size()));
         this.addToBot(new AccelerateAction());
     }
 

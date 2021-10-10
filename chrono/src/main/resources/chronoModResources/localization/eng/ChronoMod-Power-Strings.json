@@ -61,7 +61,7 @@
     },
     "chronoMod:Memento": {
         "NAME": "Memento",
-        "DESCRIPTIONS": ["At the end of the turn, you can choose to place #b", " card", " cards", " from your hand onto the top of your draw pile."]
+        "DESCRIPTIONS": ["At the start of the turn, draw #b", " card", " cards", " and put #b", "card", "cards", " from your hand onto the top of your draw pile."]
     },
     "chronoMod:Memorize": {
         "NAME": "Memorize",
