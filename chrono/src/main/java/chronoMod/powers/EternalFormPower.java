@@ -25,7 +25,7 @@ public class EternalFormPower extends AbstractPower {
         this.costReduction = costReduction;
         this.updateDescription();
         this.loadRegion("time");
-        this.priority = 25;
+        this.priority = 80;
     }
 
     @Override

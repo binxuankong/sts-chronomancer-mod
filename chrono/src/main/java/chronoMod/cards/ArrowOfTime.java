@@ -31,7 +31,7 @@ public class ArrowOfTime extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.costCounter = 1;
-        this.damageCounter = 4;
+        this.damageCounter = 1;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class ArrowOfTime extends AbstractDynamicCard {
         }
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
         this.upgradeBaseCost(this.costCounter);
-        this.upgradeDamage(this.damageCounter);
+        this.upgradeDamage(this.damageCounter * this.baseDamage);
         this.costCounter++;
         this.damageCounter *= 2;
     }

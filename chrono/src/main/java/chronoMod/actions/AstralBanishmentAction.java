@@ -16,7 +16,7 @@ public class AstralBanishmentAction extends AbstractGameAction {
         this.info = info;
         this.energyGainAmt = energyAmt;
         this.actionType = ActionType.DAMAGE;
-        this.attackEffect = AttackEffect.FIRE;
+        this.attackEffect = AttackEffect.POISON;
     }
 
     public void update() {

@@ -34,7 +34,7 @@
   },
   "chronoMod:AstralBanishment": {
     "NAME": "Astral Banishment",
-    "DESCRIPTION": "Require: [E] [E] [E]. NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
+    "DESCRIPTION": "Require: [E] [E] [E] NL Deal !D! damage to a random enemy X times. NL Gain [E] for each enemy killed this way.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:AstralBeam": {
@@ -133,7 +133,7 @@
   },
   "chronoMod:Flashbulb": {
     "NAME": "Flashbulb",
-    "DESCRIPTION": "Deal !D! damage and gain 1 Jade. NL Put a random Attack card from your discard pile into your hand. It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Put a random Attack card from your discard pile into your hand. It costs 0 this turn."
   },
   "chronoMod:FlashForward": {
     "NAME": "Flash Forward",
@@ -162,8 +162,8 @@
   },
   "chronoMod:LucidDream": {
     "NAME": "Lucid Dream",
-    "DESCRIPTION": "Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile."
+    "DESCRIPTION": "Ethereal. NL Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile."
   },
   "chronoMod:MagicChantFall": {
     "NAME": "Fall Chant",
@@ -235,14 +235,14 @@
   },
   "chronoMod:Precognition": {
     "NAME": "Precognition",
-    "DESCRIPTION": "Require: [E] [E]. NL Consume Jade X-1 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Require: [E]. NL Consume Jade X times. NL Exhaust.",
+    "DESCRIPTION": "Require: [E] [E] NL Consume Jade X-1 times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Require: [E] NL Consume Jade X times. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
-    "DESCRIPTION": "Require: [E] [E] [E]. NL Shuffle ALL your cards into your draw pile. NL Draw X cards. They cost 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Require: [E] [E] [E]. NL Shuffle ALL your cards into your draw pile. NL Draw X+1 cards. They cost 0 this turn.",
+    "DESCRIPTION": "Require: [E] [E] [E] NL Shuffle ALL your cards into your draw pile. NL Draw X cards. They cost 0 this turn.",
+    "UPGRADE_DESCRIPTION": "Require: [E] [E] [E] NL Shuffle ALL your cards into your draw pile. NL Draw X+1 cards. They cost 0 this turn.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:RecurringDream": {
@@ -251,7 +251,7 @@
   },
   "chronoMod:Rewinder": {
     "NAME": "Rewinder",
-    "DESCRIPTION": "Repeat your next Recall effect 3 times. Gain 2 Jade."
+    "DESCRIPTION": "Repeat your next Recall effect !M! times. Gain 1 Jade."
   },
   "chronoMod:RingSingularity": {
     "NAME": "Ring Singularity",

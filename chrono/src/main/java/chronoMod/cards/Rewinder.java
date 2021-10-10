@@ -25,11 +25,13 @@ public class Rewinder extends AbstractDynamicCard {
 
     public Rewinder() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.baseMagicNumber = REWIND_COUNT;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new RewinderAction(REWIND_COUNT));
+        this.addToBot(new RewinderAction(this.magicNumber));
         this.addToBot(new GainJadeAction(JADE_AMOUNT));
     }
 

@@ -41,13 +41,10 @@ public class MysticFlarePower extends RecallPower {
     @Override
     public void recallEffect () {
         for (int i=0; i < this.hitCount; i++) {
-            if (this.target != null) {
-                this.addToBot(new VFXAction(new PressurePointEffect(this.target.hb.cX, this.target.hb.cY)));
-            }
             this.addToBot(new DamageAction(this.target, new DamageInfo(this.owner, this.damage, this.damageType),
-                    AbstractGameAction.AttackEffect.NONE));
+                    AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             this.addToBot(new DamageAction(this.target, new DamageInfo(this.owner, this.damage, this.damageType),
-                    AbstractGameAction.AttackEffect.NONE));
+                    AbstractGameAction.AttackEffect.FIRE));
         }
     }
 
