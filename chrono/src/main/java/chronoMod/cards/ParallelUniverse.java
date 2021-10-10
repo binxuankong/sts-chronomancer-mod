@@ -22,7 +22,7 @@ public class ParallelUniverse extends AbstractXCostCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int BLOCK = 8;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public ParallelUniverse() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
@@ -31,8 +31,10 @@ public class ParallelUniverse extends AbstractXCostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new RecallBlockPower(p, p.currentBlock), p.currentBlock));
-        this.addToBot(new LoseBlockAction(p, p, p.currentBlock));
+        if (p.currentBlock > 0) {
+            this.addToBot(new ApplyPowerAction(p, p, new RecallBlockPower(p, p.currentBlock), p.currentBlock));
+            this.addToBot(new LoseBlockAction(p, p, p.currentBlock));
+        }
         int effect = this.getEffectNum(p);
         if (effect > 0) {
             for (int i = 0; i < effect; i++) {

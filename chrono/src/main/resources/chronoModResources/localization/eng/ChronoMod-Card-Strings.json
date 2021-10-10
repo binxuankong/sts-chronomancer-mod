@@ -60,7 +60,7 @@
   },
   "chronoMod:BorrowedTime": {
     "NAME": "Borrowed Time",
-    "DESCRIPTION": "Whenever you receive unblocked damage, Recall the amount of damage received as Block."
+    "DESCRIPTION": "Whenever you lose HP, Recall the amount of HP lost as Block."
   },
   "chronoMod:ButterflyEffect": {
     "NAME": "Butterfly Effect",
@@ -235,8 +235,8 @@
   },
   "chronoMod:Precognition": {
     "NAME": "Precognition",
-    "DESCRIPTION": "Require: [E] [E]. Consume Jade X-1 times.",
-    "UPGRADE_DESCRIPTION": "Require: [E]. Consume Jade X times.",
+    "DESCRIPTION": "Require: [E] [E]. NL Consume Jade X-1 times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Require: [E]. NL Consume Jade X times. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:Predestination": {

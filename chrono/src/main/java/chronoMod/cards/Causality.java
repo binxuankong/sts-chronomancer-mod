@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class Causality extends AbstractDynamicCard {
-    private static final String CARD_ID = ChronoMod.makeID(Causality.class.getSimpleName());
-    public static final String ID = CARD_ID;
+    private static final String CARD_ID = Causality.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
     public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

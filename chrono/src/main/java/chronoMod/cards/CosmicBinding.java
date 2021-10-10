@@ -8,9 +8,12 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+
+import java.util.Iterator;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
@@ -48,10 +51,14 @@ public class CosmicBinding extends AbstractXCostCard {
         }
         if (effect >= 3) {
             this.addToBot(new GainJadeAction(1));
-            this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false),
-                    this.magicNumber, AbstractGameAction.AttackEffect.NONE));
-            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false),
-                    this.magicNumber, AbstractGameAction.AttackEffect.NONE));
+            Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+            while(var1.hasNext()) {
+                AbstractMonster mo = (AbstractMonster) var1.next();
+                this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false),
+                        this.magicNumber, AbstractGameAction.AttackEffect.NONE));
+                this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false),
+                        this.magicNumber, AbstractGameAction.AttackEffect.NONE));
+            }
         }
     }
 

@@ -13,7 +13,7 @@
     },
     "chronoMod:BorrowedTime": {
         "NAME": "Borrowed Time",
-        "DESCRIPTIONS": ["Whenever you receive unblocked damage, #yRecall the amount of damage received as #yBlock."]
+        "DESCRIPTIONS": ["Whenever you lose #yHP, Recall the amount lost as #yBlock."]
     },
     "chronoMod:ButterflyEffect": {
         "NAME": "Butterfly Effect",

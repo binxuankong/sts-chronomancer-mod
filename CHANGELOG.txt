@@ -62,3 +62,13 @@ Dark Matter
 Tides of Time
 - Old: Whenever you trigger a Recall effect, apply 1 Weak to ALL enemies.
 - New: The first time you trigger a Recall effect each turn, apply 1(2) Weak to ALL enemies.
+
+
+2021-10-10
+Astral Banishment
+- Require 3 E. Deal 12(16) damage to a random enemy X times. Gain 1 E for each enemy killed this way.
+- Require 3 E. Deal 10(14) damage to a random enemy X times. Gain 1 E for each enemy killed this way.
+
+Parallel Universe
+- Old: Recall your Block. Gain 8(10) Block X times.
+- New: Recall your Block. Gain 8(11) Block X times.
