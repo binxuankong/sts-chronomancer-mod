@@ -26,8 +26,8 @@ public class MysticShot extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int BONUS_DMG = 2;
-    private static final int UPGRADE_PLUS_BONUS_DMG = 1;
+    private static final int BONUS_DMG = 3;
+    private static final int UPGRADE_PLUS_BONUS_DMG = 2;
 
     public MysticShot() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

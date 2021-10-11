@@ -25,7 +25,7 @@ public class Precognition extends AbstractXCostCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int ENERGY_REQUIRED = 2;
-    private static final int UPGRADE_PLUS_ENERGy = -1;
+    private static final int UPGRADE_PLUS_ENERGY = -1;
 
     public Precognition() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
@@ -76,7 +76,7 @@ public class Precognition extends AbstractXCostCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_ENERGy);
+            upgradeMagicNumber(UPGRADE_PLUS_ENERGY);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

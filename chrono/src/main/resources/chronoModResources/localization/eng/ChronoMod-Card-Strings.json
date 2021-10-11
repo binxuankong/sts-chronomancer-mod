@@ -48,7 +48,8 @@
   },
   "chronoMod:BigBang": {
     "NAME": "Big Bang",
-    "DESCRIPTION": "Double your Jade. NL Gain [E] equal to your Jade and draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Double your Jade. NL Gain [E] equal to your Jade. Your Attack deals double damage this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Double your Jade. NL Gain [E] equal to your Jade. Your Attack deals double damage this turn."
   },
   "chronoMod:BlackHole": {
     "NAME": "Black Hole",
@@ -199,7 +200,7 @@
   },
   "chronoMod:Memento": {
     "NAME": "Memento",
-    "DESCRIPTION": "At the end of your turn, you can choose to place !M! card from your hand onto the top of your draw pile."
+    "DESCRIPTION": "At the start of your turn, draw !M! card and put a card from your hand onto the top of your draw pile."
   },
   "chronoMod:Memorize": {
     "NAME": "Memorize",
@@ -331,7 +332,7 @@
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",
-    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade. NL Ethereal.",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   }
 }

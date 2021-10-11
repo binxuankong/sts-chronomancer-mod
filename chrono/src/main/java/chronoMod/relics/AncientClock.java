@@ -26,8 +26,8 @@ public class AncientClock extends CustomRelic {
     public void onShuffle() {
         AbstractPlayer p = AbstractDungeon.player;
         this.flash();
-        this.addToBot(new RelicAboveCreatureAction(p, this));
-        this.addToBot(new CardFromDeckToDiscardAction(3));
+        this.addToTop(new CardFromDeckToDiscardAction(1));
+        this.addToTop(new RelicAboveCreatureAction(p, this));
     }
 
     @Override

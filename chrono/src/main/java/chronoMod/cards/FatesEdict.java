@@ -19,10 +19,10 @@ public class FatesEdict extends AbstractXCostCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 3;
     private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public FatesEdict() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);

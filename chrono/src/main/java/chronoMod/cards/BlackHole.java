@@ -25,8 +25,8 @@ public class BlackHole extends AbstractXCostCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 18;
+    private static final int UPGRADE_PLUS_DMG = 6;
 
     public BlackHole() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
