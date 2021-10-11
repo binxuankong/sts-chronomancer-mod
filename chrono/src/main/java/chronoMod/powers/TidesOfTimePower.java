@@ -18,26 +18,21 @@ public class TidesOfTimePower extends AbstractPower {
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    private boolean activate;
+    private boolean canActivate;
 
     public TidesOfTimePower(AbstractCreature owner, int numWeak) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
         this.amount = numWeak;
-        this.activate = false;
+        this.canActivate = true;
         this.updateDescription();
         this.loadRegion("wave_of_the_hand");
     }
 
     @Override
     public void onSpecificTrigger() {
-        this.activate = true;
-    }
-
-    @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (this.activate) {
+        if (this.canActivate) {
             this.flash();
             Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
             while (var3.hasNext()) {
@@ -45,13 +40,13 @@ public class TidesOfTimePower extends AbstractPower {
                 this.addToBot(new ApplyPowerAction(mo, this.owner, new WeakPower(mo, this.amount, false),
                         this.amount, true, AbstractGameAction.AttackEffect.NONE));
             }
-            this.activate = false;
+            this.canActivate = false;
         }
     }
 
     @Override
-    public void atEndOfRound() {
-        this.priority = 0;
+    public void atEndOfTurn(boolean isPlayer) {
+        this.canActivate = true;
     }
 
     @Override

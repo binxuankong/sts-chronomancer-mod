@@ -18,9 +18,9 @@ public class Rewinder extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
-    private static final int REWIND_COUNT = 3;
+    private static final int COST = 0;
+    private static final int REWIND_COUNT = 2;
+    private static final int UPGRADE_PLUS_COUNT = 1;
     private static final int JADE_AMOUNT = 1;
 
     public Rewinder() {
@@ -39,7 +39,7 @@ public class Rewinder extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_COUNT);
             initializeDescription();
         }
     }

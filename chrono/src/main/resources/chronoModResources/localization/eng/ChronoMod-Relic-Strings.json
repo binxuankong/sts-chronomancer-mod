@@ -27,7 +27,7 @@
   "chronoMod:Goggles": {
     "NAME": "Goggles",
     "FLAVOR": "You can see further with this.",
-    "DESCRIPTIONS": ["The first card you play each combat costs #b0."]
+    "DESCRIPTIONS": ["At the start of each combat, gain [E] equals to the cost of the first card you."]
   },
   "chronoMod:Grimoire": {
     "NAME": "Grimoire",

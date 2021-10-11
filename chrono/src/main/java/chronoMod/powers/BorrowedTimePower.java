@@ -21,16 +21,17 @@ public class BorrowedTimePower extends AbstractPower {
         this.amount = -1;
         this.updateDescription();
         this.loadRegion("closeUp");
-        this.priority = 5;
     }
 
     @Override
-    public void wasHPLost(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0 && info.owner == this.owner) {
+    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
+        if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS &&
+        damageAmount > 0) {
             this.flash();
             this.addToBot(new ApplyPowerAction(this.owner, this.owner, new RecallBlockPower(this.owner, damageAmount),
                     damageAmount));
         }
+        return damageAmount;
     }
 
     @Override

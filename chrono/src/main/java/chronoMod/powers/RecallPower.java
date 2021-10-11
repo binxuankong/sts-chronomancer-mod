@@ -20,7 +20,7 @@ public abstract class RecallPower extends AbstractPower {
         this.owner = owner;
         this.p = AbstractDungeon.player;
         this.type = RecallEnum.RECALL;
-        this.priority = idOffset;
+        this.priority += idOffset;
         idOffset++;
     }
 

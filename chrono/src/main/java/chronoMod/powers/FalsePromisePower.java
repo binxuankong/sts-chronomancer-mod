@@ -64,10 +64,10 @@ public class FalsePromisePower extends AbstractPower {
         }
         if (this.drawEnergyAmount == 1) {
             this.description = this.description + this.drawEnergyAmount + DESCRIPTIONS[3] + this.drawEnergyAmount +
-                    DESCRIPTIONS[4];
+                    DESCRIPTIONS[4] + this.drawEnergyAmount + DESCRIPTIONS[5];
         } else {
             this.description = this.description + this.drawEnergyAmount + DESCRIPTIONS[3] + this.drawEnergyAmount +
-                    DESCRIPTIONS[5];
+                    DESCRIPTIONS[4] + this.drawEnergyAmount + DESCRIPTIONS[6];
         }
     }
 

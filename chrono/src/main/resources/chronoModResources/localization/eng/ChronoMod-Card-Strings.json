@@ -48,8 +48,7 @@
   },
   "chronoMod:BigBang": {
     "NAME": "Big Bang",
-    "DESCRIPTION": "Double your Jade. NL Gain [E] equal to your Jade. Your Attack deals double damage this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Double your Jade. NL Gain [E] equal to your Jade. Your Attack deals double damage this turn."
+    "DESCRIPTION": "Double your Jade. NL Gain [E] equal to your Jade. Your Attack deals double damage this turn. NL Exhaust."
   },
   "chronoMod:BlackHole": {
     "NAME": "Black Hole",
@@ -61,7 +60,7 @@
   },
   "chronoMod:BorrowedTime": {
     "NAME": "Borrowed Time",
-    "DESCRIPTION": "Whenever you lose HP, Recall the amount of HP lost as Block."
+    "DESCRIPTION": "Whenever you receive unblocked Attack damage, Recall the amount of damage received as Block."
   },
   "chronoMod:ButterflyEffect": {
     "NAME": "Butterfly Effect",
@@ -103,7 +102,7 @@
   },
   "chronoMod:Encode": {
     "NAME": "Encode",
-    "DESCRIPTION": "Select a card in your hand. NL It costs 0 this combat. NL Gain Jade equal to its cost. NL Exhaust."
+    "DESCRIPTION": "Select a card in your hand. It costs 0 this combat. NL Gain Jade equal to its cost. NL Exhaust."
   },
   "chronoMod:EssenceFlux": {
     "NAME": "Essence Flux",
@@ -115,8 +114,8 @@
   },
   "chronoMod:EventHorizon": {
     "NAME": "Event Horizon",
-    "DESCRIPTION": "Unplayable. NL When you draw this card, gain !M! [E].",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw this card, gain !B! Block and !M! [E].",
+    "DESCRIPTION": "Unplayable. NL When you draw this card, gain [E].",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL When you draw this card, gain !B! Block and [E].",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:FalsePromise": {
@@ -285,7 +284,7 @@
   },
   "chronoMod:TemperedFate": {
     "NAME": "Tempered Fate",
-    "DESCRIPTION": "Prevent the next time you would lose HP. Gain 1 Jade when this effect triggers."
+    "DESCRIPTION": "The next time you would lose HP, reduce it to 1. Gain 1 Jade when this effect triggers."
   },
   "chronoMod:TemporalParadox": {
     "NAME": "Temporal Paradox",
@@ -293,7 +292,7 @@
   },
   "chronoMod:TidesOfTime": {
     "NAME": "Tides of Time",
-    "DESCRIPTION": "Apply !M! Weak to ALL enemies at the end of your turn if you have triggered a Recall effect this turn."
+    "DESCRIPTION": "The first time you trigger a Recall effect each turn, apply !M! Weak to ALL enemies."
   },
   "chronoMod:TimeBomb": {
     "NAME": "Time Bomb",

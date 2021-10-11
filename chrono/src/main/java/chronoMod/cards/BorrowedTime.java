@@ -17,7 +17,7 @@ public class BorrowedTime extends AbstractDynamicCard {
     public static final String ID = ChronoMod.makeID(CARD_ID);
     public static final String IMG = makeCardPath("power/" + CARD_ID + ".png");
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;

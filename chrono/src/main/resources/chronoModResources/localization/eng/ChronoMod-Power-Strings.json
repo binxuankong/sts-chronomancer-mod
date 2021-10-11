@@ -13,7 +13,7 @@
     },
     "chronoMod:BorrowedTime": {
         "NAME": "Borrowed Time",
-        "DESCRIPTIONS": ["Whenever you lose #yHP, Recall the amount lost as #yBlock."]
+        "DESCRIPTIONS": ["Whenever you receive unblocked #yAttack damage, #yRecall the amount of damage received as #yBlock."]
     },
     "chronoMod:ButterflyEffect": {
         "NAME": "Butterfly Effect",
@@ -29,7 +29,7 @@
     },
     "chronoMod:FalsePromise": {
         "NAME": "False Promise",
-        "DESCRIPTIONS": ["If you play #b", " more card this turn, gain [E] , #b", " more cards this turn, gain [E] , #b", " #yJade and draw #b", " card.", " cards."]
+        "DESCRIPTIONS": ["If you play #b", " more card this turn, gain #b", " more cards this turn, gain #b", " [E] , #b", " #yJade and draw #b", " card.", " cards."]
     },
     "chronoMod:Flashback": {
         "NAME": "Flashback",
@@ -113,7 +113,7 @@
     },
     "chronoMod:TemperedFate": {
         "NAME": "Tempered Fate",
-        "DESCRIPTIONS": ["Prevent the next time you would lose HP.", "Prevent the next #b", " times you would lose HP.", " Gain 1 #yJade when this effect triggers."]
+        "DESCRIPTIONS": ["The next time", "The next #b", " times", " you would lose HP, reduce it to #b1. Gain #b1 #yJade when this effect triggers."]
     },
     "chronoMod:TemporalParadox": {
         "NAME": "Temporal Paradox",
@@ -121,7 +121,7 @@
     },
     "chronoMod:TidesOfTime": {
         "NAME": "Tides of Time",
-        "DESCRIPTIONS": ["Apply #b", " #yWeak to ALL enemies at the end of your turn if you have triggered a #yRecall effect this turn."]
+        "DESCRIPTIONS": ["The first time you trigger a #yRecall effect each turn, apply #b", " #yWeak to ALL enemies."]
     },
     "chronoMod:TimeBomb": {
         "NAME": "Time Bomb",

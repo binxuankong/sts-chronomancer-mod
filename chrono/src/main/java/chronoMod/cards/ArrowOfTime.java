@@ -31,6 +31,7 @@ public class ArrowOfTime extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.baseMagicNumber = DAMAGE;
+        this.magicNumber = this.baseMagicNumber;
         this.costCounter = 1;
         this.damageCounter = 1;
     }

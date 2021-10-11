@@ -22,7 +22,6 @@ public class TemperedFatePower extends AbstractPower {
         this.amount = bufferAmt;
         this.updateDescription();
         this.loadRegion("heartDef");
-        this.priority = 10;
     }
 
     @Override
@@ -37,12 +36,12 @@ public class TemperedFatePower extends AbstractPower {
             this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
             this.addToBot(new GainJadeAction(1));
         }
-        return 0;
+        return 1;
     }
 
     @Override
     public void updateDescription() {
-        if (this.amount <= 1) {
+        if (this.amount == 1) {
             this.description = DESCRIPTIONS[0] + DESCRIPTIONS[3];
         } else {
             this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3];
