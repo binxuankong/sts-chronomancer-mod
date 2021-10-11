@@ -31,7 +31,7 @@ public class FlashForward extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HEAVY));
         this.addToBot(new AccelerateAction());
     }

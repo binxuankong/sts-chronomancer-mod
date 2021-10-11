@@ -23,8 +23,8 @@ public class RingSingularity extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DAMAGE = 15;
+    private static final int UPGRADE_PLUS_DMG = 5;
 
     public RingSingularity() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

@@ -37,7 +37,7 @@ public class TimeSinkPower extends AbstractPower {
     @Override
     public void atStartOfTurnPostDraw() {
         this.flash();
-        this.addToBot(new GainEnergyAction(1));
+        this.addToBot(new GainEnergyAction(2));
         this.addToBot(new DrawCardAction(1));
         if (this.amount <= 1) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));

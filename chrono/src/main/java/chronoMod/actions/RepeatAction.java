@@ -11,10 +11,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-public class RewinderAction extends AbstractGameAction {
+public class RepeatAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    public RewinderAction(int rewindCount) {
+    public RepeatAction(int rewindCount) {
         this.p = AbstractDungeon.player;
         this.amount = rewindCount;
     }

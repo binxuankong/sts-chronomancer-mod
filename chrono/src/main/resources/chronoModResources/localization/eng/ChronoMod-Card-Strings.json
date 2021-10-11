@@ -9,8 +9,8 @@
   },
   "chronoMod:Accelerate": {
     "NAME": "Accelerate",
-    "DESCRIPTION": "Trigger all Recall effects this turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Trigger all Recall effects this turn."
+    "DESCRIPTION": "Discard your draw pile. NL Trigger all Recall effects this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard your draw pile. NL Trigger all Recall effects this turn."
   },
   "chronoMod:AdeptSpellcaster": {
     "NAME": "Adept Spellcaster",
@@ -129,7 +129,7 @@
   },
   "chronoMod:Flashback": {
     "NAME": "Flashback",
-    "DESCRIPTION": "Deal !D! damage. NL Recall your Jade."
+    "DESCRIPTION": "Deal !D! damage. NL Repeat your next Recall effect."
   },
   "chronoMod:Flashbulb": {
     "NAME": "Flashbulb",
@@ -149,7 +149,7 @@
   },
   "chronoMod:Glimpse": {
     "NAME": "Glimpse",
-    "DESCRIPTION": "Scry !M!. NL Draw 1 card."
+    "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL Exhaust."
   },
   "chronoMod:GoofOff": {
     "NAME": "Goof Off",
@@ -235,8 +235,8 @@
   },
   "chronoMod:Precognition": {
     "NAME": "Precognition",
-    "DESCRIPTION": "Require: [E] [E] NL Consume Jade X-1 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Require: [E] NL Consume Jade X times. NL Exhaust.",
+    "DESCRIPTION": "Require: [E] [E] NL Add X random cards into your hand. They cost 0 this turn. NL Gain 2 Jade.",
+    "UPGRADE_DESCRIPTION": "Require: [E] [E] NL Add X random upgraded cards into your hand. They cost 0 this turn. NL Gain 2 Jade.",
     "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
   },
   "chronoMod:Predestination": {
@@ -304,8 +304,8 @@
   },
   "chronoMod:TimeSink": {
     "NAME": "Time Sink",
-    "DESCRIPTION": "Gain [E] and draw 1 card at the start of your next X turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] and draw 1 card at the start of your next X turns."
+    "DESCRIPTION": "Gain [E] [E] and draw 1 card at the start of your next X turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] and draw 1 card at the start of your next X turns."
   },
   "chronoMod:TimeWarp": {
     "NAME": "Time Warp",

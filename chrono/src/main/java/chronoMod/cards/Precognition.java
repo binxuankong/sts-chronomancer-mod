@@ -1,7 +1,8 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.ConsumeJadeAction;
+import chronoMod.actions.GainJadeAction;
+import chronoMod.actions.PrecognitionAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,27 +25,17 @@ public class Precognition extends AbstractXCostCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int ENERGY_REQUIRED = 2;
-    private static final int UPGRADE_PLUS_ENERGY = -1;
-
     public Precognition() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = ENERGY_REQUIRED;
-        this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int effect = this.getEffectNum(p);
-        if (!this.upgraded) {
-            effect--;
-        }
         if (effect > 0) {
-            for (int i = 0; i < effect; i++) {
-                this.addToBot(new ConsumeJadeAction(p, 1));
-            }
+            this.addToBot(new PrecognitionAction(p, this.upgraded, effect));
         }
+        this.addToBot(new GainJadeAction(2));
     }
 
     @Override
@@ -53,8 +44,7 @@ public class Precognition extends AbstractXCostCard {
         if (!canUse) {
             return false;
         } else {
-            int energy = EnergyPanel.totalCount;
-            if (energy < this.magicNumber) {
+            if (EnergyPanel.totalCount < 2) {
                 canUse = false;
                 this.cantUseMessage = EXTENDED_DESCRIPTION;
             }
@@ -64,11 +54,8 @@ public class Precognition extends AbstractXCostCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        int energy = EnergyPanel.totalCount;
-        if (energy >= this.magicNumber) {
+        if (EnergyPanel.totalCount >= 2) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        } else {
-            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 
@@ -76,7 +63,6 @@ public class Precognition extends AbstractXCostCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_ENERGY);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

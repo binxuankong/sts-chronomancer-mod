@@ -20,10 +20,10 @@ public class ManaBall extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DAMAGE = 2;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_PLUS_DAMAGE = 0;
     private static final int BONUS_DMG = 3;
-    private static final int UPGRADE_PLUS_BONUS_BLOCK = 1;
+    private static final int UPGRADE_PLUS_BONUS_BLOCK = 3;
 
     public ManaBall() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

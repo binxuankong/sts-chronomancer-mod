@@ -18,10 +18,10 @@ public class ManaBarrier extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
-    private static final int BONUS_BLOCK = 2;
-    private static final int UPGRADE_PLUS_BONUS_BLOCK = 1;
+    private static final int BLOCK = 7;
+    private static final int UPGRADE_PLUS_BLOCK = 0;
+    private static final int BONUS_BLOCK = 3;
+    private static final int UPGRADE_PLUS_BONUS_BLOCK = 5;
 
     public ManaBarrier() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

@@ -25,7 +25,7 @@ public class AstralBanishment extends AbstractXCostCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 4;
     private static final int ENERGY_GAINED_AMOUNT = 1;
 

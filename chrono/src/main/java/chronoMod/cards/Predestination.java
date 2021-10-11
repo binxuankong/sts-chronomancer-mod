@@ -52,8 +52,7 @@ public class Predestination extends AbstractXCostCard {
         if (!canUse) {
             return false;
         } else {
-            int energy = EnergyPanel.totalCount;
-            if (energy < 3) {
+            if (EnergyPanel.totalCount < 3) {
                 canUse = false;
                 this.cantUseMessage = EXTENDED_DESCRIPTION;
             }
@@ -63,8 +62,7 @@ public class Predestination extends AbstractXCostCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        int energy = EnergyPanel.totalCount;
-        if (energy >= 3) {
+        if (EnergyPanel.totalCount >= 3) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();

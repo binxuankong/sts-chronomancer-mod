@@ -10,6 +10,11 @@
     "DESCRIPTION": "Recall effects trigger at the start of your next turn."
   },
   {
+    "PROPER_NAME": "Repeat",
+    "NAMES": ["Repeat", "repeat"],
+    "DESCRIPTION": "Activate the Recall effect without triggering it."
+  },
+  {
     "PROPER_NAME": "Require",
     "NAMES": ["Require", "require"],
     "DESCRIPTION": "Require at least the shown amount of [E] in order to play this card."

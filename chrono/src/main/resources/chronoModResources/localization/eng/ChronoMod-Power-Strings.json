@@ -133,7 +133,7 @@
     },
     "chronoMod:TimeSink": {
         "NAME": "Time Sink",
-        "DESCRIPTIONS": ["Gain [E] and draw 1 card at the start of your next #b", " turns."]
+        "DESCRIPTIONS": ["Gain [E] [E] and draw 1 card at the start of your next #b", " turns."]
     },
     "chronoMod:Willpower": {
         "NAME": "Willpower",
