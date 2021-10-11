@@ -39,10 +39,8 @@ public class DejaVu extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (lastCard != null) {
             ChronoMod.logger.info("DejaVu : last card :" + lastCard.cardID);
-            AbstractCard card = lastCard.makeStatEquivalentCopy();
-            if (card.costForTurn >= 0) {
-                card.setCostForTurn(0);
-            }
+            // AbstractCard card = lastCard.makeStatEquivalentCopy();
+            AbstractCard card = lastCard.makeSameInstanceOf();
             this.addToBot(new DejaVuAction(card));
         } else {
             ChronoMod.logger.info("DejaVu : error : last card is null ");

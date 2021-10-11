@@ -1,5 +1,6 @@
 package chronoMod.cards;
 
+import chronoMod.patches.ChronoEnum;
 import chronoMod.powers.*;
 import chronoMod.relics.Grimoire;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,6 +20,7 @@ public abstract class AbstractXCostCard extends AbstractDynamicCard {
     public AbstractXCostCard(final String id, final String img, final CardType type, final CardColor color,
                              final CardRarity rarity, final CardTarget target) {
         super(id, img, COST, type, color, rarity, target);
+        this.tags.add(ChronoEnum.XCOST);
     }
 
     public int getEffectNum(AbstractPlayer p) {

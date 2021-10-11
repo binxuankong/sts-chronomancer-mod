@@ -21,9 +21,9 @@ public class ManaBall extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DAMAGE = 0;
+    // private static final int UPGRADE_PLUS_DAMAGE = 0;
     private static final int BONUS_DMG = 3;
-    private static final int UPGRADE_PLUS_BONUS_BLOCK = 3;
+    private static final int UPGRADE_PLUS_BONUS_DAMAGE = 3;
 
     public ManaBall() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -47,8 +47,8 @@ public class ManaBall extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DAMAGE);
-            upgradeMagicNumber(UPGRADE_PLUS_BONUS_BLOCK);
+            // upgradeDamage(UPGRADE_PLUS_DAMAGE);
+            upgradeMagicNumber(UPGRADE_PLUS_BONUS_DAMAGE);
             initializeDescription();
         }
     }

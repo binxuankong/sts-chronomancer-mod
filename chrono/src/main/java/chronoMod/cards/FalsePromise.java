@@ -13,8 +13,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class FalsePromise extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(FalsePromise.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    private static final String CARD_ID = FalsePromise.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("power/" + CARD_ID + ".png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 

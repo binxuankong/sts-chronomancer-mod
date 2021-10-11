@@ -15,8 +15,9 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class Flux extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(Flux.class.getSimpleName());
-    public static final String IMG = makeCardPath("Flux.png");
+    private static final String CARD_ID = Flux.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class Glimpse extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(Glimpse.class.getSimpleName());
-    public static final String IMG = makeCardPath("Glimpse.png");
+    private static final String CARD_ID = Glimpse.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
