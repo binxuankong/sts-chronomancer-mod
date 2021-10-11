@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
@@ -21,24 +20,23 @@ public class Predestination extends AbstractXCostCard {
     public static final String IMG = makeCardPath("Skill.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION[0];
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int EXTRA_EFFECT_AMOUNT = 1;
+    // private static final int EXTRA_EFFECT_AMOUNT = 1;
 
     public Predestination() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
-        this.baseMagicNumber = 0;
-        this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int effect = this.getEffectNum(p) + this.magicNumber;
+        // int effect = this.getEffectNum(p) + this.magicNumber;
+        int effect = this.getEffectNum(p);
         if (effect > 0) {
             this.addToBot(new ShuffleAllAction());
             this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
@@ -47,33 +45,10 @@ public class Predestination extends AbstractXCostCard {
     }
 
     @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        if (!canUse) {
-            return false;
-        } else {
-            if (EnergyPanel.totalCount < 3) {
-                canUse = false;
-                this.cantUseMessage = EXTENDED_DESCRIPTION;
-            }
-            return canUse;
-        }
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        if (EnergyPanel.totalCount >= 3) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        } else {
-            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        }
-    }
-
-    @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(EXTRA_EFFECT_AMOUNT);
+            // upgradeMagicNumber(EXTRA_EFFECT_AMOUNT);
             this.exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

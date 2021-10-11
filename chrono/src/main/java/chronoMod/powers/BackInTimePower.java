@@ -35,6 +35,7 @@ public class BackInTimePower extends RecallPower {
     public void recallEffect() {
         AbstractPlayer p = AbstractDungeon.player;
         p.currentHealth = this.amount;
+        p.refreshCharStat();
         //if (p.currentHealth < this.amount) {
         //    p.heal(this.amount - p.currentHealth);
         //} else if (p.currentHealth > this.amount) {

@@ -42,7 +42,7 @@ public class MaleficePower extends RecallPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1] + this.target.name + DESCRIPTIONS[2];
     }
 
     public AbstractPower makeCopy() {

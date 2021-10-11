@@ -50,7 +50,13 @@ public class MysticFlarePower extends RecallPower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1] + this.hitCount + DESCRIPTIONS[2];
+        if (this.hitCount == 1) {
+            this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1] + this.hitCount + DESCRIPTIONS[2] +
+                    this.target.name + DESCRIPTIONS[4];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1] + this.hitCount + DESCRIPTIONS[3] +
+                    this.target.name + DESCRIPTIONS[4];
+        }
     }
 
     public AbstractPower makeCopy() {

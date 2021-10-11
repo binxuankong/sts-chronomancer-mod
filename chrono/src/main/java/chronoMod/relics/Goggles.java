@@ -2,9 +2,10 @@ package chronoMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import chronoMod.ChronoMod;
+import chronoMod.actions.ApplyGogglesAction;
+import chronoMod.actions.ReverseGogglesAction;
 import chronoMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -24,13 +25,16 @@ public class Goggles extends CustomRelic {
     }
 
     @Override
+    public void atBattleStart() {
+        this.flash();
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        this.addToBot(new ApplyGogglesAction());
+    }
+
+    @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (!this.grayscale) {
-            this.flash();
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            if (card.costForTurn > 0) {
-                this.addToBot(new GainEnergyAction(card.costForTurn));
-            }
+            this.addToBot(new ReverseGogglesAction());
             this.grayscale = true;
         }
     }

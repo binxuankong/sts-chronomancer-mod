@@ -1,6 +1,6 @@
 package chronoMod.powers;
 
-import chronoMod.patches.RecallEnum;
+import chronoMod.patches.ChronoEnum;
 import chronoMod.relics.FeatherQuill;
 import chronoMod.relics.Winder;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -19,7 +19,7 @@ public abstract class RecallPower extends AbstractPower {
         super();
         this.owner = owner;
         this.p = AbstractDungeon.player;
-        this.type = RecallEnum.RECALL;
+        this.type = ChronoEnum.RECALL;
         this.priority += idOffset;
         idOffset++;
     }

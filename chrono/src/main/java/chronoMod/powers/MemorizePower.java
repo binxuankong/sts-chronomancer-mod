@@ -23,12 +23,13 @@ public class MemorizePower extends RecallPower {
         idOffset++;
         this.card = card;
         this.updateDescription();
-        this.loadRegion("carddraw");
+        this.loadRegion("wireheading");
     }
 
     @Override
     public void recallEffect () {
-        card.setCostForTurn(0);
+        // card.setCostForTurn(0);
+        card.freeToPlayOnce = true;
     }
 
     @Override

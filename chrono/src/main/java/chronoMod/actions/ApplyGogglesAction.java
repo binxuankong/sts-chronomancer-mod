@@ -16,7 +16,7 @@ public class ApplyGogglesAction extends AbstractGameAction {
 
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
-            c.setCostForTurn(-9);
+            c.freeToPlayOnce = true;
         }
 
         this.isDone = true;

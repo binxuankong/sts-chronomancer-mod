@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
@@ -18,7 +17,6 @@ public class Precognition extends AbstractXCostCard {
     public static final String IMG = makeCardPath("Skill.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION[0];
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -27,6 +25,7 @@ public class Precognition extends AbstractXCostCard {
 
     public Precognition() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust = true;
     }
 
     @Override
@@ -36,27 +35,6 @@ public class Precognition extends AbstractXCostCard {
             this.addToBot(new PrecognitionAction(p, this.upgraded, effect));
         }
         this.addToBot(new GainJadeAction(2));
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        if (!canUse) {
-            return false;
-        } else {
-            if (EnergyPanel.totalCount < 2) {
-                canUse = false;
-                this.cantUseMessage = EXTENDED_DESCRIPTION;
-            }
-            return canUse;
-        }
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        if (EnergyPanel.totalCount >= 2) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        }
     }
 
     @Override

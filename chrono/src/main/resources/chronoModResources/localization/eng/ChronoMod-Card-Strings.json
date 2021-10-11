@@ -203,7 +203,7 @@
   },
   "chronoMod:Memorize": {
     "NAME": "Memorize",
-    "DESCRIPTION": "Retain a card. NL Recall: It costs 0 this turn."
+    "DESCRIPTION": "Retain a card. NL Recall: It is free to play once."
   },
   "chronoMod:MysticBarrier": {
     "NAME": "Mystic Barrier",
@@ -235,15 +235,13 @@
   },
   "chronoMod:Precognition": {
     "NAME": "Precognition",
-    "DESCRIPTION": "Require: [E] [E] NL Add X random cards into your hand. They cost 0 this turn. NL Gain 2 Jade.",
-    "UPGRADE_DESCRIPTION": "Require: [E] [E] NL Add X random upgraded cards into your hand. They cost 0 this turn. NL Gain 2 Jade.",
-    "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
+    "DESCRIPTION": "Add X random cost X cards into your hand. They are free to play once. NL Gain 2 Jade. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add X random upgraded cost X cards into your hand. They are free to play once. NL Gain 2 Jade. Exhaust."
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
-    "DESCRIPTION": "Require: [E] [E] [E] NL Shuffle ALL your cards into your draw pile. NL Draw X cards. They cost 0 this turn.",
-    "UPGRADE_DESCRIPTION": "Require: [E] [E] [E] NL Shuffle ALL your cards into your draw pile. NL Draw X+1 cards. They cost 0 this turn.",
-    "EXTENDED_DESCRIPTION": ["Not enough Energy to play this card."]
+    "DESCRIPTION": "Shuffle ALL your cards into your draw pile. NL Draw X cards. They are free to play once. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle ALL your cards into your draw pile. NL Draw X cards. They are free to play once."
   },
   "chronoMod:RecurringDream": {
     "NAME": "Recurring Dream",

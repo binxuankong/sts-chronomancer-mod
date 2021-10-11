@@ -31,8 +31,8 @@ public class TemperedFatePower extends AbstractPower {
     }
 
     @Override
-    public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
-        if (damageAmount > 0) {
+    public int onLoseHp(int hpLost) {
+        if (hpLost > 0) {
             this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
             this.addToBot(new GainJadeAction(1));
         }

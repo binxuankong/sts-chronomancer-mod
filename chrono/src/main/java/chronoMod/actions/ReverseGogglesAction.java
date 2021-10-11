@@ -17,7 +17,7 @@ public class ReverseGogglesAction extends AbstractGameAction {
 
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
-            c.setCostForTurn(c.cost);
+            c.freeToPlayOnce = false;
         }
         
         this.isDone = true;

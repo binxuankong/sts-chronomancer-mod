@@ -57,7 +57,7 @@
     },
     "chronoMod:Malefice": {
         "NAME": "Malefice",
-        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage."]
+        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage to ", "."]
     },
     "chronoMod:Memento": {
         "NAME": "Memento",
@@ -65,11 +65,11 @@
     },
     "chronoMod:Memorize": {
         "NAME": "Memorize",
-        "DESCRIPTIONS": ["#yRecall: ", " costs 0 this turn."]
+        "DESCRIPTIONS": ["#yRecall: ", " is free to play once."]
     },
     "chronoMod:MysticFlare": {
         "NAME": "Mystic Flare",
-        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage twice #b", " times."]
+        "DESCRIPTIONS": ["#yRecall: Deal #b", " damage twice #b", " time to ", " times to ", "."]
     },
     "chronoMod:MysticShift": {
         "NAME": "Mystic Shift",
