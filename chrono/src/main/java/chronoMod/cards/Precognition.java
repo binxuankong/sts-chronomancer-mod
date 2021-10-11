@@ -1,7 +1,6 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.GainJadeAction;
 import chronoMod.actions.PrecognitionAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -34,7 +33,6 @@ public class Precognition extends AbstractXCostCard {
         if (effect > 0) {
             this.addToBot(new PrecognitionAction(p, this.upgraded, effect));
         }
-        this.addToBot(new GainJadeAction(2));
     }
 
     @Override

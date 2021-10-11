@@ -2,6 +2,7 @@ package chronoMod.actions;
 
 import chronoMod.patches.ChronoEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,7 +35,8 @@ public class PrecognitionAction extends AbstractGameAction {
                 c.upgrade();
             }
             c.freeToPlayOnce = true;
-            this.addToBot(new MakeTempCardInHandAction(c, 1));
+            // this.addToBot(new MakeTempCardInHandAction(c, 1));
+            this.addToBot(new MakeTempCardInDrawPileAction(c, 1, true, true));
         }
 
         this.isDone = true;

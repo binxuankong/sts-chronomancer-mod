@@ -1,6 +1,7 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.RecurringDreamPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -20,7 +21,7 @@ public class RecurringDream extends AbstractXCostCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int BLOCK = 10;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
     public RecurringDream() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
@@ -30,10 +31,11 @@ public class RecurringDream extends AbstractXCostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int effect = this.getEffectNum(p);
+        int effect = this.getEffectNum(p) + 1;
         if (effect > 0) {
             this.addToBot(new ApplyPowerAction(p, p, new RecurringDreamPower(p, effect, this.block)));
         }
+        this.addToBot(new GainJadeAction(1));
     }
 
 
