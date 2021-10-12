@@ -1,15 +1,11 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.PredestinationAction;
+import chronoMod.actions.PrecognitionAction;
 import chronoMod.characters.Chronomancer;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ShuffleAction;
-import com.megacrit.cardcrawl.actions.defect.ShuffleAllAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -26,8 +22,6 @@ public class Predestination extends AbstractXCostCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    // private static final int EXTRA_EFFECT_AMOUNT = 1;
-
     public Predestination() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
@@ -35,12 +29,9 @@ public class Predestination extends AbstractXCostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // int effect = this.getEffectNum(p) + this.magicNumber;
         int effect = this.getEffectNum(p);
         if (effect > 0) {
-            this.addToBot(new ShuffleAllAction());
-            this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
-            this.addToBot(new DrawCardAction(effect, new PredestinationAction()));
+            this.addToBot(new PrecognitionAction(p, this.upgraded, effect));
         }
     }
 
@@ -48,8 +39,6 @@ public class Predestination extends AbstractXCostCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            // upgradeMagicNumber(EXTRA_EFFECT_AMOUNT);
-            this.exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

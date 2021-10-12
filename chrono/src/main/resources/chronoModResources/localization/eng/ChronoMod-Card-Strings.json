@@ -235,13 +235,14 @@
   },
   "chronoMod:Precognition": {
     "NAME": "Precognition",
-    "DESCRIPTION": "Shuffle X random cost X cards into your draw pile. They are free to play once. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle X random upgraded cost X cards into your draw pile. They are free to play once. NL Exhaust."
+    "DESCRIPTION": "Draw X cards. They are free to play once. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw X cards. They are free to play once."
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
-    "DESCRIPTION": "Shuffle ALL your cards into your draw pile. NL Draw X cards. They are free to play once. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle ALL your cards into your draw pile. NL Draw X cards. They are free to play once."
+    "DESCRIPTION": "Shuffle X random cost X cards into your draw pile. They are free to play once. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Shuffle X random upgraded cost X cards into your draw pile. They are free to play once. NL Exhaust."
+
   },
   "chronoMod:RecurringDream": {
     "NAME": "Recurring Dream",
