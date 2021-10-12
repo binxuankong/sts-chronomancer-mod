@@ -18,7 +18,7 @@ import static chronoMod.ChronoMod.makeCardPath;
 public class MagicChantSpring extends AbstractDynamicCard {
     private static final String CARD_ID = MagicChantSpring.class.getSimpleName();
     public static final String ID = ChronoMod.makeID(CARD_ID);
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
