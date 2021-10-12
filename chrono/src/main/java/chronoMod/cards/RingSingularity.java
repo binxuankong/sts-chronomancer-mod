@@ -2,7 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.RecallEnergyPower;
+import chronoMod.powers.RingSingularityPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -35,7 +35,7 @@ public class RingSingularity extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                     AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        this.addToBot(new ApplyPowerAction(p, p, new RecallEnergyPower(p, COST), COST));
+        this.addToBot(new ApplyPowerAction(p, p, new RingSingularityPower(p, COST), COST));
     }
 
     @Override

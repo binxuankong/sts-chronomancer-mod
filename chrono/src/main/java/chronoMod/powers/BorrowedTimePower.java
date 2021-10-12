@@ -28,7 +28,7 @@ public class BorrowedTimePower extends AbstractPower {
         if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS &&
         damageAmount > 0) {
             this.flash();
-            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new RecallBlockPower(this.owner, damageAmount),
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new BorrowedTimeBlockPower(this.owner, damageAmount),
                     damageAmount));
         }
         return damageAmount;

@@ -15,9 +15,25 @@
         "NAME": "Borrowed Time",
         "DESCRIPTIONS": ["Whenever you receive unblocked #yAttack damage, #yRecall the amount of damage received as #yBlock."]
     },
+    "chronoMod:BorrowedTimeBlock": {
+        "NAME": "Borrow Time",
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " #yBlock."]
+    },
     "chronoMod:ButterflyEffect": {
         "NAME": "Butterfly Effect",
         "DESCRIPTIONS": ["#yRecall: If any enemy intends to attack, gain #b", " #yBlock. Otherwise, gain #b", " #yArtifact."]
+    },
+    "chronoMod:ContinuumShift": {
+        "NAME": "Continuum Shift",
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " #yBlock."]
+    },
+    "chronoMod:Convergence": {
+        "NAME": "Convergence",
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " #yBlock."]
+    },
+    "chronoMod:DelayedGuard": {
+        "NAME": "Delayed Guard",
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " #yBlock."]
     },
     "chronoMod:EssenceFlux": {
         "NAME": "Essence Flux",
@@ -38,6 +54,10 @@
     "chronoMod:Inheritance": {
         "NAME": "Inheritance",
         "DESCRIPTIONS": ["At the end of your turn, #yRecall your unused [E] ."]
+    },
+    "chronoMod:InheritanceEnergy": {
+        "NAME": "Inherit Energy",
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " [E] ."]
     },
     "chronoMod:Jade": {
         "NAME": "Jade",
@@ -79,25 +99,21 @@
         "NAME": "Nightmare",
         "DESCRIPTIONS": ["Lose #b", " HP at the start of its next #b", " turns."]
     },
-    "chronoMod:RecallBlock": {
-        "NAME": "Recall Block",
+    "chronoMod:ParallelUniverse": {
+        "NAME": "Parallel Universe",
         "DESCRIPTIONS": ["#yRecall: Gain #b",  " #yBlock."]
     },
     "chronoMod:RecallReceiveDamage": {
         "NAME": "Recall Receive Damage",
         "DESCRIPTIONS": ["#yRecall: Receive #b",  " damage."]
     },
-    "chronoMod:RecallDraw": {
-        "NAME": "Recall Draw",
-        "DESCRIPTIONS": ["#yRecall: Draw #b",  " card.", " cards."]
-    },
-    "chronoMod:RecallEnergy": {
-        "NAME": "Recall Energy",
-        "DESCRIPTIONS": ["#yRecall: Gain #b",  " [E] ."]
-    },
     "chronoMod:RecurringDream": {
         "NAME": "Recurring Dream",
         "DESCRIPTIONS": ["Gain #b", " #yBlock at the start of your next #b", " turns."]
+    },
+    "chronoMod:RingSingularity": {
+        "NAME": "Ring Singularity",
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " [E] ."]
     },
     "chronoMod:Singularity": {
         "NAME": "Singularity",
@@ -110,6 +126,10 @@
     "chronoMod:SplitSecond": {
         "NAME": "Split Second",
         "DESCRIPTIONS": ["#ySplit #ySecond costs 0 this turn."]
+    },
+    "chronoMod:Teleport": {
+        "NAME": "Teleport",
+        "DESCRIPTIONS": ["#yRecall: Draw #b",  " card.", " cards."]
     },
     "chronoMod:TemperedFate": {
         "NAME": "Tempered Fate",
@@ -134,6 +154,10 @@
     "chronoMod:TimeSink": {
         "NAME": "Time Sink",
         "DESCRIPTIONS": ["Gain [E] [E] and draw 1 card at the start of your next #b", " turns."]
+    },
+    "chronoMod:TimeWarp": {
+        "NAME": "Time Warp",
+        "DESCRIPTIONS": ["#yRecall: Gain #b",  " [E] and draw #b", " card.", " cards."]
     },
     "chronoMod:Willpower": {
         "NAME": "Willpower",

@@ -2,7 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.RecallBlockPower;
+import chronoMod.powers.ConvergencePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -37,7 +37,7 @@ public class Convergence extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        this.addToBot(new ApplyPowerAction(p, p, new RecallBlockPower(p, this.block), this.block));
+        this.addToBot(new ApplyPowerAction(p, p, new ConvergencePower(p, this.block), this.block));
     }
 
     @Override

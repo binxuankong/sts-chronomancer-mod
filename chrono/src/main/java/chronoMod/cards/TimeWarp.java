@@ -2,7 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.RecallEnergyPower;
+import chronoMod.powers.TimeWarpPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,7 +34,7 @@ public class TimeWarp extends AbstractDynamicCard {
         if (upgraded) {
             this.addToBot(new DrawCardAction(p, 1));
         }
-        this.addToBot(new ApplyPowerAction(p, p, new RecallEnergyPower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new TimeWarpPower(p, 1), 1));
     }
 
     @Override

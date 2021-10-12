@@ -26,6 +26,7 @@ public class TimeBombPower extends RecallPower {
         this.amount = damage;
         this.updateDescription();
         this.loadRegion("the_bomb");
+        this.priority = 30;
     }
 
     @Override

@@ -2,7 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.RecallBlockPower;
+import chronoMod.powers.ContinuumShiftPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -32,7 +32,7 @@ public class ContinuumShift extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, this.block));
-        this.addToBot(new ApplyPowerAction(p, p, new RecallBlockPower(p, this.block), this.block));
+        this.addToBot(new ApplyPowerAction(p, p, new ContinuumShiftPower(p, this.block), this.block));
     }
 
     @Override

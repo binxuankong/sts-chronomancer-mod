@@ -2,7 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.RecallBlockPower;
+import chronoMod.powers.ParallelUniversePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.LoseBlockAction;
@@ -32,7 +32,7 @@ public class ParallelUniverse extends AbstractXCostCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.currentBlock > 0) {
-            this.addToBot(new ApplyPowerAction(p, p, new RecallBlockPower(p, p.currentBlock), p.currentBlock));
+            this.addToBot(new ApplyPowerAction(p, p, new ParallelUniversePower(p, p.currentBlock), p.currentBlock));
             this.addToBot(new LoseBlockAction(p, p, p.currentBlock));
         }
         int effect = this.getEffectNum(p);

@@ -10,19 +10,16 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
-public class RecallBlockPower extends RecallPower {
-    public static final String POWER_ID = ChronoMod.makeID("RecallBlock");
+public class ParallelUniversePower extends RecallPower {
+    public static final String POWER_ID = ChronoMod.makeID("ParallelUniverse");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static int idOffset;
-
-    public RecallBlockPower(AbstractCreature owner, int blockAmt) {
+    public ParallelUniversePower(AbstractCreature owner, int blockAmt) {
         super(owner);
         this.name = NAME;
-        this.ID = POWER_ID + idOffset;
-        idOffset++;
+        this.ID = POWER_ID;
         this.amount = blockAmt;
         this.updateDescription();
         this.loadRegion("defenseNext");
@@ -40,6 +37,6 @@ public class RecallBlockPower extends RecallPower {
     }
 
     public AbstractPower makeCopy() {
-        return new RecallBlockPower(this.owner, this.amount);
+        return new ParallelUniversePower(this.owner, this.amount);
     }
 }

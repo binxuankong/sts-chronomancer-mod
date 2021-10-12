@@ -2,7 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.characters.Chronomancer;
-import chronoMod.powers.RecallBlockPower;
+import chronoMod.powers.DelayedGuardPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -30,7 +30,7 @@ public class DelayedGuard extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new RecallBlockPower(p, this.block), this.block));
+        this.addToBot(new ApplyPowerAction(p, p, new DelayedGuardPower(p, this.block), this.block));
     }
 
     @Override

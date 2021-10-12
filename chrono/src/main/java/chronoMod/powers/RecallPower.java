@@ -13,15 +13,16 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 public abstract class RecallPower extends AbstractPower {
 
     AbstractPlayer p;
-    private static int idOffset;
+    // private static int idOffset;
 
     public RecallPower(AbstractCreature owner) {
         super();
         this.owner = owner;
-        this.p = AbstractDungeon.player;
+        // this.p = AbstractDungeon.player;
+        this.p = (AbstractPlayer)owner;
         this.type = ChronoEnum.RECALL;
-        this.priority += idOffset;
-        idOffset++;
+        // this.priority += idOffset;
+        // idOffset++;
     }
 
     @Override
