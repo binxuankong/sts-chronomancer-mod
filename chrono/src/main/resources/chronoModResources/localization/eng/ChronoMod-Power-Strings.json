@@ -69,7 +69,7 @@
     },
     "chronoMod:MagicChantFall": {
         "NAME": "Fall Chant",
-        "DESCRIPTIONS": ["At the end of your turn, #yRepeat your next recall effect.", "At the end of your turn, #Repeat your next recall effect #b", " times".]
+        "DESCRIPTIONS": ["At the end of your turn, #yRepeat your next recall effect.", "At the end of your turn, #Repeat your next recall effect #b", " times."]
     },
     "chronoMod:MagicChantWinter": {
         "NAME": "Winter Chant",

@@ -2,19 +2,13 @@ package chronoMod.powers;
 
 import chronoMod.ChronoMod;
 import chronoMod.actions.ConsumeJadeAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 public class JadePower extends AbstractPower {
     public static final String POWER_ID = ChronoMod.makeID("Jade");
@@ -35,7 +29,13 @@ public class JadePower extends AbstractPower {
     @Override
     public void onEnergyRecharge() {
         this.flash();
-        this.addToBot(new ConsumeJadeAction((AbstractPlayer)this.owner, 1));
+        ChronoMod.logger.info("Trigger Consume Jade effect.");
+        this.addToBot(new LoseEnergyAction(this.amount));
+        this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
+        if (this.amount == 0) {
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
+        this.addToBot(new ConsumeJadeAction());
     }
 
     @Override

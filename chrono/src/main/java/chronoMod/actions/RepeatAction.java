@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 
 public class RepeatAction extends AbstractGameAction {
@@ -21,7 +20,7 @@ public class RepeatAction extends AbstractGameAction {
 
     public void update() {
         ArrayList<AbstractPower> powers = p.powers;
-        Collections.sort(powers);
+        // Collections.sort(powers);
         Iterator var1 = powers.iterator();
 
         while(var1.hasNext()) {

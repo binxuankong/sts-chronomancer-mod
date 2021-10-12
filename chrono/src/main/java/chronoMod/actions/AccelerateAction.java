@@ -20,7 +20,7 @@ public class AccelerateAction extends AbstractGameAction {
 
     public void update() {
         ArrayList<AbstractPower> powers = p.powers;
-        Collections.sort(powers);
+        // Collections.sort(powers);
         Iterator var1 = powers.iterator();
 
         while(var1.hasNext()) {

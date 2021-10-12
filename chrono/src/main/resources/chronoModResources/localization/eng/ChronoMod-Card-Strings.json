@@ -227,7 +227,7 @@
   },
   "chronoMod:Nightmare": {
     "NAME": "Nightmare",
-    "DESCRIPTION": "The enemy loses !M! HP at the start of its next X turns."
+    "DESCRIPTION": "The enemy loses !M! HP at the start of its next X turns. NL Exhaust."
   },
   "chronoMod:ParallelUniverse": {
     "NAME": "Parallel Universe",

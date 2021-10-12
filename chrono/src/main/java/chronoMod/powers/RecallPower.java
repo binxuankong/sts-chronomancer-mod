@@ -1,12 +1,12 @@
 package chronoMod.powers;
 
+import chronoMod.ChronoMod;
 import chronoMod.patches.ChronoEnum;
 import chronoMod.relics.FeatherQuill;
 import chronoMod.relics.Winder;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
@@ -18,7 +18,6 @@ public abstract class RecallPower extends AbstractPower {
     public RecallPower(AbstractCreature owner) {
         super();
         this.owner = owner;
-        // this.p = AbstractDungeon.player;
         this.p = (AbstractPlayer)owner;
         this.type = ChronoEnum.RECALL;
         // this.priority += idOffset;
@@ -28,6 +27,7 @@ public abstract class RecallPower extends AbstractPower {
     @Override
     public void atStartOfTurnPostDraw() {
         this.triggerRecall();
+        ChronoMod.logger.info("Trigger Recall effect: " + this.name);
     }
 
     public void recallEffect() {}

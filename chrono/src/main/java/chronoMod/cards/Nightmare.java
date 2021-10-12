@@ -19,13 +19,14 @@ public class Nightmare extends AbstractXCostCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int HP_LOST_AMOUNT = 12;
-    private static final int UPGRADE_PLUS_AMOUNT = 4;
+    private static final int HP_LOST_AMOUNT = 13;
+    private static final int UPGRADE_PLUS_AMOUNT = 5;
 
     public Nightmare() {
         super(ID, IMG, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = HP_LOST_AMOUNT;
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
     }
 
     @Override
