@@ -21,6 +21,7 @@ public class MementoPower extends AbstractPower {
         this.amount = numCards;
         this.updateDescription();
         this.loadRegion("rebound");
+        this.priority = 50;
     }
 
     @Override
@@ -32,9 +33,11 @@ public class MementoPower extends AbstractPower {
     @Override
     public void updateDescription() {
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3] + DESCRIPTIONS[5];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[5]
+            + DESCRIPTIONS[6];
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[4] + DESCRIPTIONS[5];
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[4] + this.amount + DESCRIPTIONS[5]
+            + DESCRIPTIONS[6];
         }
     }
 

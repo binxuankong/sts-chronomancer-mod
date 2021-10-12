@@ -62,11 +62,11 @@
   "chronoMod:Scroll": {
     "NAME": "Scroll",
     "FLAVOR": "You cannot understand the ancient language written on this. Let's hope you can find someone who does.",
-    "DESCRIPTIONS": ["The first cost X card you play each combat has its effect increased by #b3."]
+    "DESCRIPTIONS": ["The first cost #bX card you play each combat has its effect increased by #b3."]
   },
   "chronoMod:Winder": {
     "NAME": "Winder",
     "FLAVOR": "The key does not fit in the clock that you have.",
-    "DESCRIPTIONS": ["Once per turn, trigger the first Recall effect twice."]
+    "DESCRIPTIONS": ["Once per turn, #yRepeat the first #yRecall effect."]
   }
 }

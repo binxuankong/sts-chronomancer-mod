@@ -5,7 +5,7 @@
     },
     "chronoMod:ArcaneBlessing": {
         "NAME": "Arcane Blessing",
-        "DESCRIPTIONS": ["Whenever you consume #yJade, your next Attack deals #b", " additional damage."]
+        "DESCRIPTIONS": ["Whenever you consume #yJade, your next #yAttack deals #b", " additional damage."]
     },
     "chronoMod:BackInTime": {
         "NAME": "Back in Time",
