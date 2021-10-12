@@ -1,6 +1,7 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
+import chronoMod.actions.RepeatAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -14,27 +15,28 @@ public class MagicChantFallPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    public MagicChantFallPower(AbstractCreature owner, int energyDrawAmount) {
+    public MagicChantFallPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = energyDrawAmount;
+        this.amount = amount;
         this.updateDescription();
         this.loadRegion("malleable");
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
-        this.addToBot(new GainEnergyAction(this.amount));
-        this.addToBot(new DrawCardAction(this.amount));
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {
+            this.addToBot(new RepeatAction(this.amount));
+        }
     }
 
     @Override
     public void updateDescription() {
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[0];
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[3];
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }
 

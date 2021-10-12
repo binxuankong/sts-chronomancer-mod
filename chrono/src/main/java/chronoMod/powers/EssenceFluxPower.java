@@ -29,7 +29,6 @@ public class EssenceFluxPower extends RecallPower {
         this.hitCount = hitCount;
         this.updateDescription();
         this.loadRegion("static_discharge");
-        this.priority = 40;
     }
 
     @Override

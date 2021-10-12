@@ -69,7 +69,7 @@
     },
     "chronoMod:MagicChantFall": {
         "NAME": "Fall Chant",
-        "DESCRIPTIONS": ["At the start of your turn, gain #b", " [E] and draw #b", " card.", " cards."]
+        "DESCRIPTIONS": ["At the end of your turn, #yRepeat your next recall effect.", "At the end of your turn, #Repeat your next recall effect #b", " times".]
     },
     "chronoMod:MagicChantWinter": {
         "NAME": "Winter Chant",

@@ -31,7 +31,6 @@ public class MaleficePower extends RecallPower {
         this.target = monster;
         this.updateDescription();
         this.loadRegion("minion");
-        this.priority = 40;
     }
 
     @Override

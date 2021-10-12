@@ -20,7 +20,7 @@ public class NightmarePower extends AbstractPower {
 
     public NightmarePower(AbstractCreature owner, int numTurns, int amt) {
         this.name = NAME;
-        this.ID = POWER_ID;
+        this.ID = POWER_ID + amt;
         this.owner = owner;
         this.amount = numTurns;
         this.hp_lost = amt;
@@ -31,7 +31,6 @@ public class NightmarePower extends AbstractPower {
         this.updateDescription();
         this.loadRegion("nightmare");
         this.type = PowerType.DEBUFF;
-        this.priority = 30;
     }
 
     @Override

@@ -1,15 +1,12 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.PredestinationAction;
+import chronoMod.actions.PrecognitionAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ShuffleAction;
-import com.megacrit.cardcrawl.actions.defect.ShuffleAllAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -35,9 +32,7 @@ public class Precognition extends AbstractXCostCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int effect = this.getEffectNum(p);
         if (effect > 0) {
-            this.addToBot(new ShuffleAllAction());
-            this.addToBot(new ShuffleAction(AbstractDungeon.player.drawPile, false));
-            this.addToBot(new DrawCardAction(effect, new PredestinationAction()));
+            this.addToBot(new DrawCardAction(effect, new PrecognitionAction()));
         }
     }
 

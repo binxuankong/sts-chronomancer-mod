@@ -25,7 +25,6 @@ public class MysticShiftPower extends RecallPower {
         idOffset++;
         this.updateDescription();
         this.loadRegion("modeShift");
-        this.priority = 50;
     }
 
     @Override

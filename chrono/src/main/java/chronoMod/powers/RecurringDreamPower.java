@@ -19,7 +19,7 @@ public class RecurringDreamPower extends AbstractPower {
 
     public RecurringDreamPower(AbstractCreature owner, int numTurns, int block) {
         this.name = NAME;
-        this.ID = POWER_ID;
+        this.ID = POWER_ID + block;
         this.owner = owner;
         this.amount = numTurns;
         this.block = block;
@@ -29,7 +29,6 @@ public class RecurringDreamPower extends AbstractPower {
         }
         this.updateDescription();
         this.loadRegion("shift");
-        this.priority = 30;
     }
 
     @Override

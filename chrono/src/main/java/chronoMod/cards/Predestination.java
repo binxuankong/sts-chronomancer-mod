@@ -1,7 +1,7 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.PrecognitionAction;
+import chronoMod.actions.PredestinationAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,7 +31,7 @@ public class Predestination extends AbstractXCostCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int effect = this.getEffectNum(p);
         if (effect > 0) {
-            this.addToBot(new PrecognitionAction(p, this.upgraded, effect));
+            this.addToBot(new PredestinationAction(p, this.upgraded, effect));
         }
     }
 

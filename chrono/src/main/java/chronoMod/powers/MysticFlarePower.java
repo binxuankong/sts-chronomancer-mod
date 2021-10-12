@@ -36,7 +36,6 @@ public class MysticFlarePower extends RecallPower {
         this.target = monster;
         this.updateDescription();
         this.loadRegion("flameBarrier");
-        this.priority = 40;
     }
 
     @Override

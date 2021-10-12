@@ -22,7 +22,7 @@ public class MysticBarrier extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int BLOCK = 4;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int UPGRADE_PLUS_BLOCK = 1;
     private static final int BONUS_BLOCK = 2;
     private static final int UPGRADE_PLUS_BONUS_BLOCK = 1;
 

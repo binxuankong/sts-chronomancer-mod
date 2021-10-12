@@ -167,8 +167,8 @@
   },
   "chronoMod:MagicChantFall": {
     "NAME": "Fall Chant",
-    "DESCRIPTION": "At the start of your turn, gain [E] and draw 1 card. Recall: Add a *Winter *Chant to your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain [E] and draw 1 card. Recall: Add a *Winter *Chant+ to your hand."
+    "DESCRIPTION": "At the end of your turn, Repeat your next Recall effect. NL Recall: Add a *Winter *Chant to your hand.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, Repeat your next Recall effect. NL Recall: Add a *Winter *Chant+ to your hand."
   },
   "chronoMod:MagicChantSpring": {
     "NAME": "Spring Chant",
@@ -182,8 +182,8 @@
   },
   "chronoMod:MagicChantWinter": {
     "NAME": "Winter Chant",
-    "DESCRIPTION": "Ethereal. NL Gain [E] and draw !M! card. At the end of your turn, gain an extra action. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Gain [E] [E] and draw !M! cards. At the end of your turn, gain an extra action. NL Exhaust."
+    "DESCRIPTION": "NL Gain [E] and draw !M! card. At the end of your turn, gain an extra action. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "NL Gain [E] [E] and draw !M! cards. At the end of your turn, gain an extra action. NL Exhaust."
   },
   "chronoMod:Malefice": {
     "NAME": "Malefice",
@@ -235,8 +235,8 @@
   },
   "chronoMod:Precognition": {
     "NAME": "Precognition",
-    "DESCRIPTION": "Draw X cards. They are free to play once. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw X cards. They are free to play once."
+    "DESCRIPTION": "Draw X cards. They cost 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw X cards. They cost 0 this turn."
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
@@ -329,7 +329,7 @@
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",
-    "DESCRIPTION": "Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade.",
+    "DESCRIPTION": "Ethereal. NL Unplayable. NL When you draw this card, gain 1 Intangible and !M! Jade.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   }
 }

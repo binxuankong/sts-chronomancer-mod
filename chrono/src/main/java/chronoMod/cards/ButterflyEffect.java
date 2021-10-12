@@ -22,7 +22,7 @@ public class ButterflyEffect extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int BLOCK_AMOUNT = 22;
     private static final int UPGRADE_PLUS_BLOCK = 6;
-    private static final int ARTIFACT_AMOUNT = 1;
+    private static final int ARTIFACT_AMOUNT = 2;
     private static final int UPGRADE_PLUS_ARTIFACT = 1;
 
     public ButterflyEffect() {

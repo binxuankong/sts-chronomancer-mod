@@ -19,7 +19,7 @@ public class EternalFormPower extends AbstractPower {
 
     public EternalFormPower(AbstractCreature owner, int numCards, int costReduction) {
         this.name = NAME;
-        this.ID = POWER_ID;
+        this.ID = POWER_ID + costReduction;
         this.owner = owner;
         this.amount = numCards;
         this.costReduction = costReduction;
