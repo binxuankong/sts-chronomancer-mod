@@ -35,9 +35,11 @@ public class EncodeAction extends AbstractGameAction {
                     this.p.hand.addToTop(c)) {
                     c = (AbstractCard)var1.next();
                     this.addToBot(new GainJadeAction(c.cost));
-                    c.cost = 0;
-                    c.costForTurn = 0;
-                    c.isCostModified = true;
+                    if (c.cost >= 0) {
+                        c.cost = 0;
+                        c.costForTurn = 0;
+                        c.isCostModified = true;
+                    }
                     c.superFlash(Color.GOLD.cpy());
                 }
                 AbstractDungeon.player.hand.refreshHandLayout();

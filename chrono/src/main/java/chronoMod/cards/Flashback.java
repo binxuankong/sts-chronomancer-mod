@@ -22,7 +22,7 @@ public class Flashback extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DAMAGE = 4;
 
     public Flashback() {
@@ -33,7 +33,7 @@ public class Flashback extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToTop(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         // AbstractPower jade = p.getPower(JadePower.POWER_ID);
         // if (jade != null) {
         //     this.addToBot(new ApplyPowerAction(p, p, new FlashbackPower(p, jade.amount), jade.amount));

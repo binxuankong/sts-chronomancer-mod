@@ -40,7 +40,7 @@ public class ButterflyEffectPower extends RecallPower {
         Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
         while(var1.hasNext()) {
             AbstractMonster mo = (AbstractMonster)var1.next();
-            if (mo.getIntentBaseDmg() >= 0) {
+            if (!mo.isDead && mo.getIntentBaseDmg() > 0) {
                 hasAttack = true;
                 break;
             }

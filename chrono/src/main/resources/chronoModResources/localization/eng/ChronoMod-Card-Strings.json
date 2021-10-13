@@ -182,8 +182,7 @@
   },
   "chronoMod:MagicChantWinter": {
     "NAME": "Winter Chant",
-    "DESCRIPTION": "NL Gain [E] and draw !M! card. At the end of your turn, gain an extra action. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "NL Gain [E] [E] and draw !M! cards. At the end of your turn, gain an extra action. NL Exhaust."
+    "DESCRIPTION": "Repeat ALL your Recall effects. NL Exhaust."
   },
   "chronoMod:Malefice": {
     "NAME": "Malefice",

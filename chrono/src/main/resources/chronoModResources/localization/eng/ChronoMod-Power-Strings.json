@@ -69,7 +69,7 @@
     },
     "chronoMod:MagicChantFall": {
         "NAME": "Fall Chant",
-        "DESCRIPTIONS": ["At the end of your turn, #yRepeat your next recall effect.", "At the end of your turn, #Repeat your next recall effect #b", " times."]
+        "DESCRIPTIONS": ["At the end of your turn, #yRepeat your next #yRecall effect.", "At the end of your turn, #yRepeat your next #yRecall effect #b", " times."]
     },
     "chronoMod:MagicChantWinter": {
         "NAME": "Winter Chant",
@@ -81,7 +81,7 @@
     },
     "chronoMod:Memento": {
         "NAME": "Memento",
-        "DESCRIPTIONS": ["At the start of the turn, draw #b", " card", " cards", " and put #b", "card", "cards", " from your hand onto the top of your draw pile."]
+        "DESCRIPTIONS": ["At the start of the turn, draw #b", " card", " cards", " and put #b", " card", " cards", " from your hand onto the top of your draw pile."]
     },
     "chronoMod:Memorize": {
         "NAME": "Memorize",
