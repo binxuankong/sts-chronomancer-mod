@@ -12,8 +12,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class Predestination extends AbstractXCostCard {
-    public static final String ID = ChronoMod.makeID(Predestination.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    private static final String CARD_ID = Predestination.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 

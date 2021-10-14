@@ -15,8 +15,9 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class MysticShot extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(MysticShot.class.getSimpleName());
-    public static final String IMG = makeCardPath("MysticShot.png");
+    private static final String CARD_ID = MysticShot.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;

@@ -16,8 +16,9 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class MysticBlast extends AbstractXCostCard {
-    public static final String ID = ChronoMod.makeID(MysticBlast.class.getSimpleName());
-    public static final String IMG = makeCardPath("MysticBlast.png");
+    private static final String CARD_ID = MysticBlast.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;

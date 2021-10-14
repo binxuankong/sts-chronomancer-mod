@@ -11,8 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class Nightmare extends AbstractXCostCard {
-    public static final String ID = ChronoMod.makeID(Nightmare.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    private static final String CARD_ID = Nightmare.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
