@@ -21,7 +21,7 @@ import org.apache.logging.log4j.Logger;
 
 import chronoMod.cards.*;
 import chronoMod.characters.Chronomancer;
-import chronoMod.potions.PlaceholderPotion;
+import chronoMod.potions.*;
 import chronoMod.relics.*;
 import chronoMod.util.IDCheckDontTouchPls;
 import chronoMod.util.TextureLoader;
@@ -230,7 +230,12 @@ public class ChronoMod implements
     // ADD POTIONS
     public void receiveEditPotions() {
         logger.info("Beginning to edit potions");
-        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, Chronomancer.Enums.CHRONOMANCER);
+        BaseMod.addPotion(JadePotion.class, JadePotion.LIQUID, JadePotion.HYBRID, JadePotion.SPOTS,
+                JadePotion.POTION_ID, Chronomancer.Enums.CHRONOMANCER);
+        BaseMod.addPotion(RepeatPotion.class, RepeatPotion.LIQUID, RepeatPotion.HYBRID, RepeatPotion.SPOTS,
+                RepeatPotion.POTION_ID, Chronomancer.Enums.CHRONOMANCER);
+        BaseMod.addPotion(XCardPotion.class, XCardPotion.LIQUID, XCardPotion.HYBRID, XCardPotion.SPOTS,
+                XCardPotion.POTION_ID, Chronomancer.Enums.CHRONOMANCER);
         logger.info("Done editing potions");
     }
 
@@ -303,7 +308,7 @@ public class ChronoMod implements
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
-        logger.info("Done edittting strings");
+        logger.info("Done editing strings");
     }
     
     // LOAD THE KEYWORDS

@@ -29,7 +29,7 @@ public class PredestinationAction extends AbstractGameAction {
         for (int i = 0; i < this.amount; i++) {
             // AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
             AbstractCard c = this.returnRandomXCostCard();
-            if (this.upgraded) {
+            if (this.upgraded || this.p.hasPower("MasterRealityPower")) {
                 c.upgrade();
             }
             c.freeToPlayOnce = true;
