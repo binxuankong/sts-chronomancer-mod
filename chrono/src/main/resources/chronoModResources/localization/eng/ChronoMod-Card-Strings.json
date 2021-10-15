@@ -149,7 +149,7 @@
   },
   "chronoMod:Glimpse": {
     "NAME": "Glimpse",
-    "DESCRIPTION": "Draw !M! cards. NL Put a card from your hand onto the top of your draw pile."
+    "DESCRIPTION": "Draw !M! cards. NL Put 3 cards from your hand onto the top of your draw pile."
   },
   "chronoMod:GoofOff": {
     "NAME": "Goof Off",
@@ -162,8 +162,7 @@
   },
   "chronoMod:LucidDream": {
     "NAME": "Lucid Dream",
-    "DESCRIPTION": "Ethereal. NL Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block, [E] and 1 Jade. NL Place this card onto the top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Gain [E]. Gain 1 Jade."
   },
   "chronoMod:MagicChantFall": {
     "NAME": "Fall Chant",
@@ -218,7 +217,7 @@
   },
   "chronoMod:MysticShift": {
     "NAME": "Mystic Shift",
-    "DESCRIPTION": "Gain 1 Blur. NL Recall: Deal damage to ALL enemies equal to your Block."
+    "DESCRIPTION": "Block is not removed at the start of your turn. NL Recall: Deal damage to ALL enemies equal to your Block."
   },
   "chronoMod:MysticShot": {
     "NAME": "Mystic Shot",
@@ -285,7 +284,7 @@
   },
   "chronoMod:TemporalParadox": {
     "NAME": "Temporal Paradox",
-    "DESCRIPTION": "Whenever you spend at least [E] [E] [E] on a cost X card, gain !M! Strength and !M! Dexterity."
+    "DESCRIPTION": "Whenever you spend at least [E] [E] on a cost X card, gain !M! Strength and !M! Dexterity."
   },
   "chronoMod:TidesOfTime": {
     "NAME": "Tides of Time",
@@ -316,7 +315,7 @@
   },
   "chronoMod:TwilightAssault": {
     "NAME": "Twilight Assault",
-    "DESCRIPTION": "Deal !D! damage. NL Gain [E] and 1 Jade."
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E]. NL Gain 1 Jade."
   },
   "chronoMod:WheelOfTime": {
     "NAME": "Wheel of Time",

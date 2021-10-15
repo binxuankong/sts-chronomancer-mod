@@ -137,7 +137,7 @@
     },
     "chronoMod:TemporalParadox": {
         "NAME": "Temporal Paradox",
-        "DESCRIPTIONS": ["Whenever you spend at least 3 [E] on a cost X card, gain #b", " #yStrength and #b", " #yDexterity."]
+        "DESCRIPTIONS": ["Whenever you spend at least [E] [E] on a cost X card, gain #b", " #yStrength and #b", " #yDexterity."]
     },
     "chronoMod:TidesOfTime": {
         "NAME": "Tides of Time",

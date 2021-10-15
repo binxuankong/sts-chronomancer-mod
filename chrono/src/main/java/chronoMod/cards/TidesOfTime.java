@@ -11,8 +11,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class TidesOfTime extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(TidesOfTime.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    private static final String CARD_ID = TidesOfTime.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("power/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

@@ -22,7 +22,7 @@ public class WheelOfTime extends AbstractXCostCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int BONUS_DAMAGE = 6;
+    private static final int BONUS_DAMAGE = 5;
     private static final int UPGRADE_PLUS_BONUS_DMG = 3;
 
     public WheelOfTime() {

@@ -13,8 +13,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class TemporalParadox extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(TemporalParadox.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    private static final String CARD_ID = TemporalParadox.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("power/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;

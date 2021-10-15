@@ -53,7 +53,7 @@ public abstract class AbstractXCostCard extends AbstractDynamicCard {
                 this.addToBot(new ApplyPowerAction(p, p, new SplitSecondPower(p)));
             }
             // Temporal Paradox
-            if (EnergyPanel.totalCount >= 3 && p.hasPower(TemporalParadoxPower.POWER_ID)) {
+            if (EnergyPanel.totalCount >= 2 && p.hasPower(TemporalParadoxPower.POWER_ID)) {
                 p.getPower(TemporalParadoxPower.POWER_ID).onSpecificTrigger();
             }
             // Grimoire
