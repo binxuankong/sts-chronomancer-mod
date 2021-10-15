@@ -26,7 +26,7 @@ public class ArcaneBolt extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 11;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     public ArcaneBolt() {

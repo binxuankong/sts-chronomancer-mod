@@ -3,7 +3,6 @@ package chronoMod.powers;
 import chronoMod.ChronoMod;
 import chronoMod.actions.GainJadeAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -33,8 +32,8 @@ public class TemperedFatePower extends AbstractPower {
     @Override
     public int onLoseHp(int hpLost) {
         if (hpLost > 0) {
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
-            this.addToBot(new GainJadeAction(1));
+            this.addToTop(new GainJadeAction(1));
+            this.addToTop(new ReducePowerAction(this.owner, this.owner, this, 1));
         }
         return 1;
     }

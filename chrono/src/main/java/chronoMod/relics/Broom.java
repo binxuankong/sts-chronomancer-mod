@@ -19,7 +19,7 @@ public class Broom extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(RELIC_ID + ".png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
-    private static final int COUNT = 4;
+    private static final int COUNT = 5;
 
     public Broom() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.SOLID);

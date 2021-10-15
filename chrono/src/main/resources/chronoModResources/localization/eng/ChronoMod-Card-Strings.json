@@ -149,7 +149,7 @@
   },
   "chronoMod:Glimpse": {
     "NAME": "Glimpse",
-    "DESCRIPTION": "Scry !M!. NL Draw 1 card. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Put a card from your hand onto the top of your draw pile."
   },
   "chronoMod:GoofOff": {
     "NAME": "Goof Off",
@@ -246,9 +246,9 @@
     "NAME": "Recurring Dream",
     "DESCRIPTION": "Gain !B! Block at the start of your next X+1 turns. NL Gain 1 Jade. NL Exhaust."
   },
-  "chronoMod:Rewinder": {
-    "NAME": "Rewinder",
-    "DESCRIPTION": "Repeat your next Recall effect !M! times. Gain 1 Jade."
+  "chronoMod:Rewind": {
+    "NAME": "Rewind",
+    "DESCRIPTION": "Repeat your next Recall effect twice. NL Gain 1 Jade."
   },
   "chronoMod:RingSingularity": {
     "NAME": "Ring Singularity",

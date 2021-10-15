@@ -12,7 +12,7 @@
   "chronoMod:Broom": {
     "NAME": "Broom",
     "FLAVOR": "The most dangerous weather to ride a broom in is light rain.",
-    "DESCRIPTIONS": ["Whenever you play #b4 cards that cost #b0, draw #b1 card."]
+    "DESCRIPTIONS": ["Whenever you play #b5 cards that cost #b0, draw #b1 card."]
   },
   "chronoMod:CatsTail": {
     "NAME": "Cat's Tail",
