@@ -20,8 +20,9 @@ import java.util.Iterator;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class Singularity extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(Singularity.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    private static final String CARD_ID = Singularity.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("power/" + CARD_ID + ".png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 

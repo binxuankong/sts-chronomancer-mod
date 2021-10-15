@@ -1,6 +1,14 @@
 {
-"chronoMod:PlaceholderPotion": {
-        "NAME": "Placeholder Potion",
-        "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
-}
+    "chronoMod:JadePotion": {
+        "NAME": "Jade Potion",
+        "DESCRIPTIONS": ["Consume Jade ", " times."]
+    },
+    "chronoMod:RepeatPotion": {
+        "NAME": "Repeat Potion",
+        "DESCRIPTIONS": ["Repeat your next Recall effect ", " time.", "times."]
+    },
+    "chronoMod:XCardPotion": {
+        "NAME": "Potion X",
+        "DESCRIPTIONS": ["Add 1 of 3 random cost X cards to your hand, it is free to play once.", "Add 2 copies of 1 of 3 random cost X cards to your hand, they are free to play once."]
+    }
 }

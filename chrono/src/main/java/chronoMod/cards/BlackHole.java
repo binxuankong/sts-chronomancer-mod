@@ -17,8 +17,9 @@ import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class BlackHole extends AbstractXCostCard {
-    public static final String ID = ChronoMod.makeID(BlackHole.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");
+    private static final String CARD_ID = BlackHole.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;

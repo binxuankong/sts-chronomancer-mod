@@ -12,8 +12,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class StrikeCHR extends AbstractDynamicCard {
-    public static final String ID = ChronoMod.makeID(StrikeCHR.class.getSimpleName());
-    public static final String IMG = makeCardPath("Strike.png");
+    private static final String CARD_ID = StrikeCHR.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("attack/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
