@@ -1,7 +1,7 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.DiscardDrawPileAction;
+import chronoMod.actions.GoofOffAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -24,23 +24,22 @@ public class GoofOff extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 4;
-    private static final int NUM_DISCARD = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int CARD_DRAW = 3;
 
     public GoofOff() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = NUM_DISCARD;
+        this.baseMagicNumber = CARD_DRAW;
         this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-                    AbstractGameAction.AttackEffect.POISON));
-       this.addToBot(new DiscardDrawPileAction(p, this.magicNumber));
-       this.addToBot(new DrawCardAction(p, 1));
+                    AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.addToBot(new DrawCardAction(this.magicNumber, new GoofOffAction()));
     }
 
     @Override
