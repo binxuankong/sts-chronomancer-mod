@@ -14,8 +14,9 @@ import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import static chronoMod.ChronoMod.makeCardPath;
 
 public class WheelOfTime extends AbstractXCostCard {
-    public static final String ID = ChronoMod.makeID(WheelOfTime.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    private static final String CARD_ID = WheelOfTime.class.getSimpleName();
+    public static final String ID = ChronoMod.makeID(CARD_ID);
+    public static final String IMG = makeCardPath("skill/" + CARD_ID + ".png");
 
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
