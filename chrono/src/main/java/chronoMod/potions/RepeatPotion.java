@@ -17,7 +17,7 @@ public class RepeatPotion extends CustomPotion {
     public static final String NAME = potionStrings.NAME;
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
-    public static final Color LIQUID = CardHelper.getColor(0.0f, 0.0f, 153.0f);
+    public static final Color LIQUID = CardHelper.getColor(0.0f, 0.0f, 163.0f);
     public static final Color HYBRID = CardHelper.getColor(0.0f, 255.0f, 255.0f);
     public static final Color SPOTS = CardHelper.getColor(0.0f, 255.0f, 255.0f);
 

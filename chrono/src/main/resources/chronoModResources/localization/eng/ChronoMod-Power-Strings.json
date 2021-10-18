@@ -41,7 +41,7 @@
     },
     "chronoMod:EternalForm": {
         "NAME": "Eternal Form",
-        "DESCRIPTIONS": ["At the start of your turn, you can choose to put a card from your discard pile into your hand. It costs #b", " less [E] this turn."]
+        "DESCRIPTIONS": ["At the start of your turn, you can choose to put #b", " card", " cards", " from your discard pile into your hand. It costs #b", " less [E] this turn."]
     },
     "chronoMod:FalsePromise": {
         "NAME": "False Promise",
