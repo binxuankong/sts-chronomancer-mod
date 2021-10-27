@@ -1,14 +1,14 @@
 {
     "chronoMod:JadePotion": {
         "NAME": "Jade Potion",
-        "DESCRIPTIONS": ["Consume Jade ", " times."]
+        "DESCRIPTIONS": ["Consume #yJade #b", " times."]
     },
     "chronoMod:RepeatPotion": {
         "NAME": "Repeat Potion",
-        "DESCRIPTIONS": ["Repeat your next Recall effect ", " time.", "times."]
+        "DESCRIPTIONS": ["Repeat your next #yRecall effect #b", " time.", "times."]
     },
     "chronoMod:XCardPotion": {
         "NAME": "Potion X",
-        "DESCRIPTIONS": ["Add 1 of 3 random cost X cards to your hand, it is free to play once.", "Add 2 copies of 1 of 3 random cost X cards to your hand, they are free to play once."]
+        "DESCRIPTIONS": ["Add #b1 of #b3 random cost #bX cards to your hand, it is free to play once.", "Add #b2 copies of #b1 of #b3 random cost #bX cards to your hand, they are free to play once."]
     }
 }

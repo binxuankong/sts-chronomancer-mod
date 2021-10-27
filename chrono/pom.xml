@@ -4,7 +4,7 @@
     <groupId>chronomod</groupId>
     <artifactId>ChronoMod</artifactId>
     <name>Chrono Mod</name>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <description>Adds Chronomancer as a new playable character.</description>
 
     <properties>

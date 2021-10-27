@@ -23,7 +23,7 @@ public class Refresher extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public Refresher() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
     @Override
@@ -33,6 +33,11 @@ public class Refresher extends CustomRelic {
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.addToBot(new DrawCardAction(1));
         }
+    }
+
+    @Override
+    public void onEquip() {
+        AbstractDungeon.shopRelicPool.remove("Chemical X");
     }
 
     @Override

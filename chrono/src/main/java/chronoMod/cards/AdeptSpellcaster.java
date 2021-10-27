@@ -20,7 +20,7 @@ public class AdeptSpellcaster extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int EXTRA_EFFECT = 1;
     private static final int UPGRADE_PLUS_EFFECT = 1;
 

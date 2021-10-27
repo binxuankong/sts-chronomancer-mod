@@ -28,7 +28,6 @@ public class Glimpse extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = CARD_DRAW;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
     @Override

@@ -10,10 +10,11 @@ import java.util.UUID;
 public class ArrowOfTimeAction extends AbstractGameAction {
     private UUID uuid;
 
-    public ArrowOfTimeAction(UUID targetUUID, int damageAmount) {
-        this.setValues(this.target, this.source, damageAmount);
+    public ArrowOfTimeAction(UUID targetUUID, int costAmount) {
+        this.setValues(this.target, this.source, costAmount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.uuid = targetUUID;
+        this.amount = costAmount;
     }
 
     public void update() {
@@ -22,7 +23,8 @@ public class ArrowOfTimeAction extends AbstractGameAction {
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
             c.baseDamage *= 2;
-            c.modifyCostForCombat(1);
+            c.cost = this.amount;
+            c.isCostModified = true;
         }
 
         this.isDone = true;

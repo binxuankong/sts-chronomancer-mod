@@ -26,14 +26,12 @@ public class ArrowOfTime extends AbstractDynamicCard {
     private static final int COST = 0;
     private static final int DAMAGE = 4;
     private static final int UPGRADE_PLUS_DAMAGE = 2;
-    private int damageCounter;
+    private int costCounter;
 
     public ArrowOfTime() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.baseMagicNumber = DAMAGE;
-        this.magicNumber = this.baseMagicNumber;
-        this.damageCounter = 1;
+        this.costCounter = 1;
     }
 
     @Override
@@ -42,9 +40,8 @@ public class ArrowOfTime extends AbstractDynamicCard {
             this.addToBot(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
         }
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
-        this.addToBot(new ArrowOfTimeAction(this.uuid, this.damageCounter * this.magicNumber));
-        // this.costCounter++;
-        this.damageCounter *= 2;
+        this.addToBot(new ArrowOfTimeAction(this.uuid, this.costCounter));
+        this.costCounter++;
     }
 
     @Override
@@ -52,7 +49,6 @@ public class ArrowOfTime extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DAMAGE);
-            upgradeMagicNumber(UPGRADE_PLUS_DAMAGE);
             initializeDescription();
         }
     }
