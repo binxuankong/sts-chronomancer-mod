@@ -17,10 +17,12 @@ public class NightmarePower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private int hp_lost;
+    private static int idOffset;
 
     public NightmarePower(AbstractCreature owner, int numTurns, int amt) {
         this.name = NAME;
-        this.ID = POWER_ID + amt;
+        this.ID = POWER_ID + idOffset;
+        idOffset++;
         this.owner = owner;
         this.amount = numTurns;
         this.hp_lost = amt;

@@ -16,10 +16,12 @@ public class RecurringDreamPower extends AbstractPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private int block;
+    private static int idOffset;
 
     public RecurringDreamPower(AbstractCreature owner, int numTurns, int block) {
         this.name = NAME;
-        this.ID = POWER_ID + block;
+        this.ID = POWER_ID + idOffset;
+        idOffset++;
         this.owner = owner;
         this.amount = numTurns;
         this.block = block;

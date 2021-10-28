@@ -89,8 +89,8 @@
   },
   "chronoMod:DejaVu": {
     "NAME": "Deja Vu",
-    "DESCRIPTION": "Play the last card that you played.",
-    "EXTENDED_DESCRIPTION": [" NL Last card played: [#ffff00]", "[]."]
+    "DESCRIPTION": "Play the last card that you played this turn.",
+    "EXTENDED_DESCRIPTION": [" NL Card: [#ffff00]", "[]."]
   },
   "chronoMod:DelayedGuard": {
     "NAME": "Delayed Guard",
@@ -177,7 +177,7 @@
   "chronoMod:MagicChantSummer": {
     "NAME": "Summer Chant",
     "DESCRIPTION": "Gain !B! Block. NL Recall: Add a *Fall *Chant to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !B! damage. NL Recall: Add a *Fall *Chant+ to your hand. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Recall: Add a *Fall *Chant+ to your hand. NL Exhaust."
   },
   "chronoMod:MagicChantWinter": {
     "NAME": "Winter Chant",
@@ -264,7 +264,7 @@
   },
   "chronoMod:SplitSecond": {
     "NAME": "Split Second",
-    "DESCRIPTION": "Deal !D! damage. NL It costs 0 if you have used at least [E] [E] on a cost X card this turn."
+    "DESCRIPTION": "Deal !D! damage. NL It costs 0 if you have spent [E] on a cost X card this turn."
   },
   "chronoMod:StarSurge": {
     "NAME": "Star Surge",

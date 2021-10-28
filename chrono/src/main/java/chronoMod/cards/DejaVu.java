@@ -37,10 +37,10 @@ public class DejaVu extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (lastCard != null) {
-            ChronoMod.logger.info("DejaVu : last card :" + lastCard.cardID);
+        if (this.lastCard != null) {
+            ChronoMod.logger.info("DejaVu : last card :" + this.lastCard.cardID);
             // AbstractCard card = lastCard.makeStatEquivalentCopy();
-            AbstractCard card = lastCard.makeSameInstanceOf();
+            AbstractCard card = this.lastCard.makeSameInstanceOf();
             this.addToBot(new DejaVuAction(card));
         } else {
             ChronoMod.logger.info("DejaVu : error : last card is null ");
@@ -49,15 +49,15 @@ public class DejaVu extends AbstractDynamicCard {
 
     @Override
     public void applyPowers() {
-        lastCard = null;
+        this.lastCard = null;
         ArrayList<AbstractCard> cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn;
         if (!cardsPlayed.isEmpty()) {
-            lastCard = cardsPlayed.get(cardsPlayed.size() - 1);
+            this.lastCard = cardsPlayed.get(cardsPlayed.size() - 1);
         }
-        if (lastCard == null) {
+        if (this.lastCard == null) {
             this.rawDescription = DESCRIPTION;
         } else {
-            this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0] + lastCard.name + EXTENDED_DESCRIPTION[1];
+            this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0] + this.lastCard.name + EXTENDED_DESCRIPTION[1];
         }
         initializeDescription();
     }

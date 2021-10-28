@@ -46,7 +46,7 @@ public class ArcaneBarrage extends AbstractDynamicCard {
 
     @Override
     public void triggerWhenDrawn() {
-        upgradeMagicNumber(1);
+        this.upgradeMagicNumber(1);
         this.addToBot(new GainJadeAction(1));
     }
 

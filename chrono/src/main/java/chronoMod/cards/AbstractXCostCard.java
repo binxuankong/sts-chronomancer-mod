@@ -49,7 +49,7 @@ public abstract class AbstractXCostCard extends AbstractDynamicCard {
         // Use energy
         if (!this.freeToPlayOnce) {
             // Split Second
-            if (EnergyPanel.totalCount >= 2) {
+            if (EnergyPanel.totalCount >= 1) {
                 this.addToBot(new ApplyPowerAction(p, p, new SplitSecondPower(p)));
             }
             // Temporal Paradox

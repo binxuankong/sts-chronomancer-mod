@@ -27,13 +27,13 @@ public class PredestinationAction extends AbstractGameAction {
 
     public void update() {
         for (int i = 0; i < this.amount; i++) {
-            // AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
             AbstractCard c = this.returnRandomXCostCard();
-            if (this.upgraded || this.p.hasPower("MasterRealityPower")) {
+            if (this.p.hasPower("MasterRealityPower")) {
                 c.upgrade();
             }
-            c.freeToPlayOnce = true;
-            // this.addToBot(new MakeTempCardInHandAction(c, 1));
+            if (this.upgraded) {
+                c.freeToPlayOnce = true;
+            }
             this.addToBot(new MakeTempCardInDrawPileAction(c, 1, true, true));
         }
 
@@ -42,21 +42,9 @@ public class PredestinationAction extends AbstractGameAction {
 
     private AbstractCard returnRandomXCostCard() {
         ArrayList<AbstractCard> list = new ArrayList();
-
-        Iterator var1 = AbstractDungeon.srcCommonCardPool.group.iterator();
         AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (c.hasTag(ChronoEnum.XCOST)) {
-                // Common card 3x more likely to appear
-                list.add(c);
-                list.add(c);
-                list.add(c);
-                UnlockTracker.markCardAsSeen(c.cardID);
-            }
-        }
 
-        var1 = AbstractDungeon.srcUncommonCardPool.group.iterator();
+        Iterator var1 = AbstractDungeon.srcUncommonCardPool.group.iterator();
         while(var1.hasNext()) {
             c = (AbstractCard)var1.next();
             if (c.hasTag(ChronoEnum.XCOST)) {

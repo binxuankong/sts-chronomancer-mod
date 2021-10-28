@@ -28,7 +28,7 @@ public class AstralBeam extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 0;
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 12;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int CARD_DRAW = 1;
     private static final int UPGRADE_PLUS_DRAW = 1;

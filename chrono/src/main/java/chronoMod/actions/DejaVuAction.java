@@ -24,25 +24,26 @@ public class DejaVuAction extends AbstractGameAction {
     }
 
     public void update() {
+        AbstractDungeon.player.limbo.group.add(this.card);
         AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(true);
 
-        AbstractDungeon.player.limbo.group.add(card);
-        if (card.costForTurn >= 0) {
-            card.setCostForTurn(0);
+        if (target != null) {
+            this.card.calculateCardDamage(target);
         }
-        card.current_x = (Settings.WIDTH / 2.0F);
-        card.current_y = (Settings.HEIGHT / 2.0F);
-        card.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-        card.target_y = (Settings.HEIGHT / 2.0F);
-        card.freeToPlayOnce = true;
-        card.purgeOnUse = true;
-        card.targetAngle = 0.0F;
-        card.drawScale = 0.12F;
-        card.applyPowers();
+        // this.card.freeToPlayOnce = true;
+        this.card.purgeOnUse = true;
+        // this.card.applyPowers();
+
+        this.card.current_x = (Settings.WIDTH / 2.0F);
+        this.card.current_y = (Settings.HEIGHT / 2.0F);
+        this.card.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
+        this.card.target_y = (Settings.HEIGHT / 2.0F);
+        this.card.targetAngle = 0.0F;
+        this.card.drawScale = 0.12F;
 
         // this.addToBot(new NewQueueCardAction(card, true, false, true));
-        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, target, card.energyOnUse, true,
-                true), true);
+        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this.card, target, this.card.energyOnUse,
+                true, true), true);
 
         this.isDone = true;
     }

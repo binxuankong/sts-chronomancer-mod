@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class ChemicalXObtainPatch {
-    @SpirePatch(cls = "com.megacrit.cardcrawl.relics.DeadBranch", method = "makeCopy")
 
+    @SpirePatch(cls = "com.megacrit.cardcrawl.relics.ChemicalX", method = "makeCopy")
     public static class ChemicalXObtain {
         @SpirePrefixPatch
         public static SpireReturn<AbstractRelic> Prefix(AbstractRelic _inst) {
