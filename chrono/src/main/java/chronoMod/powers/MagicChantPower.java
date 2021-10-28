@@ -1,7 +1,7 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -29,7 +29,8 @@ public class MagicChantPower extends RecallPower {
 
     @Override
     public void recallEffect() {
-        this.addToBot(new MakeTempCardInHandAction(this.card.makeStatEquivalentCopy(), 1));
+        // this.addToBot(new MakeTempCardInHandAction(this.card.makeStatEquivalentCopy(), 1));
+        this.addToBot(new MakeTempCardInDrawPileAction(this.card.makeStatEquivalentCopy(), 1, true, true));
     }
 
     @Override

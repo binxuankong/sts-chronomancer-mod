@@ -1,5 +1,10 @@
 [
   {
+    "PROPER_NAME": "Inert",
+    "NAMES": ["Inert", "inert"],
+    "DESCRIPTION": "Inert cards are unplayable. Automatically triggers the effect of the card when drawn."
+  },
+  {
     "PROPER_NAME": "Jade",
     "NAMES": ["Jade", "jade"],
     "DESCRIPTION": "Lose [E] equals to your Jade at the start of your turn."
