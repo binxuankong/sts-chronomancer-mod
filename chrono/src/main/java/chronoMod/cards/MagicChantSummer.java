@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
@@ -35,7 +36,7 @@ public class MagicChantSummer extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
         this.cardsToPreview = new MagicChantFall();
-        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override
@@ -53,7 +54,11 @@ public class MagicChantSummer extends AbstractDynamicCard {
         this.applyPowers();
         AbstractPlayer p = AbstractDungeon.player;
         this.addToBot(new GainBlockAction(p, this.block));
-        this.addToBot(new ApplyPowerAction(p, p, new MagicChantPower(p, this.cardsToPreview)));
+        AbstractPower chant = p.getPower(MagicChantPower.POWER_ID);
+        if (chant == null) {
+            this.addToBot(new ApplyPowerAction(p, p, new MagicChantPower(p, this.cardsToPreview)));
+        }
+        this.addToBot(new ExhaustSpecificCardAction(this, p.hand));
     }
 
     @Override

@@ -1,5 +1,10 @@
 [
   {
+    "PROPER_NAME": "Chant",
+    "NAMES": ["Chant", "Chant+", "*Chant", "*Chant+"],
+    "DESCRIPTION": "You can only recall one Chant at a time."
+  },
+  {
     "PROPER_NAME": "Inert",
     "NAMES": ["Inert", "inert"],
     "DESCRIPTION": "Inert cards are unplayable. Automatically triggers the effect of the card when drawn."

@@ -15,13 +15,11 @@ public class MagicChantPower extends RecallPower {
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
     private AbstractCard card;
-    private static int idOffset;
 
     public MagicChantPower(AbstractCreature owner, AbstractCard card) {
         super(owner);
         this.name = NAME;
-        this.ID = POWER_ID + idOffset;
-        idOffset++;
+        this.ID = POWER_ID;
         this.card = card;
         this.updateDescription();
         this.loadRegion("hymn");

@@ -33,7 +33,7 @@ public class MagicChantWinter extends AbstractDynamicCard {
     public MagicChantWinter() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.cardsToPreview = new MagicChantSpringTemp();
-        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override
@@ -54,7 +54,15 @@ public class MagicChantWinter extends AbstractDynamicCard {
         if (magicChant == null) {
             this.addToBot(new ApplyPowerAction(p, p, new MagicChantWinterPower(p)));
         }
-        this.addToBot(new ApplyPowerAction(p, p, new MagicChantPower(p, this.cardsToPreview)));
+        AbstractCard c = new MagicChantSpring();
+        if (this.upgraded) {
+            c.upgrade();
+        }
+        AbstractPower chant = p.getPower(MagicChantPower.POWER_ID);
+        if (chant == null) {
+            this.addToBot(new ApplyPowerAction(p, p, new MagicChantPower(p, c)));
+        }
+        this.addToBot(new ExhaustSpecificCardAction(this, p.hand));
     }
 
     @Override

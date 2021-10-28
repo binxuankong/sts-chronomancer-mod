@@ -115,7 +115,7 @@
   "chronoMod:EventHorizon": {
     "NAME": "Event Horizon",
     "DESCRIPTION": "Inert. NL Gain [E].",
-    "UPGRADE_DESCRIPTION": "Inert. Gain !B! Block and [E].",
+    "UPGRADE_DESCRIPTION": "Inert. NL Gain !B! Block. NL Gain [E].",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:FalsePromise": {
@@ -166,32 +166,32 @@
   },
   "chronoMod:MagicChantFall": {
     "NAME": "Fall Chant",
-    "DESCRIPTION": "Ethereal. Inert. NL Deal !D! damage to ALL enemies. NL Recall: Shuffle a *Winter *Chant into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Inert. NL Deal !D! damage to ALL enemies. NL Recall: Shuffle a *Winter *Chant+ into your draw pile.",
+    "DESCRIPTION": "Inert. Exhaust. NL Deal !D! damage to ALL enemies. NL Recall: Shuffle a *Winter *Chant into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Inert. Exhaust. NL Deal !D! damage to ALL enemies. NL Recall: Shuffle a *Winter *Chant+ into your draw pile.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:MagicChantSpring": {
     "NAME": "Spring Chant",
-    "DESCRIPTION": "Ethereal. Inert. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Inert. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant+ into your draw pile.",
+    "DESCRIPTION": "Inert. Exhaust. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Inert. Exhaust. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant+ into your draw pile.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:MagicChantSpringTemp": {
     "NAME": "Spring Chant",
-    "DESCRIPTION": "Ethereal. Inert. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Inert. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant+ into your draw pile.",
+    "DESCRIPTION": "Inert. Exhaust. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Inert. Exhaust. NL Deal !D! damage to a random enemy. NL Recall: Shuffle a *Summer *Chant+ into your draw pile.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:MagicChantSummer": {
     "NAME": "Summer Chant",
-    "DESCRIPTION": "Ethereal. Inert. NL Gain !B! Block. NL Recall: Shuffle a *Fall *Chant into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Inert. NL Gain !B! Block. NL Recall: Shuffle a *Fall *Chant+ into your draw pile.",
+    "DESCRIPTION": "Inert. Exhaust. NL Gain !B! Block. NL Recall: Shuffle a *Fall *Chant into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Inert. Exhaust. NL Gain !B! Block. NL Recall: Shuffle a *Fall *Chant+ into your draw pile.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:MagicChantWinter": {
     "NAME": "Winter Chant",
-    "DESCRIPTION": "Ethereal. Inert. NL Gain an extra action at the end of your turn. NL Recall: Shuffle a *Spring *Chant into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Inert. NL Gain an extra action at the end of your turn. NL Recall: Shuffle a *Spring *Chant+ into your draw pile.",
+    "DESCRIPTION": "Inert. Exhaust. NL Gain an extra action at the end of your turn. NL Recall: Shuffle a *Spring *Chant into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Inert. Exhaust. NL Gain an extra action at the end of your turn. NL Recall: Shuffle a *Spring *Chant+ into your draw pile.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   },
   "chronoMod:Malefice": {

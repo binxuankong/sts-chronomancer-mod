@@ -5,12 +5,14 @@ import chronoMod.powers.MagicChantPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static chronoMod.ChronoMod.makeCardPath;
 
@@ -36,7 +38,7 @@ public class MagicChantFall extends AbstractDynamicCard {
         this.baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.cardsToPreview = new MagicChantWinter();
-        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override
@@ -55,7 +57,11 @@ public class MagicChantFall extends AbstractDynamicCard {
         AbstractPlayer p = AbstractDungeon.player;
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        this.addToBot(new ApplyPowerAction(p, p, new MagicChantPower(p, this.cardsToPreview)));
+        AbstractPower chant = p.getPower(MagicChantPower.POWER_ID);
+        if (chant == null) {
+            this.addToBot(new ApplyPowerAction(p, p, new MagicChantPower(p, this.cardsToPreview)));
+        }
+        this.addToBot(new ExhaustSpecificCardAction(this, p.hand));
     }
 
     @Override
