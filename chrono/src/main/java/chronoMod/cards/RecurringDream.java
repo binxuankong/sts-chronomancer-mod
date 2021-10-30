@@ -1,7 +1,6 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import chronoMod.powers.RecurringDreamPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -32,11 +31,10 @@ public class RecurringDream extends AbstractXCostCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int effect = this.getEffectNum(p) + 1;
+        int effect = this.getEffectNum(p);
         if (effect > 0) {
             this.addToBot(new ApplyPowerAction(p, p, new RecurringDreamPower(p, effect, this.block)));
         }
-        this.addToBot(new GainJadeAction(1));
     }
 
 

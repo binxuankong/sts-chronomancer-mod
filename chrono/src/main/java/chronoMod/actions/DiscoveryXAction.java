@@ -41,7 +41,6 @@ public class DiscoveryXAction extends AbstractGameAction {
                         disCard.upgrade();
                         disCard2.upgrade();
                     }
-
                     disCard.freeToPlayOnce = true;
                     disCard2.freeToPlayOnce = true;
                     disCard.current_x = -1000.0F * Settings.xScale;

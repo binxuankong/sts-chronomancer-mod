@@ -10,10 +10,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class MagicChantWinterAction extends AbstractGameAction {
+public class RewindAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    public MagicChantWinterAction() {
+    public RewindAction() {
         this.p = AbstractDungeon.player;
     }
 

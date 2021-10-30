@@ -2,7 +2,7 @@ package chronoMod.cards;
 
 import chronoMod.ChronoMod;
 import chronoMod.actions.GainJadeAction;
-import chronoMod.actions.RepeatAction;
+import chronoMod.actions.RewindAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,7 +22,6 @@ public class Rewind extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADE_COST = 0;
     private static final int REWIND_COUNT = 2;
-    private static final int UPGRADE_PLUS_COUNT = 1;
     private static final int JADE_AMOUNT = 1;
 
     public Rewind() {
@@ -33,7 +32,7 @@ public class Rewind extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new RepeatAction(this.magicNumber));
+        this.addToBot(new RewindAction());
         this.addToBot(new GainJadeAction(JADE_AMOUNT));
     }
 

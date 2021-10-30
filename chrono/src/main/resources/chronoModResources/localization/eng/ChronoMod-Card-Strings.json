@@ -249,16 +249,15 @@
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
-    "DESCRIPTION": "Shuffle X random cost X cards into your draw pile. They are free to play once. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Shuffle X random upgraded cost X cards into your draw pile. They are free to play once. NL Exhaust."
+    "DESCRIPTION": "Add a random cost X card to your hand. It is free to play once. NL Gain 1 Jade. NL Exhaust."
   },
   "chronoMod:RecurringDream": {
     "NAME": "Recurring Dream",
-    "DESCRIPTION": "Gain !B! Block at the start of your next X+1 turns. NL Gain 1 Jade. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block at the start of your next X turns. NL Exhaust."
   },
   "chronoMod:Rewind": {
     "NAME": "Rewind",
-    "DESCRIPTION": "Repeat your next Recall effect twice. NL Gain 1 Jade."
+    "DESCRIPTION": "Repeat ALL your Recall effects. NL Gain 1 Jade."
   },
   "chronoMod:RingSingularity": {
     "NAME": "Ring Singularity",

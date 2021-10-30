@@ -68,6 +68,6 @@
   "chronoMod:Winder": {
     "NAME": "Winder",
     "FLAVOR": "The key does not fit in the clock that you have.",
-    "DESCRIPTIONS": ["Once per turn, #yRepeat the first #yRecall effect."]
+    "DESCRIPTIONS": ["Once per turn, #yRepeat your first #yRecall effect."]
   }
 }
