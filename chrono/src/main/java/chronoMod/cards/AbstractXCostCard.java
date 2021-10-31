@@ -2,17 +2,13 @@ package chronoMod.cards;
 
 import chronoMod.patches.ChronoEnum;
 import chronoMod.powers.*;
+import chronoMod.relics.ChemicalXX;
 import chronoMod.relics.Grimoire;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-
-import java.util.Iterator;
 
 public abstract class AbstractXCostCard extends AbstractDynamicCard {
     private static final int COST = -1;
@@ -32,6 +28,11 @@ public abstract class AbstractXCostCard extends AbstractDynamicCard {
         if (p.hasRelic("Chemical X")) {
             effect += 2;
             p.getRelic("Chemical X").flash();
+        }
+        // Chemical XX
+        if (p.hasRelic(ChemicalXX.ID)) {
+            effect += 2;
+            p.getRelic(ChemicalXX.ID).flash();
         }
         // Spell Boost
         AbstractPower spellBoost = p.getPower(SpellBoostPower.POWER_ID);

@@ -246,6 +246,7 @@ public class ChronoMod implements
         // Character specific relic
         BaseMod.addRelicToCustomPool(new AncientClock(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new BrokenClock(), Chronomancer.Enums.COLOR_BLUE);
+        BaseMod.addRelicToCustomPool(new ChemicalXX(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new FeatherQuill(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new Grimoire(), Chronomancer.Enums.COLOR_BLUE);
         BaseMod.addRelicToCustomPool(new MagicalHerb(), Chronomancer.Enums.COLOR_BLUE);

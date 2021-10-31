@@ -249,7 +249,7 @@
   },
   "chronoMod:Predestination": {
     "NAME": "Predestination",
-    "DESCRIPTION": "Add a random cost X card to your hand. It is free to play once. NL Gain 1 Jade. NL Exhaust."
+    "DESCRIPTION": "Choose 1 of 3 random cost X card to add to your hand. It is free to play once. NL Gain 1 Jade. NL Exhaust."
   },
   "chronoMod:RecurringDream": {
     "NAME": "Recurring Dream",

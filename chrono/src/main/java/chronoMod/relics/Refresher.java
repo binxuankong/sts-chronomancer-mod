@@ -36,11 +36,6 @@ public class Refresher extends CustomRelic {
     }
 
     @Override
-    public void onEquip() {
-        AbstractDungeon.shopRelicPool.remove("Chemical X");
-    }
-
-    @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

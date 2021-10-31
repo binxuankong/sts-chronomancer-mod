@@ -1,12 +1,9 @@
 package chronoMod.powers;
 
 import chronoMod.ChronoMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import chronoMod.actions.MysticShiftAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -29,11 +26,7 @@ public class MysticShiftPower extends RecallPower {
 
     @Override
     public void recallEffect () {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null,
-                    DamageInfo.createDamageMatrix(this.owner.currentBlock, true), DamageInfo.DamageType.THORNS,
-                    AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        }
+        this.addToBot(new MysticShiftAction());
     }
 
     @Override

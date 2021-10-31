@@ -24,6 +24,11 @@ v0.1.3 28/10/2021
 
 v0.1.4 30/10/2021
 *Precognition : Uncommon -> Rare
-*Predestination : Rework : Uncommon; Cost : 1(0) ; Add a random cost X card into your hand. It is free to play once and gains Exhaust. Gain 1 Jade.
+*Predestination : Rework : Uncommon; Cost : 1(0) ; Choose 1 of 3 random cost X card to add to your hand. It is free to play once and gains Exhaust. Gain 1 Jade.
 *Recurring Dream : Rework : Uncommon; Cost : X ; Gain 11(15) Block at the start of your next X turns. NL Exhaust.
 *Rewind : Rework : Rare; Cost : 1(0) ; Repeat ALL your Recall effects. Gain 1 Jade.
+
+v0.1.5 31/10/2021
+*Add Chemical XX to replace Chemical X for Chronomancer. Increase cost X cards effect by 1 instead of 2.
+*Fix Mystic Shift not using updated Block for damage.
+*Fix tooltip of Predestination.

@@ -1,7 +1,7 @@
 package chronoMod.patches;
 
 import chronoMod.characters.Chronomancer;
-import chronoMod.relics.Refresher;
+import chronoMod.relics.ChemicalXX;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
@@ -15,7 +15,7 @@ public class ChemicalXObtainPatch {
         @SpirePrefixPatch
         public static SpireReturn<AbstractRelic> Prefix(AbstractRelic _inst) {
             if (AbstractDungeon.player instanceof Chronomancer) {
-                return SpireReturn.Return(new Refresher());
+                return SpireReturn.Return(new ChemicalXX());
             }
             return SpireReturn.Continue();
         }

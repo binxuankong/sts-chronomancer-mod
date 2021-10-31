@@ -19,6 +19,11 @@
     "FLAVOR": "Cursed?",
     "DESCRIPTIONS": ["The first time you receive unblocked #yAttack damage each combat, deal damage to ALL enemies equal to damage received."]
   },
+  "chronoMod:ChemicalXX": {
+    "NAME": "Chemical XX",
+    "FLAVOR": "A weaker version of Chemical X.",
+    "DESCRIPTIONS": ["Whenever you play a cost X card, its effects are increased by 1."]
+  },
   "chronoMod:FeatherQuill": {
     "NAME": "Feather Quill",
     "FLAVOR": "The standard writing instrument in the magic world.",

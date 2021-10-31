@@ -19,7 +19,7 @@ public class EssenceFluxAction extends AbstractGameAction {
                 AbstractDungeon.cardRandomRng);
 
         if (this.target != null) {
-            this.addToTop(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT));
+            this.addToBot(new DamageAction(this.target, this.info, AttackEffect.BLUNT_LIGHT));
         }
 
         this.isDone = true;
