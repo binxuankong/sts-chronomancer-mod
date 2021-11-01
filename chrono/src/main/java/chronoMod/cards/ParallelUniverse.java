@@ -22,7 +22,7 @@ public class ParallelUniverse extends AbstractXCostCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 7;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public ParallelUniverse() {

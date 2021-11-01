@@ -4,6 +4,7 @@ import chronoMod.ChronoMod;
 import chronoMod.actions.GainJadeAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,13 +35,11 @@ public class Wormhole extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = JADE;
         this.magicNumber = this.baseMagicNumber;
-        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
-        this.addToBot(new GainJadeAction(this.magicNumber));
     }
 
     @Override
@@ -54,6 +53,7 @@ public class Wormhole extends AbstractDynamicCard {
         AbstractPlayer p = AbstractDungeon.player;
         this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
         this.addToBot(new GainJadeAction(this.magicNumber));
+        this.addToBot(new ExhaustSpecificCardAction(this, p.hand));
     }
 
     @Override

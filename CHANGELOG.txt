@@ -34,6 +34,21 @@ v0.1.5 31/10/2021
 *Fix tooltip of Predestination.
 
 v0.1.6 1/11/2021
+*Arrow of Time : Damage : 4(6) -> 4(5)
+*Astral Banishment : Damage 12(16) -> 10(14)
+*Boomerang Blade : Damage : 12(16) -> 11(15)
+*Convergence : Damage and Block : 6(9) -> 6(8)
+*Essence Flux : Damage : 9(12) -> 8(11)
+*Fate's Edict : Damage and Block : 7(10) -> 6(9)
+*Flash Forward : Damage : 9(13) -> 10(14)
+*Fortune's End : Damage : 9(11) -> 8(10)
+*Lucid Dream : Block : 4(6) -> 5(8)
+*Mystic Flare : Damage : 5(7) -> 4(6)
+*Parallel Universe : Block : 8(11) -> 7(10)
+*Recurring Dream : Block : 11(15) -> 10(14)
+*Tip of the Tongue : Damage : 4(6) -> 6(8)
+*Twilight Assault : Damage 5(7) -> 6(9)
+*Wormhole : Ethereal -> Exhaust
 *Fix Arrow of Time cost resetting after reduce cost for turn action.
 *Fix Big Bang giving Jade even when player has no Jade.
 *Fix Goggles giving extra E on card use.

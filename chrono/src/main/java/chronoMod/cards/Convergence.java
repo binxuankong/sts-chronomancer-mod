@@ -25,7 +25,7 @@ public class Convergence extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE_BLOCK_AMOUNT = 6;
-    private static final int UPGRADE_PLUS_AMOUNT = 3;
+    private static final int UPGRADE_PLUS_AMOUNT = 2;
 
     public Convergence() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

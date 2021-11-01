@@ -24,7 +24,7 @@ public class ArrowOfTime extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 4;
-    private static final int UPGRADE_PLUS_DAMAGE = 2;
+    private static final int UPGRADE_PLUS_DAMAGE = 1;
 
     public ArrowOfTime() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

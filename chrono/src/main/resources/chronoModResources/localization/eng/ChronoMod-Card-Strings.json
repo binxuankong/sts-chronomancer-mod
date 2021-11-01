@@ -337,7 +337,7 @@
   },
   "chronoMod:Wormhole": {
     "NAME": "Wormhole",
-    "DESCRIPTION": "Ethereal. NL Inert. NL Gain 1 Intangible and !M! Jade.",
+    "DESCRIPTION": "Inert. NL Gain 1 Intangible and !M! Jade. NL Exhaust.",
     "EXTENDED_DESCRIPTION": ["This card cannot be played."]
   }
 }

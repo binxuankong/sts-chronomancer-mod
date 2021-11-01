@@ -22,8 +22,8 @@ public class LucidDream extends AbstractDynamicCard {
     public static final CardColor COLOR = Chronomancer.Enums.COLOR_BLUE;
 
     private static final int COST = 0;
-    private static final int BLOCK = 4;
-    private static final int UPGRADE_PLUS_BLOCK = 2;
+    private static final int BLOCK = 5;
+    private static final int UPGRADE_PLUS_BLOCK = 8;
     private static final int ENERGY_JADE_AMOUNT = 1;
 
     public LucidDream() {
