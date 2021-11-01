@@ -32,3 +32,6 @@ v0.1.5 31/10/2021
 *Add Chemical XX to replace Chemical X for Chronomancer. Increase cost X cards effect by 1 instead of 2.
 *Fix Mystic Shift not using updated Block for damage.
 *Fix tooltip of Predestination.
+
+v0.1.6 1/11/2021
+*Fix Big Bang giving Jade even when player has no Jade.

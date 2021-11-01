@@ -20,6 +20,7 @@ public class BigBangAction extends AbstractGameAction {
         AbstractPower jade = this.p.getPower(JadePower.POWER_ID);
         if (jade != null) {
             jadeAmount += jade.amount;
+            this.addToBot(new GainJadeAction(jadeAmount));
         }
         int energyAmount = jadeAmount;
 
@@ -28,7 +29,6 @@ public class BigBangAction extends AbstractGameAction {
             energyAmount *= 2;
         }
 
-        this.addToBot(new GainJadeAction(jadeAmount));
         this.addToBot(new GainEnergyAction(energyAmount));
 
         this.isDone = true;
