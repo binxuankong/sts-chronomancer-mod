@@ -5,7 +5,6 @@ import chronoMod.actions.ArrowOfTimeAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -26,12 +25,10 @@ public class ArrowOfTime extends AbstractDynamicCard {
     private static final int COST = 0;
     private static final int DAMAGE = 4;
     private static final int UPGRADE_PLUS_DAMAGE = 2;
-    private int costCounter;
 
     public ArrowOfTime() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.costCounter = 1;
     }
 
     @Override
@@ -40,8 +37,7 @@ public class ArrowOfTime extends AbstractDynamicCard {
             this.addToBot(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
         }
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
-        this.addToBot(new ArrowOfTimeAction(this.uuid, this.costCounter));
-        this.costCounter++;
+        this.addToBot(new ArrowOfTimeAction(this));
     }
 
     @Override

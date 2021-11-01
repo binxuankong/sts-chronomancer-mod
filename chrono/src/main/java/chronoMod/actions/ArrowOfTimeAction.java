@@ -8,24 +8,16 @@ import java.util.Iterator;
 import java.util.UUID;
 
 public class ArrowOfTimeAction extends AbstractGameAction {
-    private UUID uuid;
+    private AbstractCard card;
 
-    public ArrowOfTimeAction(UUID targetUUID, int costAmount) {
-        this.setValues(this.target, this.source, costAmount);
+    public ArrowOfTimeAction(AbstractCard card) {
         this.actionType = ActionType.CARD_MANIPULATION;
-        this.uuid = targetUUID;
-        this.amount = costAmount;
+        this.card = card;
     }
 
     public void update() {
-        Iterator var1 = GetAllInBattleInstances.get(this.uuid).iterator();
-
-        while(var1.hasNext()) {
-            AbstractCard c = (AbstractCard)var1.next();
-            c.baseDamage *= 2;
-            c.cost = this.amount;
-            c.isCostModified = true;
-        }
+        this.card.baseDamage *= 2;
+        this.card.modifyCostForCombat(1);
 
         this.isDone = true;
     }

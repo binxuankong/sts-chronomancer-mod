@@ -37,7 +37,7 @@ public class Goggles extends CustomRelic {
         if (!this.grayscale) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new GainEnergyAction(card.energyOnUse));
+            this.addToBot(new GainEnergyAction(card.costForTurn));
             // this.addToBot(new ReverseGogglesAction());
             this.grayscale = true;
         }

@@ -34,4 +34,6 @@ v0.1.5 31/10/2021
 *Fix tooltip of Predestination.
 
 v0.1.6 1/11/2021
+*Fix Arrow of Time cost resetting after reduce cost for turn action.
 *Fix Big Bang giving Jade even when player has no Jade.
+*Fix Goggles giving extra E on card use.
