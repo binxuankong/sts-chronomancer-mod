@@ -23,7 +23,7 @@ public class LucidDream extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 8;
+    private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int ENERGY_JADE_AMOUNT = 1;
 
     public LucidDream() {

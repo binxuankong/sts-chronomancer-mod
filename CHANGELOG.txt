@@ -43,6 +43,8 @@ v0.1.6 1/11/2021
 *Flash Forward : Damage : 9(13) -> 10(14)
 *Fortune's End : Damage : 9(11) -> 8(10)
 *Lucid Dream : Block : 4(6) -> 5(8)
+*Mana Ball : Damage : 6(6), 4(6) -> 6(8), 3(4)
+*Mana Barrier : Bonus Block : 5(5), 3(5) -> 5(7), 2(3)
 *Mystic Flare : Damage : 5(7) -> 4(6)
 *Parallel Universe : Block : 8(11) -> 7(10)
 *Recurring Dream : Block : 11(15) -> 10(14)
