@@ -1,37 +1,9 @@
-v0.1.0 16/10/2021
-*Beta release
-
-v0.1.1 16/10/2021
-*Goof Off : Rework : Common ; Cost : 1 ; Deal 10(13) damage. Draw 3 cards and discard them.
-
-v0.1.2 27/10/2021
-*Adept Spellcaster : Cost : 1 -> 2.
-*Fix Arrow of Time card cost update.
-*Fix Glimpse exhausting.
-*Chemical X will no longer be available for Chronomancer.
-
-v0.1.3 28/10/2021
-*Add Inert keyword : Inert cards are unplayable. Automatically triggers the effect of the card when drawn.
-*Astral Beam : Damage : 11(13) -> 12(14)
-*Ring Singularity : Damage : 15(20) -> 14(18)
-*Split Second : Rework : Common ; Cost : 2 ; Deal 12(16) damage.  It costs 0 if you have spent E on a X cost card this turn.
-*Predestination : Rework : Rare ; Cost : X ; Shuffle X random cost X cards into your draw pile. (They are free to play once.) Exhaust.
-*Goggles : Rework : The first time you play a card each combat, gain [E] equals to the [E] used on the card.
-*Rework all Magic Chant cards.
-*Nightmare and Recurring Dream now have separate instances instead of stacking the number of turns.
-*Fix Summer Chant+ card description.
-*Fix Chemical X still showing for Chronomancer.
-
-v0.1.4 30/10/2021
-*Precognition : Uncommon -> Rare
-*Predestination : Rework : Uncommon; Cost : 1(0) ; Choose 1 of 3 random cost X card to add to your hand. It is free to play once and gains Exhaust. Gain 1 Jade.
-*Recurring Dream : Rework : Uncommon; Cost : X ; Gain 11(15) Block at the start of your next X turns. NL Exhaust.
-*Rewind : Rework : Rare; Cost : 1(0) ; Repeat ALL your Recall effects. Gain 1 Jade.
-
-v0.1.5 31/10/2021
-*Add Chemical XX to replace Chemical X for Chronomancer. Increase cost X cards effect by 1 instead of 2.
-*Fix Mystic Shift not using updated Block for damage.
-*Fix tooltip of Predestination.
+v0.1.7 2/11/2021
+*Predestination : Rework : Uncommon; Cost : 1(0) ; Add a random cost X card to your hand. It is free to play once. Gain 1 Jade.
+*Cat's Tail : Rarity : Rare -> Uncommon
+*Goggles : Rarity : Uncommon -> Rare
+*Fix Accelerate and Repeat action not triggering Recall related power and relic effects.
+*Fix Goggles not giving back correct E on cost X cards.
 
 v0.1.6 1/11/2021
 *Arrow of Time : Damage : 4(6) -> 4(5)
@@ -54,3 +26,38 @@ v0.1.6 1/11/2021
 *Fix Arrow of Time cost resetting after reduce cost for turn action.
 *Fix Big Bang giving Jade even when player has no Jade.
 *Fix Goggles giving extra E on card use.
+
+v0.1.4 30/10/2021
+*Precognition : Uncommon -> Rare
+*Predestination : Rework : Uncommon; Cost : 1(0) ; Choose 1 of 3 random cost X card to add to your hand. It is free to play once. Gain 1 Jade.
+*Recurring Dream : Rework : Uncommon; Cost : X ; Gain 11(15) Block at the start of your next X turns. Exhaust.
+*Rewind : Rework : Rare; Cost : 1(0) ; Repeat ALL your Recall effects. Gain 1 Jade.
+
+v0.1.5 31/10/2021
+*Add Chemical XX to replace Chemical X for Chronomancer. Increase cost X cards effect by 1 instead of 2.
+*Fix Mystic Shift not using updated Block for damage.
+*Fix tooltip of Predestination.
+
+v0.1.3 28/10/2021
+*Add Inert keyword : Inert cards are unplayable. Automatically triggers the effect of the card when drawn.
+*Astral Beam : Damage : 11(13) -> 12(14)
+*Ring Singularity : Damage : 15(20) -> 14(18)
+*Split Second : Rework : Common ; Cost : 2 ; Deal 12(16) damage.  It costs 0 if you have spent E on a X cost card this turn.
+*Predestination : Rework : Rare ; Cost : X ; Shuffle X random cost X cards into your draw pile. (They are free to play once.) Exhaust.
+*Goggles : Rework : The first time you play a card each combat, gain [E] equals to the [E] used on the card.
+*Rework all Magic Chant cards.
+*Nightmare and Recurring Dream now have separate instances instead of stacking the number of turns.
+*Fix Summer Chant+ card description.
+*Fix Chemical X still showing for Chronomancer.
+
+v0.1.2 27/10/2021
+*Adept Spellcaster : Cost : 1 -> 2.
+*Fix Arrow of Time card cost update.
+*Fix Glimpse exhausting.
+*Chemical X will no longer be available for Chronomancer.
+
+v0.1.1 16/10/2021
+*Goof Off : Rework : Common ; Cost : 1 ; Deal 10(13) damage. Draw 3 cards and discard them.
+
+v0.1.0 16/10/2021
+*Beta release

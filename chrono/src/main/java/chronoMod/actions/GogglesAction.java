@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
-public class ApplyGogglesAction extends AbstractGameAction {
-    public ApplyGogglesAction() {
+public class GogglesAction extends AbstractGameAction {
+    public GogglesAction() {
         this.duration = Settings.ACTION_DUR_XFAST;
     }
 

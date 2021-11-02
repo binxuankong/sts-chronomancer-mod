@@ -1,8 +1,8 @@
 package chronoMod.cards;
 
 import chronoMod.ChronoMod;
-import chronoMod.actions.DiscoveryXAction;
 import chronoMod.actions.GainJadeAction;
+import chronoMod.actions.PredestinationAction;
 import chronoMod.characters.Chronomancer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -30,7 +30,8 @@ public class Predestination extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DiscoveryXAction(1));
+        this.addToBot(new PredestinationAction(p, 1));
+        // this.addToBot(new DiscoveryXAction(1));
         this.addToBot(new GainJadeAction(1));
     }
 

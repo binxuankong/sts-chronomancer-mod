@@ -28,7 +28,7 @@ public class AccelerateAction extends AbstractGameAction {
 
             if (pow.type == ChronoEnum.RECALL) {
                 RecallPower recall_pow = (RecallPower)pow;
-                recall_pow.triggerRecall();
+                recall_pow.triggerRecall(true);
             }
         }
 

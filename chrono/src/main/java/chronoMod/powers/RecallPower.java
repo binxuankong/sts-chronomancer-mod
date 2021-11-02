@@ -26,13 +26,13 @@ public abstract class RecallPower extends AbstractPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        this.triggerRecall();
+        this.triggerRecall(true);
         ChronoMod.logger.info("Trigger Recall effect: " + this.name);
     }
 
     public void recallEffect() {}
 
-    public void triggerRecall() {
+    public void triggerRecall(boolean remove) {
         this.flash();
         this.recallEffect();
 
@@ -55,7 +55,9 @@ public abstract class RecallPower extends AbstractPower {
             this.p.getRelic(FeatherQuill.ID).onTrigger();
         }
 
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if (remove) {
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        }
     }
 
 }

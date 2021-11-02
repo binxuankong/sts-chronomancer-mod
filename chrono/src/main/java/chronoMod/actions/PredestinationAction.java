@@ -2,7 +2,7 @@ package chronoMod.actions;
 
 import chronoMod.patches.ChronoEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -15,11 +15,9 @@ import java.util.Iterator;
 public class PredestinationAction extends AbstractGameAction {
 
     private AbstractPlayer p;
-    private boolean upgraded;
 
-    public PredestinationAction(AbstractPlayer p, boolean upgraded, int effect) {
+    public PredestinationAction(AbstractPlayer p, int effect) {
         this.p = p;
-        this.upgraded = upgraded;
         this.amount = effect;
         this.duration = Settings.ACTION_DUR_XFAST;
         this.actionType = ActionType.SPECIAL;
@@ -31,10 +29,9 @@ public class PredestinationAction extends AbstractGameAction {
             if (this.p.hasPower("MasterRealityPower")) {
                 c.upgrade();
             }
-            if (this.upgraded) {
-                c.freeToPlayOnce = true;
-            }
-            this.addToBot(new MakeTempCardInDrawPileAction(c, 1, true, true));
+            c.freeToPlayOnce = true;
+            // this.addToBot(new MakeTempCardInDrawPileAction(c, 1, true, true));
+            this.addToBot(new MakeTempCardInHandAction(c, true));
         }
 
         this.isDone = true;

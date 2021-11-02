@@ -13,9 +13,9 @@ import java.util.Iterator;
 public class RepeatAction extends AbstractGameAction {
     private AbstractPlayer p;
 
-    public RepeatAction(int rewindCount) {
+    public RepeatAction(int repeatCount) {
         this.p = AbstractDungeon.player;
-        this.amount = rewindCount;
+        this.amount = repeatCount;
     }
 
     public void update() {
@@ -28,8 +28,7 @@ public class RepeatAction extends AbstractGameAction {
             if (pow.type == ChronoEnum.RECALL) {
                 RecallPower recall_pow = (RecallPower)pow;
                 for (int i = 0; i < this.amount; i++) {
-                    recall_pow.flash();
-                    recall_pow.recallEffect();
+                    recall_pow.triggerRecall(false);
                 }
                 break;
             }

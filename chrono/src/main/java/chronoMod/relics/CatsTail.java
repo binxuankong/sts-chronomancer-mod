@@ -21,7 +21,7 @@ public class CatsTail extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public CatsTail() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
     @Override

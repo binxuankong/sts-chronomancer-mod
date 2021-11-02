@@ -2,8 +2,6 @@ package chronoMod.relics;
 
 import basemod.abstracts.CustomRelic;
 import chronoMod.ChronoMod;
-import chronoMod.actions.ApplyGogglesAction;
-import chronoMod.actions.ReverseGogglesAction;
 import chronoMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -22,14 +20,11 @@ public class Goggles extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
     public Goggles() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.SOLID);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.SOLID);
     }
 
     @Override
     public void atBattleStart() {
-        // this.flash();
-        // this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        // this.addToBot(new ApplyGogglesAction());
     }
 
     @Override
@@ -37,8 +32,11 @@ public class Goggles extends CustomRelic {
         if (!this.grayscale) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.addToBot(new GainEnergyAction(card.costForTurn));
-            // this.addToBot(new ReverseGogglesAction());
+            if (card.cost == -1 && !card.freeToPlayOnce) {
+                this.addToBot(new GainEnergyAction(card.energyOnUse));
+            } else {
+                this.addToBot(new GainEnergyAction(card.costForTurn));
+            }
             this.grayscale = true;
         }
     }

@@ -26,8 +26,7 @@ public class RewindAction extends AbstractGameAction {
             AbstractPower pow = (AbstractPower)var1.next();
             if (pow.type == ChronoEnum.RECALL) {
                 RecallPower recall_pow = (RecallPower)pow;
-                recall_pow.flash();
-                recall_pow.recallEffect();
+                recall_pow.triggerRecall(false);
             }
         }
 
