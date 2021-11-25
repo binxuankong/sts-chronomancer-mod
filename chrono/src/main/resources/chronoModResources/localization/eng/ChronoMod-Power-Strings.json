@@ -65,7 +65,7 @@
     },
     "chronoMod:MagicChant": {
         "NAME": "Magic Chant",
-        "DESCRIPTIONS": ["#yRecall: Add a ", " to your hand."]
+        "DESCRIPTIONS": ["#yRecall: Shuffle a ", " into your draw pile."]
     },
     "chronoMod:MagicChantFall": {
         "NAME": "Fall Chant",

@@ -2,6 +2,8 @@ package chronoMod.powers;
 
 import chronoMod.ChronoMod;
 import chronoMod.actions.EssenceFluxAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,7 +36,9 @@ public class EssenceFluxPower extends RecallPower {
     @Override
     public void recallEffect () {
         for (int i=0; i < this.hitCount; i++) {
-            this.addToBot(new EssenceFluxAction(new DamageInfo(this.owner, damage, damageType)));
+            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(this.owner, this.damage, this.damageType),
+                    AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            // this.addToBot(new EssenceFluxAction(new DamageInfo(this.owner, damage, damageType)));
         }
     }
 

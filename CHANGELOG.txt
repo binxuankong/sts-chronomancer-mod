@@ -1,3 +1,7 @@
+v0.1.8 25/11/2021
+*Fix Essence Flux not targeting newly summoned minions.
+*Fix Magic Chant related tooltips.
+
 v0.1.7 2/11/2021
 *Predestination : Rework : Uncommon; Cost : 1(0) ; Add a random cost X card to your hand. It is free to play once. Gain 1 Jade.
 *Cat's Tail : Rarity : Rare -> Uncommon
