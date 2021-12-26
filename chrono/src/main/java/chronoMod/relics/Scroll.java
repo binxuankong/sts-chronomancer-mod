@@ -29,12 +29,6 @@ public class Scroll extends CustomRelic {
         this.flash();
         this.addToBot(new RelicAboveCreatureAction(p, this));
         this.addToBot(new ApplyPowerAction(p, p, new SpellBoostPower(p, 3), 3));
-        this.grayscale = true;
-    }
-
-    @Override
-    public void onVictory() {
-        this.grayscale = false;
     }
 
     @Override

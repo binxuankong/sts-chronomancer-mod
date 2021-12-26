@@ -1,3 +1,6 @@
+v0.1.9 26/12/2021
+*Fix Cat's Tail to only work during battle.
+
 v0.1.8 25/11/2021
 *Fix Essence Flux not targeting newly summoned minions.
 *Fix Magic Chant related tooltips.

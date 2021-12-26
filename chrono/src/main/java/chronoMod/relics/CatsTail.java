@@ -20,19 +20,28 @@ public class CatsTail extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath(RELIC_ID + ".png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath(RELIC_ID + ".png"));
 
+    private boolean trigger;
+
     public CatsTail() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
+        this.trigger = false;
+    }
+
+    @Override
+    public void atBattleStart() {
+        this.trigger = true;
     }
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS
-                && damageAmount > 1 && !this.grayscale) {
+                && damageAmount > 0 && this.trigger) {
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             this.addToBot(new DamageAllEnemiesAction((AbstractCreature)null,
                     DamageInfo.createDamageMatrix(damageAmount, true), DamageInfo.DamageType.THORNS,
                     AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            this.trigger = false;
             this.grayscale = true;
         }
         return damageAmount;
@@ -40,6 +49,7 @@ public class CatsTail extends CustomRelic {
 
     @Override
     public void onVictory() {
+        this.trigger = false;
         this.grayscale = false;
     }
 
